@@ -91,32 +91,19 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-                                                    <th scope="col">Random</th>
-
+                                                    <th scope="col">Company name</th>
+                                                    <th scope="col">Street address</th>
+                                                    <th scope="col">Phone number</th>
+                                                    <th scope="col">Mc number</th>
+                                                    <th scope="col">Pow</th>
+                                                    <th scope="col">Client name</th>
+                                                    <th scope="col">Email address</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                
                                                 <tr>
                                                     <th scope="row">1</th>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                </tr>
-                                                <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Random</td>
                                                     <td>Random</td>
                                                     <td>Random</td>
                                                     <td>Random</td>
