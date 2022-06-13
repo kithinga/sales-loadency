@@ -1,6 +1,6 @@
-
+<?php include "config.php"  ?>
 <head>
-<link href="style.css" rel="stylesheet" type="sales.css" />
+<link href="sales.css" rel="stylesheet" type="text/css" />
 <script src="jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 function validateFile() {

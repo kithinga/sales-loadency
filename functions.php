@@ -1,59 +1,81 @@
 <?php
-// Load the database configuration file
-include 'config.php';
-include_once 'sales_database.php';
+// include mysql database configuration file
+include_once 'config.php';
 
-if(isset($_POST['Import'])){
-    
+if (isset($_POST['submit']))
+{
+
     // Allowed mime types
-    $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
-    
+    $fileMimes = array(
+        'text/x-comma-separated-values',
+        'text/comma-separated-values',
+        'application/octet-stream',
+        'application/vnd.ms-excel',
+        'application/x-csv',
+        'text/x-csv',
+        'text/csv',
+        'application/csv',
+        'application/excel',
+        'application/vnd.msexcel',
+        'text/plain'
+    );
+
     // Validate whether selected file is a CSV file
-    if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $csvMimes)){
-        
-        // If the file is uploaded
-        if(is_uploaded_file($_FILES['file']['tmp_name'])){
-            
+    if (!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $fileMimes))
+    {
+
             // Open uploaded CSV file with read-only mode
             $csvFile = fopen($_FILES['file']['tmp_name'], 'r');
-            
+
             // Skip the first line
             fgetcsv($csvFile);
-            
+
             // Parse data from CSV file line by line
-            while(($line = fgetcsv($csvFile)) !== FALSE){
+             // Parse data from CSV file line by line
+            while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
+            {
                 // Get row data
-                $s_mc_number  = $line[0];
-                $s_company_name  = $line[1];
-                $street_address = $line[2];
-                $s_phone_number = $line[3];
-                $client_name = $line[4];
-                $pow = $line[5];
-                
-                // Check whether member already exists in the database with the same email
-                $prevQuery = "SELECT s_mc_number FROM  WHERE email = '".$line[1]."'";
-                $prevResult = $db->query($prevQuery);
-                
-                if($prevResult->num_rows > 0){
-                    // Update member data in the database
-                    $db->query("UPDATE members SET name = '".$name."', phone = '".$phone."', status = '".$status."', modified = NOW() WHERE email = '".$email."'");
-                }else{
-                    // Insert member data in the database
-                    $db->query("INSERT INTO members (name, email, phone, created, modified, status) VALUES ('".$name."', '".$email."', '".$phone."', NOW(), NOW(), '".$status."')");
+                // $s_company_name = "2346";
+                // $street_address = "eqw";
+                // $s_phone_number = "wqeuoiuywe";
+                // $s_mc_number = "wqeioi";
+                // $pow = "jikol";
+                // $client_name = "qsada90";
+                // $s_email = "236765z@gmail.com";
+                $s_company_name = $getData[0];
+                $street_address = $getData[1];
+                $s_phone_number = $getData[2];
+                $s_mc_number = $getData[3];
+                $pow = $getData[4];
+                $client_name = $getData[5];
+                $s_email = $getData[6];
+                $s_status = $getData[7];
+            
+
+                // If user already exists in the database with the same email
+                $query = "SELECT s_mc_number FROM va2pow WHERE s_company_name = '" . $getData[0] . "'";
+
+                $check = mysqli_query($conn, $query);
+
+                if ($check->num_rows > 0)
+                {
+                    mysqli_query($conn, "UPDATE va2pow SET s_mc_number = '" . $s_mc_number . "', s_company_name = '" . $s_company_name . "', street_address = '" . $street_address . "',  WHERE s_email = '" . $s_email . "'");
+                }
+                else
+                {
+                     mysqli_query($conn, "INSERT INTO va2pow (s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status) VALUES ( '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "')");
+
                 }
             }
-            
+
             // Close opened CSV file
             fclose($csvFile);
-            
-            $qstring = '?status=succ';
-        }else{
-            $qstring = '?status=err';
-        }
-    }else{
-        $qstring = '?status=invalid_file';
+
+            header("Location: index.php");
+        
+    }
+    else
+    {
+        echo "Please select valid file";
     }
 }
-
-// Redirect to the listing page
-header("Location: index.php".$qstring);

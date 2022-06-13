@@ -1,18 +1,10 @@
 <?php
-function getdb(){
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "sales_db";
-try {
-   
-    $conn = mysqli_connect($servername, $username, $password, $db);
-     //echo "Connected successfully"; 
-    }
-catch(exception $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
-    }
-    return $conn;
-}
+    $servername='localhost';
+    $username='root';
+    $password='';
+    $dbname = "sales_db";
+    $conn=mysqli_connect($servername,$username,$password,"$dbname");
+      if(!$conn){
+          echo "sales db not connected";
+        }
 ?>

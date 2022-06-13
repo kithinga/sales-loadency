@@ -1,25 +1,46 @@
- <?php
-    include "config.php";
-    ?>
 
- <body>
+<?php include "config.php"; ?>
+<!doctype html>
+<html lang="en">
 
-     <div class="container-fluid">
-         <div class="row">
-             <div class="col-lg-12">
-                 <div class="div">
-                     <form action="" method="post" name="frmCSVImport" id="frmCSVImport" enctype="multipart/form-data" onsubmit="return validateFile()">
-                         <div Class="input-row">
-                             <label>Coose your file. <a href="./import-template.csv" download>Download
-                                     template</a></label> <input type="file" name="file" id="file" class="file" accept=".csv,.xls,.xlsx">
-                             <div class="import">
-                                 <button type="submit" id="submit" name="import" class="btn-submit">Import
-                                     CSV and Save Data</button>
-                             </div>
-                         </div>
-                     </form>
-                 </div>
-             </div>
-         </div>
-     </div>
- </body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Import CSV File into MySQL using PHP</title>
+  <style>
+    .custom-file-input.selected:lang(en)::after {
+      content: "" !important;
+    }
+
+    .custom-file {
+      overflow: hidden;
+    }
+    .custom-file-input {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <form action="functions.php" method="post" enctype="multipart/form-data">
+      <div class="input-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFileInput" aria-describedby="customFileInput" name="file">
+          <label class="custom-file-label" for="customFileInput">Select file</label>
+        </div>
+        <div class="input-group-append">
+           <input type="submit" name="submit" value="Upload" class="btn btn-primary">
+        </div>
+      </div>
+  </form>
+  </div>
+
+</body>
+
+</html>

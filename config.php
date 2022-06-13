@@ -1,6 +1,5 @@
 
 <?php include "sales_database.php"?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
