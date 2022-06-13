@@ -247,6 +247,13 @@
 tr th{
     font-family: Montserrat;
     font-size:14px;
+    font-weight:700;
+    background-color:rgb(240, 247, 250)!important;
+}
+tr td{
+    font-family: Montserrat;
+    font-size:14px;
+    font-weight:500;
 }
 
 

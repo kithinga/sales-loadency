@@ -28,18 +28,18 @@
                     <div class="col">
                         <div class="collected-contacts shadow">
                             <?php
-                               $mc = 0;
-                               $mc_count = 0;
+                            $mc = 0;
+                            $mc_count = 0;
                             ?>
                             <?php while ($row = mysqli_fetch_array($va2pow_results)) { ?>
                                 <?php
                                 $mc = $row['collected_contacts'];
                                 $mc_count += $mc;
                                 ?>
-                                    <h2>Collected contacts <span class=""> <?php echo $mc_count; ?> </span><small>CONTACTS</small> </h2>
+                                <h2>Collected contacts <span class=""> <?php echo $mc_count; ?> </span><small>CONTACTS</small> </h2>
                             <?php
                             } ?>
-                         
+
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,6 @@
             </div>
         </div>
 
-
         <br><br><br>
         <div class="row justify-content-center ">
             <div class="col-lg-8 sales-listing">
@@ -91,27 +90,48 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
-                                                    <th scope="col">Company name</th>
-                                                    <th scope="col">Street address</th>
-                                                    <th scope="col">Phone number</th>
-                                                    <th scope="col">Mc number</th>
-                                                    <th scope="col">Pow</th>
                                                     <th scope="col">Client name</th>
-                                                    <th scope="col">Email address</th>
+                                                    <th scope="col">Company name</th>
+                                                    <th scope="col">Mc number</th>
+                                                    <th scope="col">Phone number</th>
+                                                    <th scope="col">Street address</th>
+                                                    <th scope="col">Pow</th>
+                                                    <th scope="col">Status</th>
+                                                    <!-- <th scope="col">Email address</th> -->
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                
-                                                <tr>
-                                                    <th scope="row">1</th>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                    <td>Random</td>
-                                                </tr>
+                                                <?php
+                                                    // $s_company_name = 0;
+                                                    // $street_address = 0;
+                                                    // $s_phone_number = 0;
+                                                    $n=0;
+                                                ?>
+
+                                                <?php while ($row = mysqli_fetch_array($said_no_results)) { ?>
+                                                    <?php
+                                                    $s_mc_number = $row['s_mc_number'];
+                                                    $s_company_name = $row['s_company_name'];
+                                                    $client_name = $row['client_name'];
+                                                    $street_address = $row['street_address'];
+                                                    $s_phone_number = $row['s_phone_number'];
+                                                    $pow = $row['pow'];
+                                                    $s_status = $row['s_status'];
+                                                    $s_email = $row['s_email'];
+                                                    ?>
+                                                    <tr>
+                                                        <td><?php echo $n++ ?></td>
+                                                           <td><?php echo $client_name; ?></td>
+                                                           <td><?php echo $s_company_name; ?></td>
+                                                           <td><?php echo $s_mc_number; ?></td>
+                                                           <td><?php echo $s_phone_number; ?></td>
+                                                            <td><?php echo $street_address; ?></td> 
+                                                            <td><?php echo $pow; ?></td> 
+                                                            <td><?php echo $s_status; ?></td> 
+                                                        
+                                                    </tr>
+                                                <?php
+                                                } ?>
                                             </tbody>
                                         </table>
                                     </div>
