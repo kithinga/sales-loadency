@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sales-header{
+    /* background-color:green;min-height:5rem;
+    border */
+    padding:1.6rem;
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin-bottom:1rem;
+    font-family: Montserrat;
+}
+
+.sales-card{
+      padding:1rem;
+      background-color: rgb(255, 255, 255);
+      color: rgb(19, 18, 18);
+      border-radius:9px;
+      text-align: center;
+      font-family: Montserrat;
+      min-height: 10rem;
+      padding-top:2rem;
+      border:solid 1px rgb(235, 237, 241);
+}
+
+.sales-card h5{
+   font-size:15.5px;
+   font-weight: 700;
+   /* letter-spacing:2px; */
+   color: rgb(12, 12, 12);
+}
+
+.sales-card p{
+   font-size:25px;
+   font-weight:900;
+   color: rgb(255, 255, 255);
+}
+
+.sales-title{
+    text-align: center;
+    font-family: Montserrat;
+}
+.sales-title p{
+    letter-spacing:3px;
+    color: rgb(109, 120, 184);
+    font-weight:500;
+}
+
+.sales-title h1{
+    margin-top:3rem;
+    margin-bottom:1rem;
+    text-align: center;
+    font-size: 27px;
+    font-weight:800;
+}
+
+.sales-listing{
+    /* background-color:rgb(124, 124, 194)!important; */
+    border: solid 1px rgb(236, 238, 238);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius:3px;
+}
+
+.accordion-item{
+    /* background-color:red; */
+    padding:1px;
+    margin-bottom: 2rem;
+    border-radius:1px solid rgb(224, 247, 247);
+    border: solid 1px rgb(241, 241, 245);
+}
+
+
+.accordion-button{
+    font-family: Montserrat;
+    border-radius:3px !important;;
+}
+
+.collected-contacts{
+    background-color:rgb(236, 240, 245);
+    padding: 1.5rem;
+    border-radius:4px;
+    margin-bottom:2rem;
+}
+
+.collected-contacts h2{
+   color: rgb(50, 81, 218);
+   font-size: 20px;
+   font-family: Montserrat;
+   font-weight: 700;
+}
+
+.customer{
+    background-color:rgb(20, 187, 20);
+    color:white!important;
+}
+
+.maybe{
+    background-color:rgb(219, 198, 11);
+}
+
+.no-answer{
+    background-color:rgb(52, 60, 104);
+}
+.no-answer h5{
+    color: white;
+}
+
+.said-no{
+    background-color:rgb(255, 77, 32);
+}
+
+.customers-table{
+    background-color:rgb(255, 255, 255);
+    /* padding:1rem; */
+    border:1px solid rgb(255, 255, 255);
+    border-radius:3px;
+    border: solid 1px rgb(224, 222, 222);
+    transition-duration: 1s;
+}
+.accordion-button:focus{
+   background-color:rgb(36, 99, 172) !important;
+   /* background-color:rgb(22, 170, 41) !important; */
+   border:none !important;
+   border: solid 4px white;
+   color:white !important;
+   font-weight:700;
+}
+.accordion-body{
+    /* background-color: yellowgreen; */
+    padding:1px;
+    margin-top: 6px;
+}
+
