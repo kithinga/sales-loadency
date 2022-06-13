@@ -1,4 +1,4 @@
-<?php include "config.php";?>
+<!-- <?php include "config.php";?>
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -14,4 +14,4 @@
     </div>
 </body>
 
-
+ -->
