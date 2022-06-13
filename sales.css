@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+
 }
 
 .sales-header{
@@ -21,7 +22,15 @@
       font-family: Montserrat;
       min-height: 10rem;
       padding-top:2rem;
-      border:solid 1px rgb(235, 237, 241);
+      transition-duration: 1s;
+      border:solid 1px rgb(205, 208, 216);
+}
+
+.sales-card:hover{
+      padding:1rem;
+      background-color: rgb(54, 170, 206);
+      border: solid 2px rgb(69, 70, 83);
+     
 }
 
 .sales-card h5{
@@ -79,14 +88,19 @@
 
 .collected-contacts{
     background-color:rgb(236, 240, 245);
-    padding: 1.5rem;
-    border-radius:4px;
+    padding: 3rem;
+    border-radius:10px;
+    transition-duration: 1s;
     margin-bottom:2rem;
+}
+.collected-contacts:hover{
+    background-color: rgb(54, 170, 206);
+    border: solid 2px rgb(62, 98, 122);
 }
 
 .collected-contacts h2{
-   color: rgb(106, 91, 243);
-   font-size: 20px;
+   color: rgb(244, 242, 255);
+   font-size: 26px;
    font-family: Montserrat;
    font-weight: 700;
 }
@@ -101,11 +115,11 @@
 }
 
 .no-answer{
-    background-color:rgb(52, 60, 104);
+    background-color:rgb(131, 135, 158);
 }
-.no-answer h5{
+/* .no-answer h5{
     color: white;
-}
+} */
 
 .said-no{
     background-color:rgb(255, 77, 32);
@@ -134,8 +148,24 @@
 }
 
 .collected-contacts{
-    /* background-color: rgb(25, 25, 34); */
+    background-color:rgb(52, 60, 104);
     border: solid 2px rgb(217, 226, 235);
+}
+.collected-contacts small{
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgb(5, 247, 187);
+    /* margin-left: 1rem; */
+    padding-bottom: 6.5px;
+}
+.collected-contacts span{
+    color: rgb(236, 205, 26) !important;
+    margin-left: 15rem;
+    font-size: 40px;
+    font-weight: 200;
+    /* background-color: yellow; */
+    border-bottom: 1px solid rgb(61, 235, 38);
 }
 
 .form-container {
@@ -213,4 +243,6 @@
 	width: 100%;
 	margin-bottom: 20px;
 }
+
+
 

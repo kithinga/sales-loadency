@@ -26,35 +26,46 @@
             <div class="col-lg-6">
                 <div class="row">
                     <div class="col">
-                        <div class="collected-contacts">
-                            <h2>Collected contacts</h2>
-                            <p> 43568 </p>
+                        <div class="collected-contacts shadow">
+                            <?php
+                               $mc = 0;
+                               $mc_count = 0;
+                            ?>
+                            <?php while ($row = mysqli_fetch_array($va2pow_results)) { ?>
+                                <?php
+                                $mc = $row['collected_contacts'];
+                                $mc_count += $mc;
+                                ?>
+                                    <h2>Collected contacts <span class=""> <?php echo $mc_count; ?> </span><small>CONTACTS</small> </h2>
+                            <?php
+                            } ?>
+                         
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center sales-boxes">
                     <div class="col-lg-3">
-                        <div class="sales-card shad-sm customer">
+                        <div class="sales-card shad-sm customer shadow">
                             <h5>Customers</h5>
-                            <p>1,345 + </p>
+                            <p><?php echo $data['customer_count']; ?></p>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="sales-card shado-sm maybe">
+                        <div class="sales-card shado-sm maybe shadow">
                             <h5>Maybe</h5>
-                            <p>5,768 +</p>
+                            <p><?php echo $data['maybe_count']; ?></p>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <div class="sales-card shado-sm no-answer">
+                        <div class="sales-card shado-sm no-answer shadow">
                             <h5>No answer</h5>
-                            <p>097 + </p>
+                            <p><?php echo $data['no_answer_count']; ?> </p>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="sales-card shado-sm said-no">
                             <h5>Said no</h5>
-                            <p>567 +</p>
+                            <p><?php echo $data['no_count']; ?></p>
                         </div>
                     </div>
                 </div>
