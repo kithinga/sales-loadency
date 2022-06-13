@@ -5,7 +5,7 @@
             <div class="col">
                 <div class="upload_form">
                     <form action="sales_database.php" method="post" enctype="multipart/form-data">
-                        <input type="file" name="csvfile" required="required">
+                        <input type="file" name="csvfile" >
                         <input type="submit" value="upload">
                     </form>
                 </div>
