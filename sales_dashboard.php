@@ -57,7 +57,6 @@
                             <p>567 +</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -89,7 +88,7 @@
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
-                                             
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -128,8 +127,8 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                            <div class="maybe-table">
+                                <div class="accordion-body">
+                                    <div class="maybe-table">
                                         <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
@@ -142,7 +141,7 @@
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
-                                             
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -171,7 +170,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
                         <div class="accordion-item">
@@ -182,7 +181,7 @@
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-                                <div class="no-answer-table">
+                                    <div class="no-answer-table">
                                         <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
@@ -195,7 +194,7 @@
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
-                                             
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -234,8 +233,8 @@
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                            <div class="said-no-table">
+                                <div class="accordion-body">
+                                    <div class="said-no-table">
                                         <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
@@ -248,7 +247,7 @@
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
                                                     <th scope="col">Random</th>
-                                             
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -277,7 +276,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
