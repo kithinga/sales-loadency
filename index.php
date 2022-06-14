@@ -1,5 +1,5 @@
 <?php include "config.php"  ?>
-<head>
+  <head>
 <link href="sales.css" rel="stylesheet" type="text/css" />
 <script src="jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
@@ -14,3 +14,12 @@ function validateFile() {
   }
 </script>
 </head>
+
+<body>
+  <div class="container-fluid">
+    
+  </div>
+  
+</body>
+
+
