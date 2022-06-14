@@ -281,4 +281,24 @@ tr td{
 }
 
 
+/* [User buttons] */
+.user-buttons{
+    background-color: grey;
+    border-radius: 4px;
+    margin-top: 3rem;
+}
+.user-buttons button{
+    height: 4rem;
+    /* width: 10rem; */
+}
+
+.user-start{
+    background-color: rgb(247, 238, 238);
+    border: solid 1px grey;
+    border-radius: 6px;
+    min-height: 10rem;
+    width: 9vw;
+    margin: 0.5rem;
+}
+
 
