@@ -67,8 +67,8 @@
 .sales-listing{
     /* background-color:rgb(124, 124, 194)!important; */
     border: solid 1px rgb(236, 238, 238);
-    margin: 1rem;
-    padding: 2rem;
+    margin: 10px;
+    padding: 1rem;
     border-radius:3px;
 }
 
@@ -88,7 +88,7 @@
 
 .collected-contacts{
     background-color:rgb(236, 240, 245);
-    padding: 3rem;
+    padding: 3.1rem;
     border-radius:10px;
     transition-duration: 1s;
     margin-bottom:2rem;
@@ -109,20 +109,34 @@
     background-color:rgb(20, 187, 20);
     color:white!important;
 }
+.customer-bt button:focus{
+    background-color:rgb(20, 187, 20)!important;
+    color: white!important;
+    outline: none!important;
+}
 
 .maybe{
     background-color:rgb(219, 198, 11);
 }
 
+.maybe-bt button:focus{
+    background-color:rgb(219, 198, 11)!important;
+}
+
 .no-answer{
     background-color:rgb(131, 135, 158);
 }
-/* .no-answer h5{
-    color: white;
-} */
+.no-answer-bt button:focus{
+    background-color:rgb(131, 135, 158);
+}
 
 .said-no{
     background-color:rgb(255, 77, 32);
+}
+
+.said-no-bt button:focus{
+    background-color:rgb(255, 77, 32);
+    
 }
 
 .customers-table{
@@ -133,14 +147,19 @@
     border: solid 1px rgb(224, 222, 222);
     transition-duration: 1s;
 }
-.accordion-button:focus{
-   background-color:rgb(36, 99, 172) !important;
-   /* background-color:rgb(22, 170, 41) !important; */
-   border:none !important;
-   border: solid 4px white;
-   color:white !important;
-   font-weight:700;
+
+.accordion-button{
+   border:solid 2px rgb(255, 255, 255) !important;
+   height: 4rem;
+   transition-duration: 1.4s;
 }
+
+.accordion-button:hover{
+   /* border:solid 2px rgb(189, 209, 231) !important; */
+   border-radius: 6px!important;
+   background-color: rgb(221, 224, 243);
+}
+
 .accordion-body{
     /* background-color: yellowgreen; */
     padding:1px;
@@ -151,6 +170,7 @@
     background-color:rgb(52, 60, 104);
     border: solid 2px rgb(217, 226, 235);
 }
+
 .collected-contacts small{
     font-size: 12px;
     font-weight: 100;
@@ -161,7 +181,7 @@
 }
 .collected-contacts span{
     color: rgb(236, 205, 26) !important;
-    margin-left: 15rem;
+    margin-left: 7rem;
     font-size: 40px;
     font-weight: 200;
     /* background-color: yellow; */
@@ -254,6 +274,10 @@ tr td{
     font-family: Montserrat;
     font-size:14px;
     font-weight:500;
+}
+
+.waiting-call p{
+    color: rgb(72, 73, 75);
 }
 
 
