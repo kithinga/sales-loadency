@@ -13,11 +13,11 @@
                 <div class="assigned-title row">
                     <div class="col">
                         <div>
-                            <h1>Sales by Kithinga <span><i class="fa fa-user"></i></span></h1>
+                            <h1>SALES BY KITHINGA <span><i class="fa fa-user"></i></span></h1>
                         </div>
                     </div>
                 </div>
-                <div class="row assigned-card-area">
+                <div class="row assigned-card-area ">
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>All time calls</h6>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card ">
-                            <h6>Customer</h6>
+                            <h6>Won customers</h6>
                             <p>27</p>
                             <div class="cspan shadow"></div>
                         </div>
@@ -75,7 +75,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
+                       
                         <div class="assigned-table">
+                        <h5>ASSIGNED CONTACTS</h5>
+                        
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -84,6 +87,9 @@
                                         <th scope="col">Company name</th>
                                         <th scope="col">Mc number</th>
                                         <th scope="col">Phone number</th>
+                                        <th scope="col">Last called</th>
+                                        <th scope="col">Times called</th>
+                                        <th scope="col">Called by</th>
                                         <th scope="col">Call status</th>
                                         <th scope="col">Street address</th>
                                         <th scope="col">Pow</th>
@@ -116,6 +122,9 @@
                                             <td><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
+                                            <td>34mins ago</td>
+                                            <td>4</td>
+                                            <td>Tesfae</td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>" >
                                                 <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="trip_id" value="<?php echo $trip_id; ?>" />
@@ -130,10 +139,11 @@
                                                                 <option value='said-no'>said-no</option>
                                                                 <option value='customer'>customer</option>
                                                                 <option value='maybe'>maybe</option>
+                                                                <option value='maybedecoy'>maybedecoy</option>
                                                             </select>
                                                             <label for="stat-com">Status-comments</label>
                                                             <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
-                                                            <button class="edit-status-btn" type="submit" name="edit-status">Update status</button>
+                                                            <button class="edit-status-btn" type="submit" name="edit-contact-status">Update status</button>
                                                         </div>
                                                     </div>
                                                 </form>

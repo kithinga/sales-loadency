@@ -356,10 +356,26 @@ border-bottom: 2px solid rgb(233, 229, 229);
 
 .assigned-table{
     padding:2rem;
+ 
+}
+.assigned-table thead{
+    height:3.3rem!important;
+
+ 
+}
+.assigned-table h5{
+   color: rgb(59, 59, 59);
+   font-family:Roboto;
+   font-size: 18px;
+   font-weight: 900;
+   margin: 7px 0px 17px 1px;
 }
 
 .assigned-card-area{
     padding:2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    background-color: rgb(245, 245, 245);
 }
 
 .assigned-card{
@@ -423,7 +439,7 @@ border-bottom: 2px solid rgb(233, 229, 229);
 .assigned-title h1{
     margin: 1.6rem;
     color: rgb(70, 75, 90);
-    font-size:16px;
+    font-size:19px;
     /* letter-spacing:1px; */
     font-weight: 800;
     font-family: Montserrat;
