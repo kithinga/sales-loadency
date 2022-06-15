@@ -302,3 +302,154 @@ tr td{
 }
 
 
+.my-header h4{
+    letter-spacing:2px;
+    font-weight: 900;
+    margin: 2rem;
+    font-family: Montserrat;
+   
+}
+
+.my-header{
+border-bottom: 2px solid rgb(233, 229, 229);
+}
+
+.mkokoteni img{
+    height:10rem;
+    width:10rem;
+}
+
+.side-nav{
+    
+    /* min-height: 100vh; */
+    padding:6px;
+}
+.home-button button i{
+    margin-left: 9px;
+    color: rgb(133, 133, 133);
+}
+
+.assigned-area{
+    border-left: 1px solid rgb(221, 216, 216);
+    /* padding:1rem; */
+    /* min-height:100vh; */
+}
+
+.home-button button{
+    color: rgb(32, 31, 31);
+    /* border-radius:6px; */
+    border: none;
+    /* border-top: solid rgb(222, 225, 231) 2px; */
+    border-bottom: solid rgb(222, 225, 231) 1px;
+    background-color:white;
+    font-weight: 500;
+    font-size:14px;
+    width:100%;
+    padding: 21px 1px 21px 1px;
+    transition-duration:1.4s;
+    /* min-width:17.4rem; */
+}
+.home-button button:hover{
+    background-color:rgb(235, 235, 235);
+    border-radius: 4px;
+}
+
+.assigned-table{
+    padding:2rem;
+}
+
+.assigned-card-area{
+    padding:2rem;
+}
+
+.assigned-card{
+    /* border-radius:6px; */
+    /* background-color:rgb(242, 245, 248); */
+    margin-bottom: 10px;
+    border-right: 1px rgb(221, 215, 215) solid;
+    padding: 2rem;
+    text-align:center;
+    font-family: Montserrat;
+}
+.assigned-card h6{
+    font-weight: 700;
+    font-size: 13px;
+    color:rgb(58, 56, 56)
+}
+.assigned-card p{
+    /* font-weight: 700; */
+    font-size:26px;
+    color: grey;
+}
+.customer h2{
+    background-color:rgb(123, 151, 123);
+}
+
+.cspan {
+    background-color: rgb(15, 197, 76);
+    height:1rem;
+    border-radius: 9px;
+    width:2rem;
+}
+
+.snspan {
+    background-color: rgb(241, 25, 18);
+    height:1rem;
+    border-radius: 9px;
+    width:2rem;
+}
+
+.mbspan {
+    background-color: rgb(226, 223, 5);
+    height:1rem;
+    border-radius: 9px;
+    /* border: rgb(235, 230, 230) 1px solid; */
+    width:3rem;
+}
+.naspan {
+    background-color: rgb(74, 85, 100);
+    height:1rem;
+    border-radius: 9px;
+    width:2.5rem;
+}
+
+.assigned-title{
+    border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.assigned-title h1{
+    margin: 1.6rem;
+    color: rgb(70, 75, 90);
+    font-size:16px;
+    /* letter-spacing:1px; */
+    font-weight: 800;
+    font-family: Montserrat;
+}
+
+.assigned-title h1 span{
+    float: right;
+    margin-right:3rem;
+    border-radius: 30rem;
+    border: solid 1px rgb(196, 191, 191);
+    padding:10px 10px 0px 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    transition-duration: 2s;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }

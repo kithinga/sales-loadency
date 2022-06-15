@@ -1,24 +1,17 @@
 <?php include "config.php" ?>
+<?php include "shared_header.php" ?>
 
 <body>
     <div class="container-fluid">
-
-        <div class="row no-gutters sales-header">
-            <div class="col-lg-4">
-                <div class="">
-                    <h4>Sales logo</h4>
-                </div>
-            </div>
-        </div>
-
         <div class="row">
-            <div class="col">
+            <div class="col-lg-12">
                 <div class="sales-title">
                     <h1>Sales at loadency
                     </h1>
                     <p>INSIGHTS</p>
                     <br><br>
                 </div>
+                
             </div>
         </div>
 
