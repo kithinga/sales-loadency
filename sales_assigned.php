@@ -4,7 +4,6 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-
             <div class="col-lg-1">
                 <div class="row side-nav">
                     <div class="home-button"><button class="">Back home <i class="fa fa-home"></i></button></div>
@@ -85,9 +84,9 @@
                                         <th scope="col">Company name</th>
                                         <th scope="col">Mc number</th>
                                         <th scope="col">Phone number</th>
+                                        <th scope="col">Call status</th>
                                         <th scope="col">Street address</th>
                                         <th scope="col">Pow</th>
-                                        <th scope="col">Status</th>
                                         <!-- <th scope="col">Email address</th> -->
                                     </tr>
                                 </thead>
@@ -117,32 +116,31 @@
                                             <td><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
-                                            <td><?php echo $street_address; ?></td>
-                                            <td><?php echo $pow; ?></td>
-                                            <td class="status-box " title="Current status is - <?php echo $s_status ?>">
-                                                <form class="edit-status-form" method="post" action="update.php">
+                                            <td class="status-box " title="Current status is - <?php echo $s_status ?>" >
+                                                <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="trip_id" value="<?php echo $trip_id; ?>" />
                                                     <div class="dropdown">
                                                         <span> <?php echo $s_status ?></span>
                                                         <div class="dropdown-content">
-                                                            <p>Company name <?php echo $s_company_name; ?></p>
+                                                            <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
                                                             <label for="sele">Current-status</label>
-                                                            <select name='trip_status' id="sele" class="edit-status-input">
+                                                            <select name='s_status' id="sele" class="edit-status-input">
                                                                 <option value='<?php echo $s_status ?>' selected> <?php echo $s_status ?></option>
                                                                 <option value='no-answer'>no-answer</option>
                                                                 <option value='said-no'>said-no</option>
                                                                 <option value='customer'>customer</option>
                                                                 <option value='maybe'>maybe</option>
-                                                            </select><br>
+                                                            </select>
                                                             <label for="stat-com">Status-comments</label>
                                                             <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
                                                             <button class="edit-status-btn" type="submit" name="edit-status">Update status</button>
                                                         </div>
                                                     </div>
                                                 </form>
+                                                <!-- <i class="fa fa-caret-down"></i> -->
                                             </td>
-                                            <td><?php echo $s_status; ?></td>
-
+                                            <td><?php echo $street_address; ?></td>
+                                            <td><?php echo $pow; ?></td>
                                         </tr>
                                     <?php
                                     } ?>
@@ -154,6 +152,4 @@
             </div>
         </div>
     </div>
-
-    
 </body>
