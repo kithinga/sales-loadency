@@ -71,7 +71,6 @@
                         </div>
                     </div>
 
-
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
@@ -98,9 +97,13 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    // $s_company_name = 0;
-                                    // $street_address = 0;
-                                    // $s_phone_number = 0;
+                                    
+                                    date_default_timezone_set('Australia/Melbourne');
+                                    $file = $_SERVER["SCRIPT_NAME"];
+                                    $break = Explode('/', $file);
+                                    $pfile = $break[count($break) - 1];
+                                    echo "" .date("d F Y \at g:ia",filemtime($pfile));
+                                    
                                     $n = 1;
                                     ?>
 
@@ -135,7 +138,6 @@
                                                             <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
                                                             <label for="sele">Current-status</label>
                                                             <select name='s_status' id="sele" class="edit-status-input">
-                                                                <option value='<?php echo $s_status ?>' selected> <?php echo $s_status ?></option>
                                                                 <option value='no-answer'>no-answer</option>
                                                                 <option value='said-no'>said-no</option>
                                                                 <option value='customer'>customer</option>
