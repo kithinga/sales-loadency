@@ -115,6 +115,7 @@
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
                                         $status_comments = "developer mode";
+                                     
                                         ?>
                                         <tr>
                                             <td><?php echo $n++ ?></td>
@@ -123,7 +124,7 @@
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
                                             <td>34mins ago</td>
-                                            <td>4</td>
+                                            <td>4 times called</td>
                                             <td>Tesfae</td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>" >
                                                 <form class="edit-status-form" method="post" action="update_status.php">
