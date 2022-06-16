@@ -96,19 +96,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
 
-                                    date_default_timezone_set('Africa/Nairobi');
-                                    $file = $_SERVER["SCRIPT_NAME"];
-                                    $break = Explode('/', $file);
-                                    $pfile = $break[count($break) - 1];
-                                    echo "" . date("d F Y \at g:ia", filemtime($pfile));
+                                    <?php
                                     $n = 1;
                                     $times_called = 0;
-
-
-
-
                                     ?>
 
                                     <?php while ($row = mysqli_fetch_array($maybe_results)) { ?>
@@ -122,33 +113,33 @@
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
                                         $times_called = $row['times_called'];
-                                        $last_changed = $row['last_changed'];
-                                        $now = $row['now'];
-
-                                       
-                                        $date = new DateTime($last_changed);
-                                        $now = new DateTime($now);
-
+                                        $last_changed = $row['last_changed'];  
+                                        $date = date('Y-m-d H:i:s');
                                         
-
-
-                                        // $interval = date_diff($last_changed, $now);
-                                        // echo $interval->format($differenceFormat);
-
+                                        $now = time(); // 
+                                        $your_date = strtotime($last_changed);
+                                        $datediff = $now - $your_date;
+          
+                                        $minutes = round(abs($datediff) / 60);
+                                      
                                         ?>
                                         <tr>
+                                        
                                             <td><?php echo $n++ ?></td>
                                             <td><?php echo $client_name; ?></td>
                                             <td><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
-                                            <td><?php echo $date->diff($now)->format("%d d, %h hrs, %i mins"); ?></td>
+                                            <td><?php echo $minutes; ?> <small> mins ago</small></td>
+
                                             <td><?php echo $times_called; ?></td>
                                             <td>Tesfae</td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                 <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
                                                     <input class="edit-status-input" type="hidden" name="times_called" value="<?php echo $times_called + 1; ?>" />
+                                                    <input class="edit-status-input" type="hidden" name="last_changed" value="" />
+
                                                     <div class="dropdown">
                                                         <span> <?php echo $s_status ?></span>
                                                         <div class="dropdown-content">

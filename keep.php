@@ -28,4 +28,6 @@
  else{
      echo "connection failed";
  }
+
+ echo $date->diff($now)->format("%d d, %h hrs, %i mins"); 
 ?>
