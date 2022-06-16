@@ -5,8 +5,9 @@
     if (isset($_POST['edit-contact-status'])) {
         $s_status = $_POST['s_status'];
         $s_mc_number = $_POST['s_mc_number'];
-        mysqli_query($conn,"UPDATE va2pow SET  s_status = '$s_status' WHERE s_mc_number = '$s_mc_number'");
+        $times_called = $_POST['times_called'];
+        mysqli_query($conn,"UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called' WHERE s_mc_number = '$s_mc_number'");
     }
-    header( 'Location:index.php' ) ;
+    header( 'Location:sales_assigned.php' ) ;
 
 ?>

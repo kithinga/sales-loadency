@@ -74,10 +74,10 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                       
+
                         <div class="assigned-table">
-                        <h5>ASSIGNED CONTACTS</h5>
-                        
+                            <h5>ASSIGNED CONTACTS</h5>
+
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -97,14 +97,18 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    
-                                    date_default_timezone_set('Australia/Melbourne');
+
+                                    date_default_timezone_set('Africa/Nairobi');
                                     $file = $_SERVER["SCRIPT_NAME"];
                                     $break = Explode('/', $file);
                                     $pfile = $break[count($break) - 1];
-                                    echo "" .date("d F Y \at g:ia",filemtime($pfile));
-                                    
+                                    echo "" . date("d F Y \at g:ia", filemtime($pfile));
                                     $n = 1;
+                                    $times_called = 0;
+                                    $now = time ();
+
+                                    // $interval = date_diff($datetime1, $datetime2);
+                                    // echo $interval->format($differenceFormat);
                                     ?>
 
                                     <?php while ($row = mysqli_fetch_array($maybe_results)) { ?>
@@ -117,8 +121,9 @@
                                         $pow = $row['pow'];
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
+                                        $times_called = $row['times_called'];
                                         // $status_comments = "developer mode";
-                                     
+
                                         ?>
                                         <tr>
                                             <td><?php echo $n++ ?></td>
@@ -126,12 +131,13 @@
                                             <td><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
-                                            <td>34mins ago</td>
-                                            <td>4 times called</td>
+                                            <td><?php echo $now ?></td>
+                                            <td><?php echo $times_called; ?></td>
                                             <td>Tesfae</td>
-                                            <td class="status-box " title="Current status is - <?php echo $s_status ?>" >
+                                            <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                 <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
+                                                    <input class="edit-status-input" type="hidden" name="times_called" value="<?php echo $times_called + 1; ?>" />
                                                     <div class="dropdown">
                                                         <span> <?php echo $s_status ?></span>
                                                         <div class="dropdown-content">
@@ -160,7 +166,7 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>
