@@ -105,10 +105,10 @@
                                     echo "" . date("d F Y \at g:ia", filemtime($pfile));
                                     $n = 1;
                                     $times_called = 0;
-                                    $now = time ();
 
-                                    // $interval = date_diff($datetime1, $datetime2);
-                                    // echo $interval->format($differenceFormat);
+
+
+
                                     ?>
 
                                     <?php while ($row = mysqli_fetch_array($maybe_results)) { ?>
@@ -122,7 +122,18 @@
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
                                         $times_called = $row['times_called'];
-                                        // $status_comments = "developer mode";
+                                        $last_changed = $row['last_changed'];
+                                        $now = $row['now'];
+
+                                       
+                                        $date = new DateTime($last_changed);
+                                        $now = new DateTime($now);
+
+                                        
+
+
+                                        // $interval = date_diff($last_changed, $now);
+                                        // echo $interval->format($differenceFormat);
 
                                         ?>
                                         <tr>
@@ -131,7 +142,7 @@
                                             <td><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
-                                            <td><?php echo $now ?></td>
+                                            <td><?php echo $date->diff($now)->format("%d d, %h hrs, %i mins"); ?></td>
                                             <td><?php echo $times_called; ?></td>
                                             <td>Tesfae</td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>">
