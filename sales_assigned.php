@@ -117,7 +117,7 @@
                                         $pow = $row['pow'];
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
-                                        $status_comments = "developer mode";
+                                        // $status_comments = "developer mode";
                                      
                                         ?>
                                         <tr>
@@ -131,21 +131,21 @@
                                             <td>Tesfae</td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>" >
                                                 <form class="edit-status-form" method="post" action="update_status.php">
-                                                    <input class="edit-status-input" type="hidden" name="trip_id" value="<?php echo $trip_id; ?>" />
+                                                    <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
                                                     <div class="dropdown">
                                                         <span> <?php echo $s_status ?></span>
                                                         <div class="dropdown-content">
                                                             <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
                                                             <label for="sele">Current-status</label>
                                                             <select name='s_status' id="sele" class="edit-status-input">
+                                                                <option value='<?php echo $s_status ?>' selected><?php echo $s_status ?></option>
                                                                 <option value='no-answer'>no-answer</option>
                                                                 <option value='said-no'>said-no</option>
                                                                 <option value='customer'>customer</option>
                                                                 <option value='maybe'>maybe</option>
-                                                                <option value='maybedecoy'>maybedecoy</option>
                                                             </select>
                                                             <label for="stat-com">Status-comments</label>
-                                                            <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
+                                                            <!-- <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea> -->
                                                             <button class="edit-status-btn" type="submit" name="edit-contact-status">Update status</button>
                                                         </div>
                                                     </div>
