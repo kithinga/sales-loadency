@@ -28,4 +28,10 @@ SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM va2pow");
 $data = mysqli_fetch_assoc($res);
 
+
+// SALES ASSIGNED PERSONAL DASHBOARD
+// All time total calls are$res = mysqli_query($conn, "SELECT
+$all_time_count = mysqli_query($conn, "SELECT SUM(times_called) AS all_time_count, COUNT(s_phone_number)AS total_contacts from va2pow");
+$dat2 = mysqli_fetch_assoc($all_time_count);
+
 ?>

@@ -20,12 +20,16 @@
                     </div>
                 </div>
                 <div class="row assigned-card-area ">
+                <div class="col-lg-2">
+                        <div class="assigned-card">
+                            <h6>Collected contacts</h6>
+                            <p class="coll-c"><?php echo $dat2['total_contacts']?></p>
+                        </div>
+                    </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
-                        <?php while ($row = mysqli_fetch_array($allcalls_results)) { ?>
                             <h6>All time calls</h6>
-                            <p>74,232</p>
-                            <?php }?>
+                            <p> <?php echo $dat2['all_time_count']?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -40,12 +44,7 @@
                             <p>132</p>
                         </div>
                     </div>
-                    <div class="col-lg-2">
-                        <div class="assigned-card">
-                            <h6>Contacts assigned</h6>
-                            <p>2357</p>
-                        </div>
-                    </div>
+                  
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>No answer</h6>
