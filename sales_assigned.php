@@ -127,7 +127,6 @@
                                       
                                         ?>
                                         <tr>
-                                        
                                             <td><?php echo $n++ ?></td>
                                             <td><?php echo $client_name; ?></td>
                                             <td><?php echo $s_company_name; ?></td>
