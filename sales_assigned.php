@@ -29,47 +29,47 @@
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>All time calls</h6>
-                            <p> <?php echo $dat2['all_time_count']?></p>
+                            <p class="otc"> <?php echo $dat2['all_time_count']?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
-                            <h6>Past week calls</h6>
-                            <p>832</p>
+                            <h6>Waiting calls</h6>
+                            <p><?php echo $dat2['waiting_count']?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Calls today</h6>
-                            <p>132</p>
+                            <p>01011</p>
                         </div>
                     </div>
                   
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>No answer</h6>
-                            <p class="nadirer">259</p>
+                            <p class="nadirer"><?php echo $dat2['na_count']?></p>
                             <div class="naspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Maybe</h6>
-                            <p class="mbdirer">67</p>
+                            <p class="mbdirer"><?php echo $dat2['mb_count']?></p>
                             <div class="mbspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Said no</h6>
-                            <p class="nodirer">48</p>
+                            <p class="nodirer"><?php echo $dat2['n_count']?></p>
                             <div class="snspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card ">
                             <h6>Won customers</h6>
-                            <p class="cdirer">27</p>
+                            <p class="cdirer"><?php echo $dat2['cus_count']?></p>
                             <div class="cspan shadow"></div>
                         </div>
                     </div>

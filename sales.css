@@ -397,7 +397,7 @@ border-bottom: 2px solid rgb(233, 229, 229);
 .assigned-card p{
     /* font-weight: 700; */
     font-size:23px;
-    color: rgb(93, 135, 170);
+    /* color: rgb(123, 135, 145); */
     /* color: rgb(42, 112, 192); */
 }
 
@@ -414,17 +414,24 @@ border-bottom: 2px solid rgb(233, 229, 229);
 
 .cdirer{
     color: rgb(23, 190, 79)!important;
+    font-weight: 700;
 }
 
 .nodirer{
     color: rgb(241, 25, 18)!important;
+    font-weight: 700;
 }
 
 .mbdirer{
+    font-weight: 700;
     color: rgb(150, 148, 19)!important;
 }
 .nadirer{
     color: rgb(64, 88, 121)!important;
+    font-weight: 700;
+}
+.otc{
+    font-weight: 700;
 }
 
 .snspan {
@@ -513,6 +520,7 @@ border-bottom: 2px solid rgb(233, 229, 229);
       border: solid 1px rgb(202, 202, 202);
 
   }
+
    .dropdown-content select{
       border-radius: 3px;
       min-height:2rem;

@@ -31,7 +31,14 @@ $data = mysqli_fetch_assoc($res);
 
 // SALES ASSIGNED PERSONAL DASHBOARD
 // All time total calls are$res = mysqli_query($conn, "SELECT
-$all_time_count = mysqli_query($conn, "SELECT SUM(times_called) AS all_time_count, COUNT(s_phone_number)AS total_contacts from va2pow");
-$dat2 = mysqli_fetch_assoc($all_time_count);
+$value_counts = mysqli_query($conn, "SELECT SUM(times_called) AS all_time_count,
+SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS cus_count,
+SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_count,
+SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS n_count,
+SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
+SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
+
+ COUNT(s_phone_number)AS total_contacts from va2pow");
+$dat2 = mysqli_fetch_assoc($value_counts);
 
 ?>
