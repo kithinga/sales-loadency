@@ -9,8 +9,9 @@
         $now = date('Y-m-d H:i:s');
         $last_changed = $now;
       
-        mysqli_query($conn,"UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', last_changed = '$last_changed' WHERE s_mc_number = '$s_mc_number'");
+        mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', last_changed = '$last_changed' WHERE s_mc_number = '$s_mc_number'");
     }
+    
     header( 'Location:sales_assigned.php' ) ;
 
 ?>

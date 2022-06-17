@@ -396,8 +396,9 @@ border-bottom: 2px solid rgb(233, 229, 229);
 
 .assigned-card p{
     /* font-weight: 700; */
-    font-size:26px;
-    color: grey;
+    font-size:23px;
+    color: rgb(93, 135, 170);
+    /* color: rgb(42, 112, 192); */
 }
 
 .customer h2{
@@ -409,6 +410,21 @@ border-bottom: 2px solid rgb(233, 229, 229);
     height:1rem;
     border-radius: 9px;
     width:2rem;
+}
+
+.cdirer{
+    color: rgb(23, 190, 79)!important;
+}
+
+.nodirer{
+    color: rgb(241, 25, 18)!important;
+}
+
+.mbdirer{
+    color: rgb(150, 148, 19)!important;
+}
+.nadirer{
+    color: rgb(64, 88, 121)!important;
 }
 
 .snspan {
@@ -425,6 +441,7 @@ border-bottom: 2px solid rgb(233, 229, 229);
     /* border: rgb(235, 230, 230) 1px solid; */
     width:3rem;
 }
+
 .naspan {
     background-color: rgb(74, 85, 100);
     height:1rem;

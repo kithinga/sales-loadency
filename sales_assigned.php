@@ -1,6 +1,8 @@
 <?php include "config.php" ?>
 <?php include "shared_header.php" ?>
 
+
+
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -20,8 +22,10 @@
                 <div class="row assigned-card-area ">
                     <div class="col-lg-2">
                         <div class="assigned-card">
+                        <?php while ($row = mysqli_fetch_array($allcalls_results)) { ?>
                             <h6>All time calls</h6>
                             <p>74,232</p>
+                            <?php }?>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -45,28 +49,28 @@
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>No answer</h6>
-                            <p>259</p>
+                            <p class="nadirer">259</p>
                             <div class="naspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Maybe</h6>
-                            <p>67</p>
+                            <p class="mbdirer">67</p>
                             <div class="mbspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Said no</h6>
-                            <p>48</p>
+                            <p class="nodirer">48</p>
                             <div class="snspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card ">
                             <h6>Won customers</h6>
-                            <p>27</p>
+                            <p class="cdirer">27</p>
                             <div class="cspan shadow"></div>
                         </div>
                     </div>
@@ -160,6 +164,7 @@
                                                 </form>
                                                 <!-- <i class="fa fa-caret-down"></i> -->
                                             </td>
+                                            
                                             <td><?php echo $street_address; ?></td>
                                             <td><?php echo $pow; ?></td>
                                         </tr>
