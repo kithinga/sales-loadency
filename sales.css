@@ -578,3 +578,9 @@ border-bottom: 2px solid rgb(233, 229, 229);
     font-weight: 700;
    
   }
+
+  .lmis{
+    font-weight: 900;
+    font-size:5rem;
+    font-family: Montserrat;
+  }
