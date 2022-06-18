@@ -21,13 +21,20 @@ include "config.php";
 <body>
   <div class="container-fluid">
     <div class="row justify-content-center">
+       <div class="index-top">
+        
+       </div>
       <div class="col-lg-8">
-        <div class="uns">
-          <div class="lmis">LMIS</div>
-            <p>Thika road</p>
+        <div class="big-logo">
+          <div class="lmis">LMIS.</div>
+            <!-- <p>Loadency management information system</p> -->
         </div>
       </div>
-      <button>LOGIN</button>
+       <div class="login-btn">
+        <h6>Loadency sales system</h6>
+        <br>
+          <a href="login.php"><button >LOGIN</button></a>
+       </div>
     </div>
   </div>
 </body>
