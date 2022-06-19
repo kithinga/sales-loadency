@@ -1,6 +1,6 @@
+
 <?php include "config.php" ?>
 <?php include "shared_header.php" ?>
-
 
 
 <body>
@@ -15,27 +15,27 @@
                 <div class="assigned-title row">
                     <div class="col">
                         <div>
-                            <h1>SALES BY KITHINGA <span><i class="fa fa-user"></i></span></h1>
+                            <h1>Sales by <?=$_SESSION['name']?><span><i class="fa fa-user"></i></span></h1>
                         </div>
                     </div>
                 </div>
-                <div class="row assigned-card-area ">
-                <div class="col-lg-2">
+                <div class="row assigned-card-area " data-aos="fade-right"data-aos-duration="2400">
+                    <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Collected contacts</h6>
-                            <p class="coll-c"><?php echo $dat2['total_contacts']?></p>
+                            <p class="coll-c"><?php echo $dat2['total_contacts'] ?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>All time calls</h6>
-                            <p class="otc"> <?php echo $dat2['all_time_count']?></p>
+                            <p class="otc"> <?php echo $dat2['all_time_count'] ?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Waiting calls</h6>
-                            <p><?php echo $dat2['waiting_count']?></p>
+                            <p><?php echo $dat2['waiting_count'] ?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -44,32 +44,32 @@
                             <p>01011</p>
                         </div>
                     </div>
-                  
+
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>No answer</h6>
-                            <p class="nadirer"><?php echo $dat2['na_count']?></p>
+                            <p class="nadirer"><?php echo $dat2['na_count'] ?></p>
                             <div class="naspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Maybe</h6>
-                            <p class="mbdirer"><?php echo $dat2['mb_count']?></p>
+                            <p class="mbdirer"><?php echo $dat2['mb_count'] ?></p>
                             <div class="mbspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Said no</h6>
-                            <p class="nodirer"><?php echo $dat2['n_count']?></p>
+                            <p class="nodirer"><?php echo $dat2['n_count'] ?></p>
                             <div class="snspan shadow"></div>
                         </div>
                     </div>
                     <div class="col-lg-2">
                         <div class="assigned-card ">
                             <h6>Won customers</h6>
-                            <p class="cdirer"><?php echo $dat2['cus_count']?></p>
+                            <p class="cdirer"><?php echo $dat2['cus_count'] ?></p>
                             <div class="cspan shadow"></div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                     <div class="col-lg-12">
 
                         <div class="assigned-table">
-                            <h5>ASSIGNED CONTACTS</h5>
+                            <h5>Assigned contacts</h5>
 
                             <table class="table table-bordered table-hover">
                                 <thead>
@@ -116,15 +116,15 @@
                                         $s_status = $row['s_status'];
                                         $s_email = $row['s_email'];
                                         $times_called = $row['times_called'];
-                                        $last_changed = $row['last_changed'];  
+                                        $last_changed = $row['last_changed'];
                                         $date = date('Y-m-d H:i:s');
-                                        
+
                                         $now = time(); // 
                                         $your_date = strtotime($last_changed);
                                         $datediff = $now - $your_date;
-          
+
                                         $minutes = round(abs($datediff) / 60);
-                                      
+
                                         ?>
                                         <tr>
                                             <td><?php echo $n++ ?></td>
@@ -135,16 +135,16 @@
                                             <td><?php echo $minutes; ?> <small> mins ago</small></td>
 
                                             <td><?php echo $times_called; ?></td>
-                                            <td>Tesfae</td>
+                                            <td></td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                 <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
                                                     <input class="edit-status-input" type="hidden" name="times_called" value="<?php echo $times_called + 1; ?>" />
                                                     <input class="edit-status-input" type="hidden" name="last_changed" value="" />
-                                                    <!-- tally tester --> 
+                                                    <!-- tally tester -->
                                                     <input class="edit-status-input" type="hidden" name="s_phone_number" value="<?php echo $s_phone_number ?>" />
-                                                    <input class="edit-status-input" type="hidden" name="caller_name" value="who is loggen in" /> 
-                                                    <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" /> 
+                                                    <input class="edit-status-input" type="text" name="caller_name" value="<?=$_SESSION['name']?>" />
+                                                    <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
                                                     <div class="dropdown">
                                                         <span> <?php echo $s_status ?></span>
@@ -166,7 +166,7 @@
                                                 </form>
                                                 <!-- <i class="fa fa-caret-down"></i> -->
                                             </td>
-                                            
+
                                             <td><?php echo $street_address; ?></td>
                                             <td><?php echo $pow; ?></td>
                                         </tr>
@@ -180,4 +180,7 @@
             </div>
         </div>
     </div>
+    <script>
+  AOS.init();
+</script>
 </body>

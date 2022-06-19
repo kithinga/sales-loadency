@@ -8,11 +8,11 @@
         $pow = $_POST['pow'];
         $now = date('Y-m-d H:i:s');
         $last_changed = $now;
-        $caller_name = "logged in person";
+        $caller_name = $_SESSION['name'];
    
         // $tally_id = $_POST['tally_id'];
         // $name = $_POST['name'];
-        mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', last_changed = '$last_changed' WHERE s_mc_number = '$s_mc_number'");
+        mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed' WHERE s_mc_number = '$s_mc_number'");
         // Inserting into tally table after update
         mysqli_query($conn,"INSERT INTO calls_tally(s_status, s_mc_number, caller_name, s_phone_number, pow)VALUES('$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow')");
     }
