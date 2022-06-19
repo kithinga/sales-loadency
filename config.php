@@ -13,8 +13,8 @@
     <!-- Css and fontawesome -->
     <script src="https://kit.fontawesome.com/4bfa3afdd7.js" crossorigin="anonymous"></script>
     <!-- Data Aos -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Chart Js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"> </script>
 </head>

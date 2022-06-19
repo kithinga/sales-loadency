@@ -26,15 +26,18 @@ include "config.php";
        </div>
       <div class="col-lg-8">
         <div class="big-logo">
-          <div class="lmis">LMIS.</div>
+          <div class="lmis" data-aos="fade-right"data-aos-duration="1500">LMIS.</div>
             <!-- <p>Loadency management information system</p> -->
         </div>
       </div>
-       <div class="login-btn">
+       <div class="login-btn" data-aos="zoom-in"data-aos-duration="2000">
         <h6>Loadency sales system</h6>
         <br>
           <a href="login.php"><button >LOGIN</button></a>
        </div>
     </div>
   </div>
+  <script>
+  AOS.init();
+</script>
 </body>
