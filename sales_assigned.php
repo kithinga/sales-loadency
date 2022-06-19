@@ -20,22 +20,11 @@
                     </div>
                 </div>
                 <div class="row assigned-card-area " data-aos="fade-right"data-aos-duration="2400">
-                    <div class="col-lg-2">
-                        <div class="assigned-card">
-                            <h6>Collected contacts</h6>
-                            <p class="coll-c"><?php echo $dat2['total_contacts'] ?></p>
-                        </div>
-                    </div>
+                   
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>All time calls</h6>
                             <p class="otc"> <?php echo $dat2['all_time_count'] ?></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="assigned-card">
-                            <h6>Waiting calls</h6>
-                            <p><?php echo $dat2['waiting_count'] ?></p>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -118,6 +107,7 @@
                                         $times_called = $row['times_called'];
                                         $last_changed = $row['last_changed'];
                                         $date = date('Y-m-d H:i:s');
+                                        $called_by = $row['caller_name'];
 
                                         $now = time(); // 
                                         $your_date = strtotime($last_changed);
@@ -129,13 +119,13 @@
                                         <tr>
                                             <td><?php echo $n++ ?></td>
                                             <td><?php echo $client_name; ?></td>
-                                            <td><?php echo $s_company_name; ?></td>
+                                            <td class="c-name"><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
                                             <td><?php echo $minutes; ?> <small> mins ago</small></td>
 
                                             <td><?php echo $times_called; ?></td>
-                                            <td></td>
+                                            <td><?php echo $called_by ?></td>
                                             <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                 <form class="edit-status-form" method="post" action="update_status.php">
                                                     <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
@@ -143,7 +133,7 @@
                                                     <input class="edit-status-input" type="hidden" name="last_changed" value="" />
                                                     <!-- tally tester -->
                                                     <input class="edit-status-input" type="hidden" name="s_phone_number" value="<?php echo $s_phone_number ?>" />
-                                                    <input class="edit-status-input" type="text" name="caller_name" value="<?=$_SESSION['name']?>" />
+                                                    <input class="edit-status-input" type="hidden" name="caller_name" value="<?=$_SESSION['name']?>" />
                                                     <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
                                                     <div class="dropdown">
@@ -167,7 +157,7 @@
                                                 <!-- <i class="fa fa-caret-down"></i> -->
                                             </td>
 
-                                            <td><?php echo $street_address; ?></td>
+                                            <td class="c-name"><?php echo $street_address; ?></td>
                                             <td><?php echo $pow; ?></td>
                                         </tr>
                                     <?php

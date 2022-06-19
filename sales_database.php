@@ -1,5 +1,5 @@
-<?php
 
+<?php
 $servername = 'localhost';
 $username = 'root';
 $password = '';
@@ -9,12 +9,15 @@ if (!$conn) {
     echo "sales db not connected";
 }
 
+
+$username =$_SESSION['name'];
+
 $va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collected_contacts` FROM va2pow ");
 // Customer results 
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
-$maybe_results = mysqli_query($conn, "SELECT * FROM va2pow  WHERE s_status = 'maybe'");
+$maybe_results = mysqli_query($conn, "SELECT * FROM va2pow  WHERE s_status = 'said-no'");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
@@ -31,14 +34,15 @@ $data = mysqli_fetch_assoc($res);
 
 // SALES ASSIGNED PERSONAL DASHBOARD
 // All time total calls are$res = mysqli_query($conn, "SELECT
-$value_counts = mysqli_query($conn, "SELECT SUM(times_called) AS all_time_count,
+$value_counts = mysqli_query($conn, "SELECT 
+COUNT(caller_name) AS all_time_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS cus_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
 
- COUNT(s_phone_number)AS total_contacts from va2pow");
+ COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
 
 ?>

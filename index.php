@@ -34,6 +34,7 @@ include "config.php";
         <h6>Loadency sales system</h6>
         <br>
           <a href="login.php"><button >LOGIN</button></a>
+          <a href="create_account.php"><button class="register-btn">REGISTER</button></a>
        </div>
     </div>
   </div>
