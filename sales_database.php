@@ -45,4 +45,6 @@ SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
 
+ 
+
 ?>

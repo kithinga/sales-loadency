@@ -1,5 +1,5 @@
 <?php
- include "config.php";
+//  include "config.php";
  include "shared_header.php";
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@
                         </label>
                         <input type="password" name="password" placeholder="Password" id="password" required><br>
                         <button type="submit" name="">Login</button>
-                        <a href=""></a>
+                        <a href="create_account.php"> <button type="button" class="reg-acc"name="reg-acc">Create account</button></a>
                     </form>
                 </div>
             </div>

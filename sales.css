@@ -640,13 +640,15 @@ border-bottom: 2px solid rgb(233, 229, 229);
     font-size: 14px;
     border: solid rgb(194, 194, 194) 1px;
   }
+  
   .login button{
-    height:3.5rem;
+    height:3rem;
     border: grey solid 1px;
-    border-radius:5px;
+    border-radius:30px;
     margin: 0.6rem;
     font-family: Montserrat;
-    background-color:rgb(96, 126, 138);
+    background-color:rgb(70, 72, 73);
+    margin-right: 2rem;
     color: white;font-weight:600;
     transition-duration: 1.2s;
     font-size:13px;
@@ -697,4 +699,10 @@ border-bottom: 2px solid rgb(233, 229, 229);
     font-weight: 900;
     font-family: Montserrat;
 
+  }
+
+  .reg-acc{
+    border-radius: 30px!important;
+    margin-left: 2rem;
+    background-color:rgb(59, 99, 172)!important;
   }
