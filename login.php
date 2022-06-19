@@ -13,6 +13,13 @@
 
 <body>
     <div class="container-fluid">
+    <div class="row justify-content-center">
+             <div class="col-lg-6">
+                <div class="cr-a">
+                    <h2>LOGIN TO LOADENCY SALES</h2>
+                </div>
+             </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="login " data-aos="fade-right"data-aos-duration="1500">
@@ -27,6 +34,7 @@
                         </label>
                         <input type="password" name="password" placeholder="Password" id="password" required><br>
                         <button type="submit" name="">Login</button>
+                        <a href=""></a>
                     </form>
                 </div>
             </div>
