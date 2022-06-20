@@ -1,4 +1,4 @@
-<?php ?>
+
 <body>
     <div class="container-fluid">
         <div class="row my-header">
@@ -9,7 +9,7 @@
             </div>
             <div class="col-lg-4">
                 <div>
-               y
+                <a href="logout.php"><h4>logout</h4></a>
                 </div>
             </div>
         </div>

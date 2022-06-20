@@ -9,6 +9,7 @@ if (!$conn) {
     echo "sales db not connected";
 }
 
+session_start();
 
 $username =$_SESSION['name'];
 
@@ -45,6 +46,8 @@ SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
 
- 
 
+
+$today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day");
+$da = mysqli_fetch_assoc($today_count);
 ?>

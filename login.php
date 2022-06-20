@@ -1,5 +1,5 @@
 <?php
-//  include "config.php";
+ include "config.php";
  include "shared_header.php";
 ?>
 <!DOCTYPE html>

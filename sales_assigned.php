@@ -1,7 +1,8 @@
+<?php
+include "config.php";
+include "shared_header.php";
 
-<?php include "config.php" ?>
-<?php include "shared_header.php" ?>
-
+?>
 
 <body>
     <div class="container-fluid">
@@ -15,12 +16,12 @@
                 <div class="assigned-title row">
                     <div class="col">
                         <div>
-                            <h1>Sales by <?=$_SESSION['name']?><span><i class="fa fa-user"></i></span></h1>
+                            <h1>Sales by <?= $_SESSION['name'] ?><span><i class="fa fa-user"></i></span></h1>
                         </div>
                     </div>
                 </div>
-                <div class="row assigned-card-area " data-aos="fade-right"data-aos-duration="2400">
-                   
+                <div class="row assigned-card-area " data-aos="fade-right" data-aos-duration="2400">
+
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>All time calls</h6>
@@ -30,7 +31,7 @@
                     <div class="col-lg-2">
                         <div class="assigned-card">
                             <h6>Calls today</h6>
-                            <p>01011</p>
+                            <p> <?php echo $da['today_count'] ?></p>
                         </div>
                     </div>
 
@@ -133,7 +134,7 @@
                                                     <input class="edit-status-input" type="hidden" name="last_changed" value="" />
                                                     <!-- tally tester -->
                                                     <input class="edit-status-input" type="hidden" name="s_phone_number" value="<?php echo $s_phone_number ?>" />
-                                                    <input class="edit-status-input" type="hidden" name="caller_name" value="<?=$_SESSION['name']?>" />
+                                                    <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
                                                     <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
                                                     <div class="dropdown">
@@ -171,6 +172,6 @@
         </div>
     </div>
     <script>
-  AOS.init();
-</script>
+        AOS.init();
+    </script>
 </body>
