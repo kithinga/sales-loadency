@@ -1,5 +1,5 @@
 <?php
- include "shared_header.php";
+ include "main_header.php";
 ?>
 <head>
     <title>LMIS</title>
