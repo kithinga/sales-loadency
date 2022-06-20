@@ -1,16 +1,12 @@
 <?php
   include "config.php";
   include "shared_header.php";
-?>
 
-<?php
- session_start();
- // If the user is not logged in redirect to the login page...
-//  
-
-?>
-
-<body>
+if (!isset($_SESSION['loggedin'])) {
+	header('Location: index.html');
+	exit;
+}else{?>
+     <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-1">
@@ -182,3 +178,5 @@
         AOS.init();
     </script>
 </body>
+<?php }
+?>

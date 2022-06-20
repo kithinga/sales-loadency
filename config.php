@@ -1,5 +1,6 @@
 
 <?php 
+session_start();
 include "sales_database.php"
 ?> 
 <!DOCTYPE html>

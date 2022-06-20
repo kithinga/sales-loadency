@@ -9,6 +9,7 @@
             </div>
             <div class="col-lg-4">
                 <div>
+                <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
                 <!-- <a href="logout.php"><h4>logout</h4></a> -->
                 </div>
             </div>
