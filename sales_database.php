@@ -48,6 +48,7 @@ $dat2 = mysqli_fetch_assoc($value_counts);
 
 
 
-$today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day");
+$today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day AND caller_name = '$username'");
 $da = mysqli_fetch_assoc($today_count);
+
 ?>
