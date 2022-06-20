@@ -6,4 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
+
+include_once  "sales_database.php";
+
 ?>

@@ -9,7 +9,7 @@ if (!$conn) {
     echo "sales db not connected";
 }
 
-$username =$_SESSION['name'];
+$username = $_SESSION['name'];
 
 $va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collected_contacts` FROM va2pow ");
 // Customer results 
