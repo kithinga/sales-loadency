@@ -11,7 +11,7 @@
                     <p>INSIGHTS</p>
                     <br><br>
                 </div>
-                
+
             </div>
         </div>
 
@@ -41,7 +41,7 @@
                             <p><?php echo $data['waiting_call_count']; ?></p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="row justify-content-center sales-boxes">
                     <div class="col-lg-3">
@@ -102,10 +102,10 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    // $s_company_name = 0;
-                                                    // $street_address = 0;
-                                                    // $s_phone_number = 0;
-                                                    $n=1;
+                                                // $s_company_name = 0;
+                                                // $street_address = 0;
+                                                // $s_phone_number = 0;
+                                                $n = 1;
                                                 ?>
 
                                                 <?php while ($row = mysqli_fetch_array($customers_results)) { ?>
@@ -121,14 +121,14 @@
                                                     ?>
                                                     <tr>
                                                         <td><?php echo $n++ ?></td>
-                                                           <td><?php echo $client_name; ?></td>
-                                                           <td><?php echo $s_company_name; ?></td>
-                                                           <td><?php echo $s_mc_number; ?></td>
-                                                           <td><?php echo $s_phone_number; ?></td>
-                                                            <td><?php echo $street_address; ?></td> 
-                                                            <td><?php echo $pow; ?></td> 
-                                                            <td><?php echo $s_status; ?></td> 
-                                                        
+                                                        <td><?php echo $client_name; ?></td>
+                                                        <td><?php echo $s_company_name; ?></td>
+                                                        <td><?php echo $s_mc_number; ?></td>
+                                                        <td><?php echo $s_phone_number; ?></td>
+                                                        <td><?php echo $street_address; ?></td>
+                                                        <td><?php echo $pow; ?></td>
+                                                        <td><?php echo $s_status; ?></td>
+
                                                     </tr>
                                                 <?php
                                                 } ?>
@@ -147,7 +147,7 @@
                             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <div class="maybe-table">
-                                    <table class="table table-bordered table-hover">
+                                        <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
@@ -163,10 +163,10 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    // $s_company_name = 0;
-                                                    // $street_address = 0;
-                                                    // $s_phone_number = 0;
-                                                    $n=1;
+                                                // $s_company_name = 0;
+                                                // $street_address = 0;
+                                                // $s_phone_number = 0;
+                                                $n = 1;
                                                 ?>
 
                                                 <?php while ($row = mysqli_fetch_array($maybe_results)) { ?>
@@ -182,20 +182,20 @@
                                                     ?>
                                                     <tr>
                                                         <td><?php echo $n++ ?></td>
-                                                           <td><?php echo $client_name; ?></td>
-                                                           <td><?php echo $s_company_name; ?></td>
-                                                           <td><?php echo $s_mc_number; ?></td>
-                                                           <td><?php echo $s_phone_number; ?></td>
-                                                            <td><?php echo $street_address; ?></td> 
-                                                            <td><?php echo $pow; ?></td> 
-                                                            <td><?php echo $s_status; ?></td> 
-                                                        
+                                                        <td><?php echo $client_name; ?></td>
+                                                        <td><?php echo $s_company_name; ?></td>
+                                                        <td><?php echo $s_mc_number; ?></td>
+                                                        <td><?php echo $s_phone_number; ?></td>
+                                                        <td><?php echo $street_address; ?></td>
+                                                        <td><?php echo $pow; ?></td>
+                                                        <td><?php echo $s_status; ?></td>
+
                                                     </tr>
                                                 <?php
                                                 } ?>
                                             </tbody>
                                         </table>
-                                       
+
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
                             <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
                                     <div class="said-no-table">
-                                    <table class="table table-bordered table-hover">
+                                        <table class="table table-bordered table-hover">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">#</th>
@@ -240,10 +240,10 @@
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    // $s_company_name = 0;
-                                                    // $street_address = 0;
-                                                    // $s_phone_number = 0;
-                                                    $n=1;
+                                                // $s_company_name = 0;
+                                                // $street_address = 0;
+                                                // $s_phone_number = 0;
+                                                $n = 1;
                                                 ?>
 
                                                 <?php while ($row = mysqli_fetch_array($said_no_results)) { ?>
@@ -259,14 +259,14 @@
                                                     ?>
                                                     <tr>
                                                         <td><?php echo $n++ ?></td>
-                                                           <td><?php echo $client_name; ?></td>
-                                                           <td><?php echo $s_company_name; ?></td>
-                                                           <td><?php echo $s_mc_number; ?></td>
-                                                           <td><?php echo $s_phone_number; ?></td>
-                                                            <td><?php echo $street_address; ?></td> 
-                                                            <td><?php echo $pow; ?></td> 
-                                                            <td><?php echo $s_status; ?></td> 
-                                                        
+                                                        <td><?php echo $client_name; ?></td>
+                                                        <td><?php echo $s_company_name; ?></td>
+                                                        <td><?php echo $s_mc_number; ?></td>
+                                                        <td><?php echo $s_phone_number; ?></td>
+                                                        <td><?php echo $street_address; ?></td>
+                                                        <td><?php echo $pow; ?></td>
+                                                        <td><?php echo $s_status; ?></td>
+
                                                     </tr>
                                                 <?php
                                                 } ?>

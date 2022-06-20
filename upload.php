@@ -1,4 +1,3 @@
-
 <?php include "config.php"; ?>
 <!doctype html>
 <html lang="en">
@@ -19,6 +18,7 @@
     .custom-file {
       overflow: hidden;
     }
+
     .custom-file-input {
       white-space: nowrap;
     }
@@ -35,10 +35,10 @@
           <label class="custom-file-label" for="customFileInput">Select file</label>
         </div>
         <div class="input-group-append">
-           <input type="submit" name="submit" value="Upload" class="btn btn-primary">
+          <input type="submit" name="submit" value="Upload" class="btn btn-primary">
         </div>
       </div>
-  </form>
+    </form>
   </div>
 
 </body>

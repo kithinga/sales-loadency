@@ -78,7 +78,7 @@ include "shared_header.php";
                                         <th scope="col">Company name</th>
                                         <th scope="col">Mc number</th>
                                         <th scope="col">Phone number</th>
-                                        <th scope="col">Last  called</th>
+                                        <th scope="col">Last called</th>
                                         <th scope="col">Times <br> called</th>
                                         <th scope="col">Previous <br> caller</th>
                                         <th scope="col">Call status</th>
@@ -113,8 +113,7 @@ include "shared_header.php";
                                         $your_date = strtotime($last_changed);
                                         $datediff = $now - $your_date;
 
-                                        $days = round(abs($datediff)/( 24 * 60 * 60 ));
-                                        
+                                        $days = round(abs($datediff) / (24 * 60 * 60));
 
                                         ?>
                                         <tr>
