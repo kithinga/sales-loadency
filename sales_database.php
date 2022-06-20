@@ -11,6 +11,7 @@ if (!$conn) {
 
 session_start();
 
+
 $username =$_SESSION['name'];
 
 $va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collected_contacts` FROM va2pow ");

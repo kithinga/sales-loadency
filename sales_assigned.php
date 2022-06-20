@@ -1,7 +1,6 @@
 <?php
 include "config.php";
 include "shared_header.php";
-
 ?>
 
 <body>
@@ -79,9 +78,9 @@ include "shared_header.php";
                                         <th scope="col">Company name</th>
                                         <th scope="col">Mc number</th>
                                         <th scope="col">Phone number</th>
-                                        <th scope="col">Last called</th>
-                                        <th scope="col">Times called</th>
-                                        <th scope="col">Called by</th>
+                                        <th scope="col">Last  called</th>
+                                        <th scope="col">Times <br> called</th>
+                                        <th scope="col">Previous <br> caller</th>
                                         <th scope="col">Call status</th>
                                         <th scope="col">Street address</th>
                                         <th scope="col">Pow</th>
@@ -114,7 +113,8 @@ include "shared_header.php";
                                         $your_date = strtotime($last_changed);
                                         $datediff = $now - $your_date;
 
-                                        $minutes = round(abs($datediff) / 60);
+                                        $days = round(abs($datediff)/( 24 * 60 * 60 ));
+                                        
 
                                         ?>
                                         <tr>
@@ -123,7 +123,7 @@ include "shared_header.php";
                                             <td class="c-name"><?php echo $s_company_name; ?></td>
                                             <td><?php echo $s_mc_number; ?></td>
                                             <td><?php echo $s_phone_number; ?></td>
-                                            <td><?php echo $minutes; ?> <small> mins ago</small></td>
+                                            <td><?php echo $days; ?> <small> days ago</small></td>
 
                                             <td><?php echo $times_called; ?></td>
                                             <td><?php echo $called_by ?></td>
