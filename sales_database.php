@@ -9,7 +9,7 @@ if (!$conn) {
     echo "sales db not connected";
 }
 
-session_start();
+$username = $_SESSION['name'];
 
 
 $username = $_SESSION['name'];
@@ -23,6 +23,8 @@ $maybe_results = mysqli_query($conn, "SELECT * FROM va2pow  WHERE s_status = 'sa
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
+
+// ALL COUNTS
 // Counting the number of contacts per status
 $res = mysqli_query($conn, "SELECT
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS no_count,
@@ -30,8 +32,9 @@ SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS no_answer_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS maybe_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS customer_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
-FROM va2pow");
+FROM calls_tally");
 $data = mysqli_fetch_assoc($res);
+ 
 
 
 // SALES ASSIGNED PERSONAL DASHBOARD
@@ -46,8 +49,6 @@ SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
 
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
-
-
 
 $today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day AND caller_name = '$username'");
 $da = mysqli_fetch_assoc($today_count);

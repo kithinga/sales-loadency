@@ -1,15 +1,19 @@
-
 <body>
     <div class="container-fluid">
         <div class="row my-header">
-            <div class="col-lg-8">
+            <div class="col-lg-9">
                 <div class="small-logo">
-                    <a href="index.php"><h4>LMIS</h4></a>
+                    <a href="index.php">
+                        <h4>LMIS</h4>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div>
-                <!-- <a href="logout.php"><h4>logout</h4></a> -->
+            <div class="col-lg-3">
+                <div class="logout-sec">
+                   <a href="user_profile.php">  <button class="shadow-sm"> <span><i class="fa fa-user"></i><?=$_SESSION['name'];?></span></button></a>
+                    <a href="logout.php"><button  class="shadow-sm">
+                      <i class="fas fa-sign-out-alt"></i>Logout
+                 </button></a>
                 </div>
             </div>
         </div>
