@@ -1,9 +1,13 @@
 <?php
-// include_once "session.php";
-include "config.php";
-include "shared_header.php";
+  include "config.php";
+  include "shared_header.php";
+?>
 
-include "sales_database.php";
+<?php
+ session_start();
+ // If the user is not logged in redirect to the login page...
+//  
+
 ?>
 
 <body>

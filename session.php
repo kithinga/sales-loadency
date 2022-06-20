@@ -7,6 +7,5 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
-include_once  "sales_database.php";
 
 ?>
