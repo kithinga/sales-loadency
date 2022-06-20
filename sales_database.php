@@ -34,9 +34,15 @@ SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS customer_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM calls_tally");
 $data = mysqli_fetch_assoc($res);
+
+
+$total_res = mysqli_query($conn, "SELECT
+SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS customer_count,
+SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
+FROM calls_tally");
+$total_data = mysqli_fetch_assoc($total_res);
+
  
-
-
 // SALES ASSIGNED PERSONAL DASHBOARD
 // All time total calls are$res = mysqli_query($conn, "SELECT
 $value_counts = mysqli_query($conn, "SELECT 

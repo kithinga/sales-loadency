@@ -4,6 +4,7 @@
 
 }
 
+
 .sales-header{
     /* background-color:green;min-height:5rem;
     border */
@@ -13,9 +14,10 @@
     font-family: Montserrat;
 }
 
+
 .sales-card{
       padding:1rem;
-      background-color: rgb(255, 255, 255);
+      background-color: rgb(245, 248, 250);
       color: rgb(19, 18, 18);
       /* border-radius:9px; */
       text-align: center;
@@ -23,27 +25,22 @@
       min-height: 10rem;
       padding-top:2rem;
       transition-duration: 1s;
-      border:solid 1px rgb(205, 208, 216);
+      border:solid 1px rgb(235, 235, 240);
+      border-radius:7px;
 }
 
-.sales-card:hover{
-      padding:1rem;
-      background-color: rgb(54, 170, 206);
-      border: solid 2px rgb(69, 70, 83);
-     
-}
 
 .sales-card h5{
-   font-size:15.5px;
-   font-weight: 700;
+   font-size:15px;
+   font-weight:700;
    /* letter-spacing:2px; */
-   color: rgb(12, 12, 12);
+   color: rgb(92, 92, 92);
 }
 
 .sales-card p{
-   font-size:25px;
-   font-weight:900;
-   /* color: rgb(255, 255, 255); */
+   font-size:30px;
+   font-weight:300;
+   color: rgb(146, 146, 146);
 }
 
 .sales-title{
@@ -54,6 +51,13 @@
     letter-spacing:3px;
     color: rgb(109, 120, 184);
     font-weight:500;
+}
+.sales-card:hover{
+    padding:1rem;
+    background-color: rgb(77, 83, 110);
+    border: solid 2px rgb(69, 70, 83);
+    color:white;cursor:pointer;
+   
 }
 
 .sales-title h1{
@@ -722,21 +726,25 @@ border-bottom: 2px solid rgb(228, 230, 231);
   .logout-sec{
       padding-top: 31px;
       font-family: Montserrat;
-      font-size: 15px!important;
+      font-size: 13px!important;
   }
+
   .logout-sec{
       padding-top: 31px;
       font-family: Montserrat;
   }
+
   .logout-sec a{
       margin-left: 1rem!important;
 
   }
+
   .logout-sec button{
      height: 2.5rem!important;
      border: solid rgb(240, 242, 243) 1px;
      transition-duration: 1.3s;
   }
+
   .logout-sec button:hover{
  background-color: rgb(72, 132, 180);
  color: white!important;

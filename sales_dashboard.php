@@ -29,25 +29,25 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
                     <div class="row justify-content-center sales-boxes">
                         <div class="col-lg-2">
-                            <div class="sales-card waiting-call shadow">
+                            <div class="sales-card waiting-call ">
                                 <h5>Not called</h5>
                                 <p><?php echo $data['waiting_call_count']; ?></p>
                             </div>
                         </div>
                         <div class="col-lg-2">
-                            <div class="sales-card shad-sm customer shadow">
+                            <div class="sales-card shad-sm customer ">
                                 <h5>Customers</h5>
                                 <p><?php echo $data['customer_count']; ?></p>
                             </div>
                         </div>
                         <div class="col-lg-2">
-                            <div class="sales-card shado-sm maybe shadow">
+                            <div class="sales-card shado-sm maybe ">
                                 <h5>Maybe</h5>
                                 <p><?php echo $data['maybe_count']; ?></p>
                             </div>
                         </div>
                         <div class="col-lg-2">
-                            <div class="sales-card shado-sm no-answer shadow">
+                            <div class="sales-card shado-sm no-answer">
                                 <h5>No answer</h5>
                                 <p><?php echo $data['no_answer_count']; ?> </p>
                             </div>
