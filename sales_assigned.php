@@ -1,6 +1,8 @@
 <?php
 include "config.php";
 include "shared_header.php";
+include "sales_database.php";
+include_once "session.php";
 ?>
 
 <body>

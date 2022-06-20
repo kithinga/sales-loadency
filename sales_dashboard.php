@@ -1,5 +1,6 @@
 <?php include "config.php" ?>
 <?php include "shared_header.php" ?>
+<?php include "sales_database.php" ?>
 
 <body>
     <div class="container-fluid">
@@ -11,7 +12,6 @@
                     <p>INSIGHTS</p>
                     <br><br>
                 </div>
-                
             </div>
         </div>
 
