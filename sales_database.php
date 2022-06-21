@@ -19,13 +19,14 @@ $va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collecte
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
-$maybe_results = mysqli_query($conn, "SELECT * FROM va2pow  WHERE s_status = 'waiting-call'");
+$to_call_results = mysqli_query($conn , "SELECT *  FROM va2pow  WHERE s_status = 'waiting-call' or s_status = 'no-answer' order by s_phone_number asc limit 10");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, COUNT(caller_name) AS all_today_count,
+-- COUNT(caller_name) AS all_today_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS daily_cus_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS daily_mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS daily_n_count,
@@ -34,14 +35,14 @@ last_changed >= date(now()) and last_changed < date(now()) + interval 1 day grou
 
 // ALL COUNTS
 // Counting the number of contacts per status
-$res = mysqli_query($conn, "SELECT
+$all_admin_res = mysqli_query($conn, "SELECT
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS no_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS no_answer_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS maybe_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS customer_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM calls_tally");
-$data = mysqli_fetch_assoc($res);
+$data = mysqli_fetch_assoc($all_admin_res);
 
 // GRAND TOTALS i>e ALL TIME COLLECTED CONTACTS  AND waiting calls
 $total_res = mysqli_query($conn, "SELECT
@@ -59,7 +60,6 @@ SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
-
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
 // USER COUNT FOR TODAY AND YESTERDAY

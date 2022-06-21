@@ -716,7 +716,8 @@ select option {
 }
 
 .c-name {
-    max-width: 20rem !important;
+    max-width: 14rem !important;
+    overflow: hidden;
 }
 
 .register-btn {
@@ -847,7 +848,7 @@ select option {
     /* width: 95%; */
 }
 .admin-nav button:hover{
-    background-color: rgb(108, 106, 134);
+    background-color: rgb(93, 95, 119);
     border: solid 2px rgb(99, 112, 112)!important; 
 }
 .fa-phone{

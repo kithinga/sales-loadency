@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-1">
                     <div class="row side-nav">
-                        <div class="home-button"><button class="">Back home <i class="fa fa-home"></i></button></div>
+                        <div class="home-button"><a href="sales_dashboard.php"><button class="">Back home <i class="fa fa-home"></i></button></a></div>
                     </div>
                 </div>
                 <div class="col-lg-11 assigned-area">
@@ -83,6 +83,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             <th scope="col">Mc number</th>
                                             <th scope="col">Phone number</th>
                                             <th scope="col">Last called</th>
+                                            <th scope="col">Previous comments</th>
                                             <th scope="col">Times <br> called</th>
                                             <th scope="col">Previous <br> caller</th>
                                             <th scope="col">Call status</th>
@@ -98,7 +99,7 @@ if (!isset($_SESSION['loggedin'])) {
                                         $times_called = 0;
                                         ?>
 
-                                        <?php while ($row = mysqli_fetch_array($maybe_results)) { ?>
+                                        <?php while ($row = mysqli_fetch_array($to_call_results)) { ?>
                                             <?php
                                             $s_mc_number = $row['s_mc_number'];
                                             $s_company_name = $row['s_company_name'];
@@ -112,6 +113,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             $last_changed = $row['last_changed'];
                                             $date = date('Y-m-d H:i:s');
                                             $called_by = $row['caller_name'];
+                                            $status_comments = $row['status_comments'];
 
                                             $now = time(); // 
                                             $your_date = strtotime($last_changed);
@@ -123,10 +125,10 @@ if (!isset($_SESSION['loggedin'])) {
                                                 <td><?php echo $n++ ?></td>
                                                 <td><?php echo $client_name; ?></td>
                                                 <td class="c-name"><?php echo $s_company_name; ?></td>
-                                                <td><?php echo $s_mc_number; ?></td>
+                                                <td class="c-name"><?php echo $s_mc_number; ?></td>
                                                 <td><?php echo $s_phone_number; ?></td>
                                                 <td><?php echo $days; ?> <small> days ago</small></td>
-
+                                                <td><?php echo $status_comments; ?> <small> </small></td>
                                                 <td><?php echo $times_called; ?></td>
                                                 <td><?php echo $called_by ?></td>
                                                 <td class="status-box " title="Current status is - <?php echo $s_status ?>">

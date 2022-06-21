@@ -35,8 +35,9 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             header('Location: sales_assigned.php');
-            // echo 'Welcome ' . $_SESSION['name'] . '!';
-        } else {
+        }
+        
+        else {
             // Incorrect password
             echo 'Incorrect username and/or password!';
         }

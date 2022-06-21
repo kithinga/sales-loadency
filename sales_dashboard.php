@@ -28,7 +28,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                                <h1>Admin dashboard
+                                <h1>Sales dashboard
                                 </h1>
                                 <p>INSIGHTS</p>
                                 <br>
@@ -112,7 +112,6 @@ if (!isset($_SESSION['loggedin'])) {
                                             $n = 1;
                                             $times_called = 0;
                                             ?>
-
                                             <?php while ($row = mysqli_fetch_array($caller_report)) { ?>
                                                 <?php
                                                 $caller_name = $row['caller_name'];
@@ -121,6 +120,8 @@ if (!isset($_SESSION['loggedin'])) {
                                                 $daily_na_count = $row['daily_na_count'];
                                                 $daily_n_count = $row['daily_n_count'];
                                                 $daily_cus_count = $row['daily_cus_count'];
+                                               
+
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $n++ ?></td>
@@ -129,10 +130,14 @@ if (!isset($_SESSION['loggedin'])) {
                                                     <td><?php echo $daily_mb_count; ?></td>
                                                     <td><?php echo $daily_na_count; ?></td>
                                                     <td><?php echo $daily_n_count; ?></td>
-                                                    <td><?php echo $daily_cus_count; ?></td>
+                                                    <td><?php echo number_format($daily_cus_count); ?></td>
                                                 </tr>
                                             <?php
                                             } ?>
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td><?php echo $all_tc['all_today_count']?></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
