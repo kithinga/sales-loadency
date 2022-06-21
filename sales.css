@@ -17,28 +17,28 @@
 
 .sales-card{
       padding:1rem;
-      background-color: rgb(245, 248, 250);
+      background-color: rgb(255, 255, 255);
       color: rgb(19, 18, 18);
       /* border-radius:9px; */
       text-align: center;
       font-family: Montserrat;
-      min-height: 10rem;
+      min-height: 9rem;
       padding-top:2rem;
       transition-duration: 1s;
       border:solid 1px rgb(235, 235, 240);
-      border-radius:7px;
+      /* border-radius:7px; */
 }
 
 
 .sales-card h5{
-   font-size:15px;
+   font-size:13px;
    font-weight:700;
    /* letter-spacing:2px; */
-   color: rgb(92, 92, 92);
+   color: rgb(99, 97, 97);
 }
 
 .sales-card p{
-   font-size:30px;
+   font-size:22px;
    font-weight:300;
    color: rgb(146, 146, 146);
 }
@@ -58,6 +58,12 @@
     border: solid 2px rgb(69, 70, 83);
     color:white;cursor:pointer;
    
+}
+
+
+.ani{
+    /* background-color:red; */
+    padding:0px!important;
 }
 
 .sales-title h1{
@@ -84,6 +90,15 @@
     border: solid 1px rgb(241, 241, 245);
 }
 
+.sales-boxes{
+    padding:20px 20px 1px 20px;
+}
+
+.analysis-cards{
+   background-color: rgb(242, 245, 248);
+   border-top: 1px solid rgb(235, 235, 235);
+   min-height:80vh;
+}
 
 .accordion-button{
     font-family: Montserrat;
@@ -760,7 +775,13 @@ border-bottom: 2px solid rgb(228, 230, 231);
   .admin-nav{
      
   }
+
   .adm-bg{
       min-height: 90Vh;
       background-color: rgb(54, 59, 83)!important;
+  }
+
+  .users-table{
+    background-color:white;
+    padding: 20px 20px 0px 20px;
   }

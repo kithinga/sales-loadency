@@ -118,8 +118,6 @@ if (!isset($_SESSION['loggedin'])) {
                                             $datediff = $now - $your_date;
 
                                             $days = round(abs($datediff) / (24 * 60 * 60));
-
-
                                             ?>
                                             <tr>
                                                 <td><?php echo $n++ ?></td>
