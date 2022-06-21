@@ -82,7 +82,8 @@ if (!isset($_SESSION['loggedin'])) {
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
-                                        <h5>Calls <br> Today</h5>
+                                        <h5> <i class="fa fa-phone"></i>  Calls <br> Today</h5>
+                                        
                                         <p><?php echo $all_tc['all_today_count']; ?></p>
                                     </div>
                                 </div>
