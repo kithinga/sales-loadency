@@ -789,6 +789,7 @@ border-bottom: 2px solid rgb(228, 230, 231);
   .users-table thead tr th{
       font-weight:600!important;
       font-size: 13px!important;
+      color: #303333;
   }
 
   .users-table tr{
@@ -800,5 +801,5 @@ border-bottom: 2px solid rgb(228, 230, 231);
      font-weight: 600;
      margin-bottom:0.5rem;
      font-family: Montserrat;
-     color: grey;
+     color: rgb(65, 65, 65);
   }

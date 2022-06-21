@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Username</th>
+                                            <th scope="col">User</th>
                                             <th scope="col">Calls Today</th>
                                             <th scope="col">Maybe</th>
                                             <th scope="col">No answer</th>
@@ -108,13 +108,19 @@ if (!isset($_SESSION['loggedin'])) {
                                             <?php
                                             $caller_name = $row['caller_name'];
                                             $calls_today = $row['all_today_count'];
-                                            // $s_company_name = $row['s_company_name'];
-                                           
+                                            $daily_mb_count = $row['daily_mb_count'];
+                                            $daily_na_count = $row['daily_na_count'];
+                                            $daily_n_count = $row['daily_n_count'];
+                                            $daily_cus_count = $row['daily_cus_count'];
                                             ?>
                                             <tr>
                                                 <td><?php echo $n++ ?></td>
                                                 <td><?php echo $caller_name; ?></td>
                                                 <td><?php echo $calls_today; ?></td>
+                                                <td><?php echo $daily_mb_count; ?></td>
+                                                <td><?php echo $daily_na_count; ?></td>
+                                                <td><?php echo $daily_n_count; ?></td>
+                                                <td><?php echo $daily_cus_count; ?></td>
                                             </tr>
                                         <?php
                                         } ?>
