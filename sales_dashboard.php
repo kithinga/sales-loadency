@@ -12,8 +12,9 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div class="row">
                 <div class="col-lg-2 adm-bg">
-                    <div class="row side-nav admin-nav">
-                        <h6>back home</h6>
+                    <div class="row  admin-nav">
+                        <button class="shadow"><i class="fa fa-home"></i>Back home</button>
+                        <button class="shadow-sm"><i class="fa fa-user"></i>Add user</button>
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">

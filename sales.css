@@ -803,3 +803,27 @@ border-bottom: 2px solid rgb(228, 230, 231);
      font-family: Montserrat;
      color: rgb(65, 65, 65);
   }
+  
+  .admin-nav{
+    text-align:center;
+    padding:1rem;
+  }
+
+  .admin-nav i{
+  margin-right:12px;
+  }
+  
+  .admin-nav button{
+    height:3.3rem;
+    color: white;
+    margin-top:0.5rem;
+    background-color:rgb(62, 67, 85);
+    /* background-color:transparent; */
+    font-family: Montserrat;
+    border-radius:4px;
+    font-weight: 600;
+    border: solid 1px rgb(65, 65, 65)!important;
+    font-size: 14px;
+    border: none;
+    /* width: 95%; */
+  }
