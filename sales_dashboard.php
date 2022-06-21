@@ -83,17 +83,17 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
                             <div class="users-table">
-                                <h5>daily user reports</h5>
+                                <h6>Daily user reports</h6>
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Username</th>
-                                            <th scope="col">last call</th>
-                                            <th scope="col">Calls <br> Today</th>
-                                            <th scope="col">Calls <br>Yesterday</th>
-                                            <th scope="col">Call status</th>
-                                            <th scope="col">Pow</th>
+                                            <th scope="col">Calls Today</th>
+                                            <th scope="col">Maybe</th>
+                                            <th scope="col">No answer</th>
+                                            <th scope="col">Said no</th>
+                                            <th scope="col">Customer</th>
                                             <!-- <th scope="col">Email address</th> -->
                                         </tr>
                                     </thead>

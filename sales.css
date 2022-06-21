@@ -783,5 +783,22 @@ border-bottom: 2px solid rgb(228, 230, 231);
 
   .users-table{
     background-color:white;
-    padding: 20px 20px 0px 20px;
+    padding: 15px 20px 0px 20px;
+  }
+
+  .users-table thead tr th{
+      font-weight:600!important;
+      font-size: 13px!important;
+  }
+
+  .users-table tr{
+    text-align: center!important;
+  }
+
+  .users-table h6{
+     font-size:15px;
+     font-weight: 600;
+     margin-bottom:0.5rem;
+     font-family: Montserrat;
+     color: grey;
   }

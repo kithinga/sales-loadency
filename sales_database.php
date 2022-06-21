@@ -25,9 +25,9 @@ $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
 
-// selecting the different users for admin dashboard reports
+// Selecting the different users for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, COUNT(caller_name) AS all_today_count from calls_tally where 
-last_changed >= date(now()) and last_changed < date(now()) + interval 1 day group by caller_name");
+last_changed >= date(now()) and last_changed < date(now()) + interval 1 day group by caller_name order by last_changed desc");
 // ALL COUNTS
 // Counting the number of contacts per status
 $res = mysqli_query($conn, "SELECT
