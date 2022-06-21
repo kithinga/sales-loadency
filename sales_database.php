@@ -24,10 +24,6 @@ $maybe_results = mysqli_query($conn, "SELECT * FROM va2pow  WHERE s_status = 'wa
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
-
-
-
-
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, COUNT(caller_name) AS all_today_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS daily_cus_count,
@@ -35,10 +31,6 @@ SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS daily_mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS daily_n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS daily_na_count from calls_tally where 
 last_changed >= date(now()) and last_changed < date(now()) + interval 1 day group by caller_name order by last_changed desc");
-
-
-
-
 
 // ALL COUNTS
 // Counting the number of contacts per status

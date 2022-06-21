@@ -83,7 +83,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
                             <div class="users-table">
-                                <h6>Daily user reports</h6>
+                                <h6>Users daily reports</h6>
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
