@@ -803,7 +803,7 @@ border-bottom: 2px solid rgb(228, 230, 231);
      font-family: Montserrat;
      color: rgb(65, 65, 65);
   }
-  
+
   .admin-nav{
     text-align:center;
     padding:1rem;
@@ -826,4 +826,22 @@ border-bottom: 2px solid rgb(228, 230, 231);
     font-size: 14px;
     border: none;
     /* width: 95%; */
+  }
+    .modal-content{
+         margin-top:11rem;
+    }
+
+  .modal-body-2{
+    padding:6px;
+    border-radius: 2px!important;
+    background-color:rgb(255, 255, 255);
+  }
+
+  .modal-body-2 h1 i{
+ margin-left: 1rem;
+ color: rgb(99, 95, 95);
+ font-size:13px;
+  }
+  .fa-square-plus{
+    margin-left:11px;
   }

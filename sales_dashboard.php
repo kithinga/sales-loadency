@@ -14,7 +14,14 @@ if (!isset($_SESSION['loggedin'])) {
                 <div class="col-lg-2 adm-bg">
                     <div class="row  admin-nav">
                         <button class="shadow"><i class="fa fa-home"></i>Back home</button>
-                        <button class="shadow-sm"><i class="fa fa-user"></i>Add user</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa fa-user"></i>Add new user
+                        </button>
+
+                        <!-- Modal -->
+
+
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">
@@ -83,56 +90,56 @@ if (!isset($_SESSION['loggedin'])) {
                         </div>
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
-                            <div class="users-table">
-                                <h6>Users daily reports</h6>
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">User</th>
-                                            <th scope="col">Calls Today</th>
-                                            <th scope="col">Maybe</th>
-                                            <th scope="col">No answer</th>
-                                            <th scope="col">Said no</th>
-                                            <th scope="col">Customer</th>
-                                            <!-- <th scope="col">Email address</th> -->
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <?php
-                                        $n = 1;
-                                        $times_called = 0;
-                                        ?>
-
-                                        <?php while ($row = mysqli_fetch_array($caller_report)) { ?>
-                                            <?php
-                                            $caller_name = $row['caller_name'];
-                                            $calls_today = $row['all_today_count'];
-                                            $daily_mb_count = $row['daily_mb_count'];
-                                            $daily_na_count = $row['daily_na_count'];
-                                            $daily_n_count = $row['daily_n_count'];
-                                            $daily_cus_count = $row['daily_cus_count'];
-                                            ?>
+                                <div class="users-table">
+                                    <h6>Users daily reports</h6>
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
                                             <tr>
-                                                <td><?php echo $n++ ?></td>
-                                                <td><?php echo $caller_name; ?></td>
-                                                <td><?php echo $calls_today; ?></td>
-                                                <td><?php echo $daily_mb_count; ?></td>
-                                                <td><?php echo $daily_na_count; ?></td>
-                                                <td><?php echo $daily_n_count; ?></td>
-                                                <td><?php echo $daily_cus_count; ?></td>
+                                                <th scope="col">#</th>
+                                                <th scope="col">User</th>
+                                                <th scope="col">Calls Today</th>
+                                                <th scope="col">Maybe</th>
+                                                <th scope="col">No answer</th>
+                                                <th scope="col">Said no</th>
+                                                <th scope="col">Customer</th>
+                                                <!-- <th scope="col">Email address</th> -->
                                             </tr>
-                                        <?php
-                                        } ?>
-                                    </tbody>
-                                </table>
-                            </div>
+                                        </thead>
+                                        <tbody>
+
+                                            <?php
+                                            $n = 1;
+                                            $times_called = 0;
+                                            ?>
+
+                                            <?php while ($row = mysqli_fetch_array($caller_report)) { ?>
+                                                <?php
+                                                $caller_name = $row['caller_name'];
+                                                $calls_today = $row['all_today_count'];
+                                                $daily_mb_count = $row['daily_mb_count'];
+                                                $daily_na_count = $row['daily_na_count'];
+                                                $daily_n_count = $row['daily_n_count'];
+                                                $daily_cus_count = $row['daily_cus_count'];
+                                                ?>
+                                                <tr>
+                                                    <td><?php echo $n++ ?></td>
+                                                    <td><?php echo $caller_name; ?></td>
+                                                    <td><?php echo $calls_today; ?></td>
+                                                    <td><?php echo $daily_mb_count; ?></td>
+                                                    <td><?php echo $daily_na_count; ?></td>
+                                                    <td><?php echo $daily_n_count; ?></td>
+                                                    <td><?php echo $daily_cus_count; ?></td>
+                                                </tr>
+                                            <?php
+                                            } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
         </div>
@@ -142,3 +149,5 @@ if (!isset($_SESSION['loggedin'])) {
     </body>
 <?php }
 ?>
+
+<?php include "modals.php"; ?>
