@@ -10,12 +10,12 @@ if (!isset($_SESSION['loggedin'])) {
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     <div class="row side-nav">
                         <div class="home-button"><button class="">Back home <i class="fa fa-home"></i></button></div>
                     </div>
                 </div>
-                <div class="col-lg-11 assigned-area">
+                <div class="col-lg-10 assigned-area">
                     <div class="assigned-title row">
                         <div class="col">
                             <div>
