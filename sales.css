@@ -805,7 +805,7 @@ select option {
 .logout-sec i {
     margin-right: 6px !important;
     color: rgb(94, 94, 94);
-
+}
   /* ADMIN DASHBOARD */
   .side-nav button{
      border-radius: 4px!important;
@@ -825,7 +825,9 @@ select option {
   }
 
 /* ADMIN DASHBOARD */
-.admin-nav {}
+.admin-nav {
+    
+}
 
 .adm-bg {
     min-height: 90Vh;
