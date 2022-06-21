@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-2">
                     <div class="row side-nav">
-                        <div class="home-button"><button class="">Back home <i class="fa fa-home"></i></button></div>
+                        <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">
@@ -68,6 +68,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </div>
 
                     </div>
+                    <p></p>
                     <div class="row">
                         <div class="col-lg-12">
 
@@ -121,10 +122,10 @@ if (!isset($_SESSION['loggedin'])) {
                                             ?>
                                             <tr>
                                                 <td><?php echo $n++ ?></td>
-                                                <td><?php echo $client_name; ?></td>
+                                                <td class=""><?php echo $client_name; ?></td>
                                                 <td class="c-name"><?php echo $s_company_name; ?></td>
-                                                <td><?php echo $s_mc_number; ?></td>
-                                                <td><?php echo $s_phone_number; ?></td>
+                                                <td class="c-name-no"><?php echo $s_mc_number; ?></td>
+                                                <td class="c-name-no"><?php echo $s_phone_number; ?></td>
                                                 <td><?php echo $days; ?> <small> days ago</small></td>
 
                                                 <td><?php echo $times_called; ?></td>
