@@ -18,10 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
-
                         <!-- Modal -->
-
-
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">

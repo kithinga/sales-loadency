@@ -10,12 +10,12 @@ if (!isset($_SESSION['loggedin'])) {
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-1">
+                <div class="col-lg-2">
                     <div class="row side-nav">
-                        <div class="home-button"><a href="sales_dashboard.php"><button class="">Back home <i class="fa fa-home"></i></button></a></div>
+                        <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
                     </div>
                 </div>
-                <div class="col-lg-11 assigned-area">
+                <div class="col-lg-10 assigned-area">
                     <div class="assigned-title row">
                         <div class="col">
                             <div>
@@ -68,6 +68,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </div>
 
                     </div>
+                    <p></p>
                     <div class="row">
                         <div class="col-lg-12">
 
@@ -123,10 +124,10 @@ if (!isset($_SESSION['loggedin'])) {
                                             ?>
                                             <tr>
                                                 <td><?php echo $n++ ?></td>
-                                                <td><?php echo $client_name; ?></td>
+                                                <td class=""><?php echo $client_name; ?></td>
                                                 <td class="c-name"><?php echo $s_company_name; ?></td>
-                                                <td class="c-name"><?php echo $s_mc_number; ?></td>
-                                                <td><?php echo $s_phone_number; ?></td>
+                                                <td class="c-name-no"><?php echo $s_mc_number; ?></td>
+                                                <td class="c-name-no"><?php echo $s_phone_number; ?></td>
                                                 <td><?php echo $days; ?> <small> days ago</small></td>
                                                 <td><?php echo $status_comments; ?> <small> </small></td>
                                                 <td><?php echo $times_called; ?></td>
