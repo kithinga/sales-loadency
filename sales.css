@@ -96,7 +96,8 @@
 .sales-boxes {
     padding: 25px 7px 1px 23px;
 }
-.sales-boxes-2 {
+
+.sales-boxes-2{
     padding: 25px 20px 1px 8px;
 }
 
@@ -953,8 +954,44 @@ font-size: 13px!important;
     margin-top: 10px!important;
     border-radius: 3px solid;
 }
+
 .day-card h1{
     font-weight:800;
     font-size:15px;
     color:rgb(119, 130, 226);
+}
+
+.last-td{ 
+    background-color:rgb(253, 253, 253) !important;
+    border: solid 2px rgb(235, 235, 235) !important;
+    margin: 4px!important;
+}
+
+.maybe-area{
+    display: none;
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.home-arrow button{
+    height:3rem!important;
+    border: solid 1px rgb(226, 230, 233);
+    font-family: Montserrat;
+    border-radius: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 600; 
+    margin: 1rem;
+    font-size:13px;
+    background-color: rgb(129, 136, 33);
+    color:rgb(255, 255, 255);
+}
+.home-arrow h4{
+    font-size:14px!important;
+    margin-top: 2rem;
+}
+
+.home-arrow button i{
+  margin-right:9px;
+  color: rgb(0, 0, 0);
+  font-size:14px;
 }

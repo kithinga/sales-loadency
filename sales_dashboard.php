@@ -13,17 +13,17 @@ if (!isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-2 adm-bg">
                     <div class="row  admin-nav">
-                        <button class="shadow"><i class="fa fa-home"></i>Back home</button>
+                        <!-- <button class="shadow"><i class="fa fa-home"></i>Back home</button> -->
                         <!-- Button trigger modal -->
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
-                        <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="shadow-sm maybe-btn" >
                             <i class="fa-solid fa-bars-progress"></i>Maybe
                         </button>
-
                     </div>
                 </div>
+                <!--  -->
                 <div class="col-lg-10 assigned-area">
                     <div class="row">
                         <div class="col-lg-12">
@@ -35,6 +35,8 @@ if (!isset($_SESSION['loggedin'])) {
                             </div>
                         </div>
                     </div>
+                    <?php include_once "maybe.php"; ?>
+
                     <div class="row analysis-cards">
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
@@ -70,21 +72,21 @@ if (!isset($_SESSION['loggedin'])) {
                                     <div class="sales-card shado-sm maybe ">
                                         <h5>Maybe</h5>
                                         <i class="fa-solid fa-arrows-spin"></i>
-                                        <p  class="mbdirer"><?php echo $data['maybe_count']; ?></p>
+                                        <p class="mbdirer"><?php echo $data['maybe_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm no-answer">
                                         <h5>No answer</h5>
                                         <i class="fa-solid fa-stopwatch"></i>
-                                        <p  class="nadirer"><?php echo $data['no_answer_count']; ?> </p>
+                                        <p class="nadirer"><?php echo $data['no_answer_count']; ?> </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
                                         <h5>Said no</h5>
                                         <i class="fa-solid fa-phone-slash"></i>
-                                        <p  class="nodirer"><?php echo $data['no_count']; ?></p>
+                                        <p class="nodirer"><?php echo $data['no_count']; ?></p>
                                     </div>
                                 </div>
 
@@ -98,7 +100,7 @@ if (!isset($_SESSION['loggedin'])) {
 
                                 <div class="col-lg-12 ani">
                                     <div class="sales-card day-card shado-sm said-no">
-                                        <h1>  Calls Today</h1>
+                                        <h1> Calls Today</h1>
                                         <i class="fa fa-phone"></i>
                                         <p><?php echo $all_tc['all_today_count']; ?></p>
                                     </div>
@@ -135,6 +137,7 @@ if (!isset($_SESSION['loggedin'])) {
                                                 $daily_na_count = $row['daily_na_count'];
                                                 $daily_n_count = $row['daily_n_count'];
                                                 $daily_cus_count = $row['daily_cus_count'];
+
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $n++ ?></td>
@@ -147,9 +150,13 @@ if (!isset($_SESSION['loggedin'])) {
                                                 </tr>
                                             <?php
                                             } ?>
-                                            <tr>
+                                            <tr class="last-td">
                                                 <td colspan="2"></td>
                                                 <td><?php echo $all_tc['all_today_count'] ?></td>
+                                                <td class="mbdirer"><?php echo  $usdt['mb_usdt'] ?></td>
+                                                <td class="nadirer"><?php echo  $usdt['na_usdt'] ?></td>
+                                                <td class="nodirer"><?php echo  $usdt['no_usdt'] ?></td>
+                                                <td class="cdirer"><?php echo  $usdt['c_usdt'] ?></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -165,6 +172,7 @@ if (!isset($_SESSION['loggedin'])) {
         <script>
             AOS.init();
         </script>
+        <script src="custom.js"></script>
     </body>
 <?php }
 ?>

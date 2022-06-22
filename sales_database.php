@@ -1,4 +1,3 @@
-
 <?php
 $servername = 'localhost';
 $username = 'root';
@@ -8,9 +7,6 @@ $conn = mysqli_connect($servername, $username, $password, "$dbname");
 if (!$conn) {
     echo "sales db not connected";
 }
-
-$username = $_SESSION['name'];
-
 
 $username = $_SESSION['name'];
 
@@ -24,14 +20,27 @@ $to_call_results = mysqli_query($conn, "SELECT * FROM va2pow   order by times_ca
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
+$maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' ");
+
+
 // USERS SELECTION for admin dashboard reports
-$caller_report = mysqli_query($conn, "SELECT *, COUNT(caller_name) AS all_today_count,
--- COUNT(caller_name) AS all_today_count,
+$caller_report = mysqli_query($conn, "SELECT *, 
+COUNT(caller_name) AS all_today_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS daily_cus_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS daily_mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS daily_n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS daily_na_count from calls_tally where 
 last_changed >= date(now()) and last_changed < date(now()) + interval 1 day group by caller_name order by last_changed desc");
+// Users daily totals
+$users_daily_totals = mysqli_query($conn, "SELECT
+SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS no_usdt,
+SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_usdt,
+SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_usdt,
+SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS c_usdt
+FROM calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day");
+$usdt = mysqli_fetch_assoc($users_daily_totals);
+
+
 
 // ALL COUNTS
 // Counting the number of contacts per status
@@ -44,12 +53,14 @@ SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM calls_tally");
 $data = mysqli_fetch_assoc($all_admin_res);
 
+
 // GRAND TOTALS i>e ALL TIME COLLECTED CONTACTS  AND waiting calls
 $total_res = mysqli_query($conn, "SELECT
 COUNT(s_phone_number) AS collected_contacts,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM va2pow");
 $total_data = mysqli_fetch_assoc($total_res);
+
 
 // SALES ASSIGNED PERSONAL DASHBOARD
 // All time total calls are$res = mysqli_query($conn, "SELECT
@@ -62,6 +73,8 @@ SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
 $dat2 = mysqli_fetch_assoc($value_counts);
+
+
 // USER COUNT FOR TODAY AND YESTERDAY
 $today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally 
 where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day AND caller_name = '$username'");
