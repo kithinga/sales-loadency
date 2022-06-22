@@ -51,7 +51,6 @@ if (isset($_POST['submit']))
                 $s_email = $getData[6];
                 $s_status = $getData[7];
             
-
                 // If user already exists in the database with the same email
                 $query = "SELECT s_mc_number FROM va2pow WHERE s_company_name = '" . $getData[0] . "'";
 
