@@ -134,11 +134,14 @@ if (!isset($_SESSION['loggedin'])) {
                                                 <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                     <form class="edit-status-form" method="post" action="update_status.php">
                                                         <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
+                                                        <input class="edit-status-input" type="hidden" name="client_name" value="<?php echo $client_name; ?>" />
+                                                        <input class="edit-status-input" type="hidden" name="s_company_name" value="<?php echo $s_company_name; ?>" />
                                                         <input class="edit-status-input" type="hidden" name="times_called" value="<?php echo $times_called + 1; ?>" />
                                                         <input class="edit-status-input" type="hidden" name="last_changed" value="" />
                                                         <!-- tally tester -->
                                                         <input class="edit-status-input" type="hidden" name="s_phone_number" value="<?php echo $s_phone_number ?>" />
                                                         <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
+                                                        <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
                                                          
                                                     <div class="dropdown">

@@ -30,9 +30,9 @@
                             <th scope="col">Company name</th>
                             <th scope="col">Mc number</th>
                             <th scope="col">Phone number</th>
+                            <th scope="col">Times <br> called</th>
                             <th class="status-box-1">Last called</th>
                             <th scope="col">Previous comments</th>
-                            <th scope="col">Times <br> called</th>
                             <th scope="col">Previous <br> caller</th>
                             <th scope="col">Call status</th>
                             <th scope="col">Street address</th>
@@ -50,14 +50,14 @@
                             <?php
                             $s_mc_number = $row['s_mc_number'];
                             $tally_id = $row['tally_id'];
-                            // $s_company_name = $row['s_company_name'];
-                            // $client_name = $row['client_name'];
-                            // $street_address = $row['street_address'];
+                            $s_company_name = $row['s_company_name'];
+                            $client_name = $row['client_name'];
+                            $street_address = $row['street_address'];
                             $s_phone_number = $row['s_phone_number'];
                             $pow = $row['pow'];
                             $s_status = $row['s_status'];
                             // $s_email = $row['s_email'];
-                            // $times_called = $row['times_called'];
+                            $times_called = $row['times_called'];
                             $last_changed = $row['last_changed'];
                             $date = date('Y-m-d H:i:s');
                             $called_by = $row['caller_name'];
@@ -65,16 +65,18 @@
                             $now = time(); // 
                             $your_date = strtotime($last_changed);
                             $datediff = $now - $your_date;
-
                             $days = round(abs($datediff) / (24 * 60 * 60));
                             ?>
                             <tr >
                                 <td  class="cirle-num"><p><?php echo $n++ ?></p></td>
+                                <td class="c-name-no"><?php echo $client_name; ?></td>
+                                <td class="cn-name"><?php echo $s_company_name; ?></td>
                                 <td class="c-name-no"><?php echo $s_mc_number; ?></td>
                                 <td class="c-name-no"><?php echo $s_phone_number; ?></td>
-                                <td><?php echo $days; ?> <small> days ago</small></td>
-                                <td><?php echo $status_comments; ?></td>
-                                <td><?php echo $called_by ?></td>
+                                <td class="c-name-no"><?php echo $times_called; ?></td>
+                                <td class="c-name-no"><?php echo $days; ?> <small> days ago</small></td>
+                                <td class="c-name-no n-bo"><?php echo $status_comments; ?></td>
+                                <td class="c-name-no"><?php echo $called_by ?></td>
                                 <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                     <form class="edit-status-form" method="post" action="update_status.php">
                                         <input class="edit-status-input" type="hidden" name="tally_id" value="<?php echo $tally_id; ?>" />
@@ -99,6 +101,7 @@
                                                     <option value='customer'>customer</option>
                                                     <option value='maybe'>maybe</option>
                                                     <option value='dropped'>dropped</option>
+                                                    <br>
                                                 </select>
                                                 <label for="stat-com">Status-comments</label>
                                                 <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
@@ -108,8 +111,9 @@
                                     </form>
                                     <!-- <i class="fa fa-caret-down"></i> -->
                                 </td>
-
+                                <td><?php echo $street_address; ?></td>
                                 <td><?php echo $pow; ?></td>
+                               
                             </tr>
                         <?php
                         } ?>

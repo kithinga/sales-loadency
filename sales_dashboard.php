@@ -19,7 +19,7 @@ if (!isset($_SESSION['loggedin'])) {
                             <i class="fa fa-user"></i>Add new user
                         </button>
                         <button type="button" class="shadow-sm maybe-btn" >
-                            <i class="fa-solid fa-bars-progress"></i>Maybe
+                            <i class="fa-solid fa-bars-progress"></i>Potential clients
                         </button>
                     </div>
                 </div>
@@ -69,28 +69,28 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm customer ">
                                         <h5>Customers</h5>
-                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <i class="cdirer fa fa-users" aria-hidden="true"></i>
                                         <p class="cdirer"><?php echo $data['customer_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm maybe ">
                                         <h5>Maybe</h5>
-                                        <i class="fa-solid fa-arrows-spin"></i>
+                                        <i class="mbdirer fa-solid fa-arrows-spin"></i>
                                         <p class="mbdirer"><?php echo $data['maybe_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm no-answer">
                                         <h5>No answer</h5>
-                                        <i class="fa-solid fa-stopwatch"></i>
+                                        <i class="nadirer fa-solid fa-stopwatch"></i>
                                         <p class="nadirer"><?php echo $data['no_answer_count']; ?> </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
                                         <h5>Said no</h5>
-                                        <i class="fa-solid fa-phone-slash"></i>
+                                        <i class="bodirer fa-solid fa-phone-slash"></i>
                                         <p class="nodirer"><?php echo $data['no_count']; ?></p>
                                     </div>
                                 </div>

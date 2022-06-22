@@ -596,12 +596,22 @@ tr td {
     border-radius: 3px;
     min-height: 2rem;
     padding: 7px 0px 7px 15px;
-    color: rgb(102, 114, 219);
+    background-color:white !important;
+    color: rgb(54, 106, 173);
     width: 100%;
     border: none;
+    font-size:14px!important;
+    font-weight:600!important;
     border: solid 1px rgb(202, 202, 202);
     margin-bottom: 10px;
     /* border-top: solid 2px rgb(223, 219, 219); */
+}
+
+.dropdown-content select option{
+    font-size:12px!important;
+    padding: 20px!important;
+    font-weight:600!important;
+    border-radius: 10px!important;
 }
 
 .dropdown-content button {
@@ -1052,4 +1062,20 @@ tr td p{
     padding: 1px!important;
     margin: 1px!important;
     text-align: center;
+}
+
+.n-bo{
+    background-color: rgb(253, 254, 255) !important;
+    /* background-color: rgb(54, 64, 73) !important; */
+    border-radius: 7px!important;
+    padding-top:30px!important;
+    font-size: 13px;
+    /* color: rgb(67, 83, 155); */
+   color:rgb(104, 131, 9)!important;
+   border-bottom: 1px rgb(223, 224, 220) solid!important;
+
+}
+
+.cn-name{
+    padding-left:1.8rem!important;
 }
