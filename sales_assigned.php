@@ -84,7 +84,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             <th scope="col">Mc number</th>
                                             <th scope="col">Phone number</th>
                                             <th scope="col">Last called</th>
-                                            <th scope="col">Previous comments</th>
+                                            <th scope="col">Previous <br> comments</th>
                                             <th scope="col">Times <br> called</th>
                                             <th scope="col">Previous <br> caller</th>
                                             <th scope="col">Call status</th>

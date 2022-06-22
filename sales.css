@@ -735,10 +735,17 @@ select option {
     font-size: 13px!important;
     /* padding-right: 15px!important; */
   }
+
   .c-name-no{
     max-width:5.7rem!important;
     text-align: center!important;
     /* font-size: 13px!important; */
+    /* padding-right: 15px!important; */
+  }
+
+  .c-name-3{
+    max-width:9rem!important;
+     text-align:center!important
     /* padding-right: 15px!important; */
   }
 
@@ -985,6 +992,7 @@ font-size: 13px!important;
     background-color: rgb(193, 206, 20);
     color:rgb(0, 0, 0);
 }
+
 .home-arrow h4{
     font-size:14px!important;
     margin-top: 2rem;
@@ -995,6 +1003,7 @@ font-size: 13px!important;
   color: rgb(0, 0, 0);
   font-size:14px;
 }
+
 .home-arrow span{
 margin-left:3rem;
 font-family: Montserrat;

@@ -1,17 +1,18 @@
-<div class="col-lg-12 assigned-area maybe-area"   data-aos="zoom-in">
+<div class="col-lg-12 assigned-area maybe-area" data-aos="zoom-in">
     <div class="assigned-title row">
         <div class="col">
             <div class="home-arrow row">
-                 <div class="col-lg-2"><a href="sales_dashboard.php"> <button class="shadow"><i class="fa fa-home"></i>back home</button></a></div>
-                 <div class="col-lg-4"> <h4>POSSIBLE CLIENTS <span> <?php echo $calls_tally['maybe_tally']?></span> / <?php echo $calls_tally['calls_done'] ?> </h4></div>
+                <div class="col-lg-2"><a href="sales_dashboard.php"> <button class="shadow"><i class="fa fa-home"></i>back home</button></a></div>
+                <div class="col-lg-4">
+                    <h4>POSSIBLE CLIENTS <span> <?php echo $calls_tally['maybe_tally'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
+                </div>
             </div>
         </div>
     </div>
     <p></p>
     <div class="row">
         <div class="col-lg-12">
-
-            <div class="assigned-table" >
+            <div class="assigned-table">
                 <h5>Possible clients</h5>
                 <table class="table table-bordered table-hover">
                     <thead>
@@ -60,12 +61,12 @@
                             ?>
                             <tr>
                                 <td><?php echo $n++ ?></td>
-                            
+
                                 <td class="c-name-no"><?php echo $s_mc_number; ?></td>
                                 <td class="c-name-no"><?php echo $s_phone_number; ?></td>
                                 <td><?php echo $days; ?> <small> days ago</small></td>
-                          
-                             
+
+
                                 <td><?php echo $called_by ?></td>
                                 <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                     <form class="edit-status-form" method="post" action="update_status.php">
@@ -100,7 +101,7 @@
                                     </form>
                                     <!-- <i class="fa fa-caret-down"></i> -->
                                 </td>
-                           
+
                                 <td><?php echo $pow; ?></td>
                             </tr>
                         <?php
