@@ -90,7 +90,7 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
                                         <h5>Said no</h5>
-                                        <i class="bodirer fa-solid fa-phone-slash"></i>
+                                        <i class="nodirer fa-solid fa-phone-slash"></i>
                                         <p class="nodirer"><?php echo $data['no_count']; ?></p>
                                     </div>
                                 </div>
