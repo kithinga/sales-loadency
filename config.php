@@ -15,6 +15,9 @@ include "sales_database.php"
     
     <link rel="stylesheet" href="sales.css">
     <!-- Css and fontawesome -->
+    <!-- <script src="https://kit.fontawesome.com/4bfa3afdd7.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script src="https://kit.fontawesome.com/4bfa3afdd7.js" crossorigin="anonymous"></script>
     <!-- Data Aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

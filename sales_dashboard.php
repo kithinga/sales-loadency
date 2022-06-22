@@ -18,7 +18,10 @@ if (!isset($_SESSION['loggedin'])) {
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
-                        <!-- Modal -->
+                        <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-bars-progress"></i>Maybe
+                        </button>
+
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">
@@ -27,7 +30,7 @@ if (!isset($_SESSION['loggedin'])) {
                             <div class="sales-title">
                                 <h1>Sales dashboard
                                 </h1>
-                                <p>INSIGHTS</p>
+                                <p>FOR SALES INSIGHTS</p>
                                 <br>
                             </div>
                         </div>
@@ -38,59 +41,75 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card waiting-call ">
                                         <h5>Collected contacts</h5>
+                                        <i class="fa-solid fa-list-check"></i>
                                         <p><?php echo $total_data['collected_contacts']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 ani">
+                                    <div class="sales-card shado-sm said-no">
+                                        <h5>Called</h5>
+                                        <i class="fa-solid fa-phone-volume"></i>
+                                        <p><?php echo $data['no_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card waiting-call ">
                                         <h5>Not called</h5>
+                                        <i class="fa-solid fa-calendar-days"></i>
                                         <p><?php echo $total_data['waiting_call_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm customer ">
                                         <h5>Customers</h5>
-                                        <p><?php echo $data['customer_count']; ?></p>
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <p class="cdirer"><?php echo $data['customer_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm maybe ">
                                         <h5>Maybe</h5>
-                                        <p><?php echo $data['maybe_count']; ?></p>
+                                        <i class="fa-solid fa-arrows-spin"></i>
+                                        <p  class="mbdirer"><?php echo $data['maybe_count']; ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm no-answer">
                                         <h5>No answer</h5>
-                                        <p><?php echo $data['no_answer_count']; ?> </p>
+                                        <i class="fa-solid fa-stopwatch"></i>
+                                        <p  class="nadirer"><?php echo $data['no_answer_count']; ?> </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
                                         <h5>Said no</h5>
-                                        <p><?php echo $data['no_count']; ?></p>
+                                        <i class="fa-solid fa-phone-slash"></i>
+                                        <p  class="nodirer"><?php echo $data['no_count']; ?></p>
                                     </div>
                                 </div>
+
                                 <div class="col-lg-3 ani">
                                     <div class="sales-card shado-sm said-no">
-                                        <h5>Calls <br> yesterday</h5>
-                                        <p><?php echo $data['no_count']; ?></p>
+                                        <h5> Dropped clients</h5>
+                                        <i class="fa fa-level-down" aria-hidden="true"></i>
+                                        <p><?php echo "1" ?></p>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 ani">
-                                    <div class="sales-card shado-sm said-no">
-                                        <h5> <i class="fa fa-phone"></i>  Calls <br> Today</h5>
-                                        
+
+                                <div class="col-lg-12 ani">
+                                    <div class="sales-card day-card shado-sm said-no">
+                                        <h1>  Calls Today</h1>
+                                        <i class="fa fa-phone"></i>
                                         <p><?php echo $all_tc['all_today_count']; ?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="row justify-content-center sales-boxes no-gutters">
+                            <div class="row justify-content-center sales-boxes-2 no-gutters">
                                 <div class="users-table">
                                     <h6>Users daily reports</h6>
-                                    <table class="table table-bordered table-hover">
+                                    <table class="table  table-hover ">
                                         <thead>
                                             <tr>
                                                 <th scope="col">#</th>
@@ -104,7 +123,6 @@ if (!isset($_SESSION['loggedin'])) {
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                             <?php
                                             $n = 1;
                                             $times_called = 0;
@@ -117,8 +135,6 @@ if (!isset($_SESSION['loggedin'])) {
                                                 $daily_na_count = $row['daily_na_count'];
                                                 $daily_n_count = $row['daily_n_count'];
                                                 $daily_cus_count = $row['daily_cus_count'];
-                                               
-
                                                 ?>
                                                 <tr>
                                                     <td><?php echo $n++ ?></td>
@@ -133,7 +149,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             } ?>
                                             <tr>
                                                 <td colspan="2"></td>
-                                                <td><?php echo $all_tc['all_today_count']?></td>
+                                                <td><?php echo $all_tc['all_today_count'] ?></td>
                                             </tr>
                                         </tbody>
                                     </table>

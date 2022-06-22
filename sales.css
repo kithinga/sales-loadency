@@ -39,7 +39,7 @@
 
 .sales-card p {
     font-size: 22px;
-    font-weight: 300;
+    font-weight: 500;
     color: rgb(146, 146, 146);
 }
 
@@ -49,8 +49,9 @@
 }
 
 .sales-title p {
-    letter-spacing: 3px;
-    color: rgb(109, 120, 184);
+    letter-spacing:1px;
+    color: rgb(61, 69, 114);
+    font-size: 13px!important;
     font-weight: 500;
 }
 
@@ -72,7 +73,7 @@
     margin-top: 3rem;
     margin-bottom: 1rem;
     text-align: center;
-    font-size: 27px;
+    font-size: 22px!important;
     font-weight: 800;
 }
 
@@ -93,7 +94,10 @@
 }
 
 .sales-boxes {
-    padding: 20px 20px 1px 20px;
+    padding: 25px 7px 1px 23px;
+}
+.sales-boxes-2 {
+    padding: 25px 20px 1px 8px;
 }
 
 .analysis-cards {
@@ -826,7 +830,7 @@ select option {
 
 /* ADMIN DASHBOARD */
 .admin-nav {
-    
+
 }
 
 .adm-bg {
@@ -835,14 +839,22 @@ select option {
 }
 
 .users-table {
-    background-color: white;
+    background-color: rgb(255, 255, 255)!important;
+    border: solid 1px rgb(235, 235, 235) !important;
+    border-radius:3px;
     padding: 15px 20px 0px 20px;
+}
+
+.table-hover{
+    border: solid 1px rgb(235, 235, 235) !important;
 }
 
 .users-table thead tr th {
     font-weight: 600 !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
+    background-color: rgb(241, 241, 241)!important;
     color: #303333;
+    border-bottom: 1px solid rgb(233, 225, 225)!important;
 }
 
 .users-table tr {
@@ -850,7 +862,7 @@ select option {
 }
 
 .users-table h6 {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     margin-bottom: 0.5rem;
     font-family: Montserrat;
@@ -879,13 +891,13 @@ select option {
     font-size: 14px;
     border: none;
     transition-duration: 1.2s;
- 
-    /* width: 95%; */
 }
+
 .admin-nav button:hover{
     background-color: rgb(93, 95, 119);
     border: solid 2px rgb(99, 112, 112)!important; 
 }
+
 .fa-phone{
     margin-right: 0.5rem;
     color: rgb(112, 112, 112);
@@ -900,6 +912,7 @@ select option {
  color: rgb(99, 95, 95);
  font-size:13px;
   }
+
   .fa-square-plus{
     margin-left:11px;
   }
@@ -910,6 +923,7 @@ padding-top: 6px !important;
 border-left: 1px solid rgb(242, 243, 247);
 
 }
+
 .assigned-table{
     background-color:rgb(255, 255, 255)!important;
     border: solid 1px rgb(235, 235, 235);border-radius:4px;
@@ -927,4 +941,20 @@ border-bottom: 1px solid rgb(241, 238, 238) !important;
 border-top: 2px solid rgb(236, 236, 236) !important;
 font-size: 13px!important;
 
+}
+
+.sales-card i{
+    margin: 9px !important;
+    color:rgb(112, 112, 112);
+    font-size: 13px;
+}
+
+.day-card{
+    margin-top: 10px!important;
+    border-radius: 3px solid;
+}
+.day-card h1{
+    font-weight:800;
+    font-size:15px;
+    color:rgb(119, 130, 226);
 }

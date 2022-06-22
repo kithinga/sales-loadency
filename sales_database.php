@@ -19,7 +19,7 @@ $va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collecte
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
-$maybe_results = mysqli_query($conn, "SELECT * FROM va2pow   order by times_called asc limit 7");
+$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow   order by times_called asc limit 7");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
