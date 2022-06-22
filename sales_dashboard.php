@@ -25,7 +25,7 @@ if (!isset($_SESSION['loggedin'])) {
                 </div>
                 <!--  -->
                 <div class="col-lg-10 assigned-area">
-                    <div class="row">
+                    <div class="row analysis-cards-dash">
                         <div class="col-lg-12">
                             <div class="sales-title">
                                 <h1>Sales dashboard
@@ -99,7 +99,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     <div class="sales-card shado-sm said-no">
                                         <h5> Dropped clients</h5>
                                         <i class="fa fa-level-down" aria-hidden="true"></i>
-                                        <p><?php echo "1" ?></p>
+                                        <p><?php echo "0" ?></p>
                                     </div>
                                 </div>
 

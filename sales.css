@@ -358,7 +358,7 @@ tr td {
 }
 
 .assigned-area {
-    border-left: 1px solid rgb(221, 216, 216);
+    /* border-left: 1px solid rgb(221, 216, 216); */
     /* padding:1rem; */
     /* min-height:100vh; */
 }
@@ -551,10 +551,21 @@ tr td {
 }
 
 .status-box {
-    padding: 10px 30px 0px 30px !important;
-    background-color: rgb(241, 241, 241) !important;
+    padding: 10px 30px 0px 20px !important;
+    text-align: center!important;
+    margin-top: 5px!important;
+    background-color: rgb(253, 253, 253) !important;
     transition-duration: 1s;
+    border:solid 2px  rgb(225, 228, 231)  !important;
+    border:solid 2px  rgb(227, 231, 213)  !important;
+    border-radius: 4px!important;
+    padding:30px 0px 30px 0px!important;
+    border-top: none !important;
 }
+
+/* .status-box-1{
+    border-top:solid 2px  rgb(213, 221, 231)  !important;
+} */
 
 .status-box:hover {
     color: white !important;
@@ -934,9 +945,11 @@ border-left: 1px solid rgb(242, 243, 247);
 
 .assigned-table{
     background-color:rgb(255, 255, 255)!important;
-    border: solid 1px rgb(235, 235, 235);border-radius:4px;
+    border: solid 2px rgb(228, 231, 225);border-radius:4px;
+    border-top: solid 3px rgb(240, 241, 238);border-radius:4px;
     padding-left: 14px;
     padding-right: 14px;
+    margin: 1rem;
     padding-top: 10px;
 
 }
@@ -976,7 +989,13 @@ font-size: 13px!important;
 
 .maybe-area{
     display: none;
-    border-top: 1px solid rgb(226, 226, 226);
+    /* border-top: 1px solid rgb(226, 226, 226); */
+}
+.home-arrow{
+    /* background-color: rgb(205, 206, 189); */
+    /* padding-bottom: 10px; */
+    padding-top: 16px;
+
 }
 
 .home-arrow button{
@@ -987,15 +1006,21 @@ font-size: 13px!important;
     padding-left: 1rem;
     padding-right: 1rem;
     font-weight: 600; 
-    margin: 1rem;
+    margin-left:1rem;
     font-size:13px;
-    background-color: rgb(193, 206, 20);
+    background-color: rgb(209, 223, 19);
+    transition-duration: 1.3s;
     color:rgb(0, 0, 0);
+}
+
+.home-arrow button:hover{
+    background-color: rgb(41, 43, 11);
+    color: rgb(247, 247, 247)!important;
 }
 
 .home-arrow h4{
     font-size:14px!important;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .home-arrow button i{
@@ -1007,4 +1032,24 @@ font-size: 13px!important;
 .home-arrow span{
 margin-left:3rem;
 font-family: Montserrat;
+}
+
+.convert{
+    background-color: rgb(238, 238, 238)!important;
+}
+
+.aa-table thead tr th{
+    border-bottom: 2px solid rgb(227, 233, 216)!important;
+}
+
+tr td p{
+    border: 2px solid rgb(234, 253, 204)!important;
+    background-color: rgb(242, 252, 227)!important;
+    /* padding: 4px!important; */
+    border-radius: 7px;
+    font-weight: 600;
+    font-family:Montserrat;
+    padding: 1px!important;
+    margin: 1px!important;
+    text-align: center;
 }

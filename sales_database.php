@@ -10,7 +10,7 @@ if (!$conn) {
 
 $username = $_SESSION['name'];
 
-$va2pow_results = mysqli_query($conn, "SELECT *, count(s_mc_number) as `collected_contacts` FROM va2pow ");
+$va2pow_results = mysqli_query($conn, "SELECT *, count(s_phone_number) as `collected_contacts` FROM va2pow ");
 // Customer results 
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results

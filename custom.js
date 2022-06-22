@@ -3,4 +3,5 @@
 $(".maybe-btn").click(function(){
     $('.maybe-area').toggle();
     $('.analysis-cards').toggle();
+    $('.analysis-cards-dash').toggle();
   });
