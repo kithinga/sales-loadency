@@ -2,8 +2,8 @@
     <div class="assigned-title row">
         <div class="col">
             <div class="home-arrow row">
-                 <div class="col-lg-2"><a href="sales_dashboard.php"> <button class="shadow-sm"><i class="fa fa-home"></i>back home</button></a></div>
-                 <div class="col-lg-4"> <h4>POSSIBLE CLIENTS</h4></div>
+                 <div class="col-lg-2"><a href="sales_dashboard.php"> <button class="shadow"><i class="fa fa-home"></i>back home</button></a></div>
+                 <div class="col-lg-4"> <h4>POSSIBLE CLIENTS <span> <?php echo $calls_tally['maybe_tally']?></span> / <?php echo $calls_tally['calls_done'] ?> </h4></div>
             </div>
         </div>
     </div>
@@ -90,6 +90,7 @@
                                                     <option value='said-no'>said-no</option>
                                                     <option value='customer'>customer</option>
                                                     <option value='maybe'>maybe</option>
+                                                    <option value='dropped'>dropped</option>
                                                 </select>
                                                 <label for="stat-com">Status-comments</label>
                                                 <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea>

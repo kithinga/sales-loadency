@@ -37,6 +37,11 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <?php include_once "maybe.php"; ?>
 
+                    <?php 
+                    // Contacts called
+                       $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
+                    ?>
+
                     <div class="row analysis-cards">
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
@@ -51,7 +56,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     <div class="sales-card shado-sm said-no">
                                         <h5>Called</h5>
                                         <i class="fa-solid fa-phone-volume"></i>
-                                        <p><?php echo $data['no_count']; ?></p>
+                                        <p><?php echo $called ?></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 ani">

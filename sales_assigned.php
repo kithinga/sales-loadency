@@ -155,6 +155,7 @@ if (!isset($_SESSION['loggedin'])) {
                                                                 <option value='said-no'>said-no</option>
                                                                 <option value='customer'>customer</option>
                                                                 <option value='maybe'>maybe</option>
+                                                                <option value='dropped'>dropped</option>
                                                             </select>
                                                             <label for="stat-com">Status-comments</label>
                                                             <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea>

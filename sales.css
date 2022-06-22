@@ -974,16 +974,16 @@ font-size: 13px!important;
 
 .home-arrow button{
     height:3rem!important;
-    border: solid 1px rgb(226, 230, 233);
+    border: none;
     font-family: Montserrat;
-    border-radius: 30px;
+    border-radius: 10px;
     padding-left: 1rem;
     padding-right: 1rem;
     font-weight: 600; 
     margin: 1rem;
     font-size:13px;
-    background-color: rgb(129, 136, 33);
-    color:rgb(255, 255, 255);
+    background-color: rgb(193, 206, 20);
+    color:rgb(0, 0, 0);
 }
 .home-arrow h4{
     font-size:14px!important;
@@ -994,4 +994,8 @@ font-size: 13px!important;
   margin-right:9px;
   color: rgb(0, 0, 0);
   font-size:14px;
+}
+.home-arrow span{
+margin-left:3rem;
+font-family: Montserrat;
 }

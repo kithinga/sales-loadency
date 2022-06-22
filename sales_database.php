@@ -40,8 +40,6 @@ SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS c_usdt
 FROM calls_tally where last_changed >= date(now()) and last_changed < date(now()) + interval 1 day");
 $usdt = mysqli_fetch_assoc($users_daily_totals);
 
-
-
 // ALL COUNTS
 // Counting the number of contacts per status
 $all_admin_res = mysqli_query($conn, "SELECT
@@ -50,8 +48,7 @@ SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS no_answer_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS maybe_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS customer_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
-FROM calls_tally");
-$data = mysqli_fetch_assoc($all_admin_res);
+FROM calls_tally"); $data = mysqli_fetch_assoc($all_admin_res);
 
 
 // GRAND TOTALS i>e ALL TIME COLLECTED CONTACTS  AND waiting calls
@@ -60,6 +57,12 @@ COUNT(s_phone_number) AS collected_contacts,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
 FROM va2pow");
 $total_data = mysqli_fetch_assoc($total_res);
+
+
+// GRAND TOTAL IN CALLS_TALLY TABLE
+$calls_tally_total = mysqli_query($conn, "SELECT
+COUNT(tally_id) AS calls_done, SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS maybe_tally FROM calls_tally ");
+$calls_tally = mysqli_fetch_assoc($calls_tally_total);
 
 
 // SALES ASSIGNED PERSONAL DASHBOARD
