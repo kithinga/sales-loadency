@@ -20,9 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `sales_db`
 --
-
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `accounts`
 --
@@ -46,7 +44,6 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `role`) VALUES
 (13, 'lmis', '$2y$10$pr14oVb9TXWkv/rIVIju9.gae27TUcCpJvLf3W5A0yDN2eL63iv/2', 'menscfesz@gmail.com', NULL);
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `admins`
 --
@@ -61,7 +58,6 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `calls_tally`
 --

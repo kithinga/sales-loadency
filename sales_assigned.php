@@ -66,7 +66,6 @@ if (!isset($_SESSION['loggedin'])) {
                                 <div class="cspan shadow"></div>
                             </div>
                         </div>
-
                     </div>
                     <p></p>
                     <div class="row">
