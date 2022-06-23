@@ -1,1 +1,12 @@
 https://code-boxx.com/php-user-role-management-system/
+
+I know this looks massive, but keep calm and look carefully:
+
+A database class.
+(A1 & A2) The constructor connects to the database when $DB = new DB() is created, the destructor closes the connection.
+(A3) exec() Runs an SQL query.
+(A4) fetch() Runs a SELECT SQL query, returns a single row.
+(A5) fetchAll() Runs a SELECT SQL query, returns multiple rows.
+Database settings. Remember to change to your own.
+Self-explanatory…
+Yep, in “normal projects” it is better to break the database class into a script on its own. I am just being lazy and trying to keep things simple here.

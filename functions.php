@@ -4,7 +4,6 @@ include_once 'config.php';
 
 if (isset($_POST['submit']))
 {
-
     // Allowed mime types
     $fileMimes = array(
         'text/x-comma-separated-values',
@@ -34,35 +33,30 @@ if (isset($_POST['submit']))
              // Parse data from CSV file line by line
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
             {
-                // Get row data
-                // $s_company_name = "2346";
-                // $street_address = "eqw";
-                // $s_phone_number = "wqeuoiuywe";
-                // $s_mc_number = "wqeioi";
-                // $pow = "jikol";
                 // $client_name = "qsada90";
                 // $s_email = "236765z@gmail.com";
-                $s_company_name = $getData[0];
-                $street_address = $getData[1];
-                $s_phone_number = $getData[2];
-                $s_mc_number = $getData[3];
-                $pow = $getData[4];
-                $client_name = $getData[5];
-                $s_email = $getData[6];
-                $s_status = $getData[7];
+                $cid = $getData[0];
+                $s_company_name = $getData[1];
+                $street_address = $getData[2];
+                $s_phone_number = $getData[3];
+                $s_mc_number = $getData[4];
+                $pow = $getData[5];
+                $client_name = $getData[6];
+                $s_email = $getData[7];
+                $s_status = $getData[8];
             
                 // If user already exists in the database with the same email
-                $query = "SELECT s_mc_number FROM va2pow WHERE s_company_name = '" . $getData[0] . "'";
+                $query = "SELECT s_mc_number FROM va2pow WHERE s_mc_number = '" . $getData[4] . "'";
 
                 $check = mysqli_query($conn, $query);
 
                 if ($check->num_rows > 0)
                 {
-                    mysqli_query($conn, "UPDATE va2pow SET s_mc_number = '" . $s_mc_number . "', s_company_name = '" . $s_company_name . "', street_address = '" . $street_address . "',  WHERE s_email = '" . $s_email . "'");
+                    mysqli_query($conn, "UPDATE va2pow SET cid = '" . $cid . "', s_company_name = '" . $s_company_name . "', street_address = '" . $street_address . "',  WHERE s_mc_number = '" . $s_mc_number . "'");
                 }
                 else
                 {
-                     mysqli_query($conn, "INSERT INTO va2pow (s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status) VALUES ( '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "')");
+                     mysqli_query($conn, "INSERT INTO va2pow (cid,s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status) VALUES ( '" . $cid . "', '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "')");
 
                 }
             }

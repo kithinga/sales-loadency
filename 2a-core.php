@@ -46,7 +46,7 @@ class DB {
     return $this->stmt->fetchAll();
   }
 }
-
+ 
 // (B) DATABASE SETTINGS - CHANGE TO YOUR OWN!
 define("DB_HOST", "localhost");
 define("DB_NAME", "test");

@@ -19,6 +19,7 @@ else{?>
         <div class="input-group-append">
           <input type="submit" name="submit" value="Upload" class="btn btn-primary">
         </div>
+        <!-- <img src="https://cdn.dribbble.com/users/122051/screenshots/5749053/dribbble_1.gif" alt=""> -->
       </div>
     </form>
   </div>
