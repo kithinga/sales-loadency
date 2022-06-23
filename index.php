@@ -48,6 +48,7 @@
         <a href="create_account.php"><button class="register-btn">REGISTER</button></a>
         <div class="keys">
           <!-- <button class="keystrokes">Frick</button> -->
+          <img src="images/Sales-cycle.svg" alt="">
         </div>
       </div>
     </div>
