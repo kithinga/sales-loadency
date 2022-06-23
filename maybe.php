@@ -7,6 +7,7 @@
                         <br>
                         <h1>Client conversion dashboard</h1>
                         <p>product of numbers</p>
+                        <span></span>
                     </div>
                 </div>
             </div>

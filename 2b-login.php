@@ -9,8 +9,8 @@ $_POST = [
 // (B) FETCH USER FROM DATABASE & VERIFY THE PASSWORD
 require "2a-core.php";
 $user = $DB->fetch(
-  "SELECT * FROM `users` JOIN `roles` USING (`role_id`) WHERE `user_email`=?",
-  [$_POST["email"]]
+  "SELECT * FROM `users` JOIN `roles` USING (`role_id`) WHERE `uid`=?",
+  [$_POST["uid"]]
 );
 $pass = is_array($user);
 if ($pass) { $pass = $user["user_password"] == $_POST["password"]; }

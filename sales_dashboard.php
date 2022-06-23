@@ -28,8 +28,8 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="row analysis-cards-dash">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                                <h1>Sales dashboard
-                                </h1>
+                            <!-- <br> -->
+                                <h1>Sales dashboard </h1>
                                 <p>FOR SALES INSIGHTS</p>
                                 <br>
                             </div>
