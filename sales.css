@@ -709,38 +709,39 @@ select option {
 }
 
 .login {
-    background-color: rgb(236, 236, 236);
-    border-radius: 2px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 4px;
     padding: 2rem;
     margin: top 3rem;
     text-align: center;
+    border: solid 2px rgb(221, 221, 221);
+    padding-top: 2.4rem;
 }
 
 .login input {
     height: 3.5rem;
-    border: grey solid 1px;
+    border: rgb(214, 214, 214) solid 1px;
     border-radius: 5px;
-    width: 60%;
+    width: 70%;
     margin: 0.6rem;
     padding-left: 2rem;
     font-family: Montserrat;
     font-size: 14px;
-    border: solid rgb(194, 194, 194) 1px;
 }
 
 .login button {
-    height: 3rem;
+    height: 3.4rem;
     border: grey solid 1px;
-    border-radius: 30px;
+    border-radius:11px;
     margin: 0.6rem;
     font-family: Montserrat;
-    background-color: rgb(70, 72, 73);
+    background-color: rgb(68, 101, 117);
     margin-right: 2rem;
     color: white;
     font-weight: 600;
     transition-duration: 1.2s;
     font-size: 13px;
-    width: 9rem;
+    width: 12rem;
 }
 
 .login h1 {
@@ -1106,3 +1107,72 @@ tr td p{
     padding: 5px 0px 5px 0px;
     /* border: solid 1px rgb(46, 46, 45); */
 }
+
+.btn-reg{
+    min-width:15rem!important;
+    border-radius:7px!important;
+    padding-left: 13px!important;
+    padding-right: 13px !important;
+    background-color: #526291!important;
+}
+
+/* The digit page css */
+.digits-grid{
+    background-color: rgb(241, 244, 247);
+    border-radius: 6px;
+    padding:2rem;
+    padding-top: 2.5rem!important;
+    margin: top 6rem!important;
+    text-align: center;
+    border: solid 1px rgb(236, 238, 241);
+    padding-top: 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-t h5{
+    font-family: Montserrat;
+    font-weight: 800!important;
+    /* text-transform: uppercase; */
+    font-size: 13!important;
+    color: rgb(85, 105, 148)!important;
+    margin-bottom:1rem;
+}
+.grid-t p{
+    font-family: Montserrat;
+    font-size: 13!important;
+    font-weight: 500;
+    color: rgb(110, 110, 110);
+}
+
+.dg-unit{
+    background-color:white;
+    border-radius:10px;
+    margin:8px;
+    min-height:8rem;
+    /* border: solid 1px rgb(238, 239, 243); */
+    transition-duration:1.3s;
+}
+
+.dg-unit button{
+    height: 100% !important;
+    width: 100%;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.digits-grid p{
+    font-family: montserrat;
+    font-size:19px;
+    font-weight:300;
+    /* color: rgb(75, 92, 124); */
+    margin-top: 2.8rem;
+   }
+
+.dg-unit:hover{
+    background-color:rgb(86, 97, 121);
+    color: white!important;
+    cursor: pointer;
+    border-radius:5px!important;
+}
+

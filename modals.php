@@ -30,8 +30,8 @@
                                             <i class="fas fa-envelope"></i>
                                         </label>
                                         <input type="email" name="email" placeholder="Email" id="email" required><br>
-                                        <button type="submit">Register</button>
-                                        <a href="login.php"> <button type="button" class="reg-acc" name="">Login</button></a>
+                                        <button type="submit" class="btn-reg">Register new user <i class="fa fa-square-plus"></i></button>
+                                        <!-- <a href="login.php"> <button type="button" class="reg-acc" name="">Login</button></a> -->
                                     </form>
                                 </div>
                             </div>

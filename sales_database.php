@@ -15,13 +15,22 @@ $va2pow_results = mysqli_query($conn, "SELECT *, count(s_phone_number) as `colle
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
-$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow   order by times_called asc limit 7");
+$con_digit = 0;
+if(isset($_POST['select-digit'])){
+    $con_digit = $_POST['con_digit'];
+}
+
+$get_digits = mysqli_query($conn, "SELECT con_digit  FROM va2pow  group by con_digit order by con_digit");
+
+$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 7 ");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
 $maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' ");
 
+
+// 
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, 
@@ -66,7 +75,9 @@ $calls_tally = mysqli_fetch_assoc($calls_tally_total);
 
 
 // SALES ASSIGNED PERSONAL DASHBOARD
-// All time total calls are$res = mysqli_query($conn, "SELECT
+// The declaration of receiving digit id
+
+// All time total calls 
 $value_counts = mysqli_query($conn, "SELECT 
 COUNT(caller_name) AS all_time_count,
 SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS cus_count,
@@ -74,7 +85,7 @@ SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
- COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username'");
+ COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username' ");
 $dat2 = mysqli_fetch_assoc($value_counts);
 
 
