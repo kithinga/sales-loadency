@@ -28,7 +28,25 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
         if (password_verify($_POST['password'], $password)) {
             // Verification success! User has logged-in!
             // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            if ($user_role == 'user') {
+            
+            if ($user_role == 'developer') {
+                session_regenerate_id();
+                $_SESSION['loggedin'] = TRUE;
+                $_SESSION['name'] = $_POST['username'];
+                $_SESSION['id'] = $id;
+                $_SESSION['user_role'] = $user_role;
+                header('Location: sales_dashboard.php');
+            }
+
+             elseif ($user_role == 'admin') {
+                session_regenerate_id();
+                $_SESSION['loggedin'] = TRUE;
+                $_SESSION['name'] = $_POST['username'];
+                $_SESSION['id'] = $id;
+                $_SESSION['user_role'] = $user_role;
+                header('Location: sales_dashboard.php');
+            }
+            elseif ($user_role == 'user') {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
@@ -37,14 +55,6 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
                 header('Location: sales_assigned.php');
             }
 
-             elseif ($user_role == 'developer') {
-                session_regenerate_id();
-                $_SESSION['loggedin'] = TRUE;
-                $_SESSION['name'] = $_POST['username'];
-                $_SESSION['id'] = $id;
-                $_SESSION['user_role'] = $user_role;
-                header('Location: sales_dashboard.php');
-            }
         } 
         else {
             // Incorrect password

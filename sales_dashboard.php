@@ -7,10 +7,9 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 } 
 
-if($_SESSION['user_role'] == 'developer'){?>
+if($_SESSION['user_role'] == ('admin')){?>
      <body>
         <div class="container-fluid">
-
             <div class="row">
                 <div class="col-lg-2 adm-bg">
                     <div class="row  admin-nav">
