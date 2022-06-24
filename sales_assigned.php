@@ -20,6 +20,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="col">
                             <div>
                                 <h1>Sales by <?= $_SESSION['name'] ?></h1>
+                    
                             </div>
                         </div>
                     </div>

@@ -28,7 +28,6 @@
              </div>
         </div>
         <div class="row justify-content-center">
-       
             <div class="col-lg-6">
                 <div class="login " data-aos="fade-right"data-aos-duration="1500">
                     <p></p>
@@ -38,10 +37,14 @@
 					<i class="fas fa-user"></i>
 				</label>
 				<input type="text" name="username" placeholder="Username" id="username" required><br>
-				<label for="password">
-					<i class="fas fa-lock"></i>
+				<label for="user-role">
+					<i  class="fa fa-hand-o-right"></i>
 				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required><br>
+				<input type="text" name="user_role" placeholder="User role" id="user-role" required><br>
+				<label for="password">
+					<i class="fas fa-eye" onclick="myFunction()"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="id_password"required> <br>
 				<label for="email">
 					<i class="fas fa-envelope"></i>
 				</label>
@@ -56,6 +59,7 @@
     <script>
   AOS.init();
 </script>
+<script src="custom.js"></script>
 </body>
 
 

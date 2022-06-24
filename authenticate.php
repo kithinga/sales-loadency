@@ -1,7 +1,6 @@
 <?php
 // Try and connect using the info above.
  include "config.php";
-
 if ( mysqli_connect_errno() ) {
 	// If there is an error with the connection, stop the script and display the error.
 	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
@@ -29,11 +28,12 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
         if (password_verify($_POST['password'], $password)) {
             // Verification success! User has logged-in!
             // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            session_regenerate_id();
-            $_SESSION['loggedin'] = TRUE;
-            $_SESSION['name'] = $_POST['username'];
-            $_SESSION['id'] = $id;
-            header('Location: sales_assigned.php');
+                session_regenerate_id();
+                $_SESSION['loggedin'] = TRUE;
+                $_SESSION['name'] = $_POST['username'];
+                $_SESSION['id'] = $id;
+                header('Location: sales_assigned.php');
+           
         }
         
         else {
