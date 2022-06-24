@@ -1,6 +1,8 @@
+<?php 
+    include 'main_header.php'
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>LMIS</title>
   <meta charset="utf-8">
@@ -37,18 +39,18 @@
       </div>
       <div class="col-lg-8">
         <div class="big-logo">
-          <div class="lmis" data-aos="fade-right" data-aos-duration="1500">LMIS.</div>
+          <!-- <div class="lmis" data-aos="fade-right" data-aos-duration="1500">LMIS.</div> -->
           <!-- <p>Loadency management information system</p> -->
         </div>
       </div>
       <div class="login-btn" data-aos="zoom-in" data-aos-duration="2000">
         <h6>Loadency sales system</h6>
         <br>
-        <a href="login.php"><button>LOGIN</button></a>
-        <a href="create_account.php"><button class="register-btn">REGISTER</button></a>
+        <a href="login.php"><button class="shadow">LOGIN</button></a>
+        <!-- <a href="create_account.php"><button class="register-btn">REGISTER</button></a> -->
         <div class="keys">
           <!-- <button class="keystrokes">Frick</button> -->
-          <img src="images/Sales-cycle.svg" alt="">
+          <!-- <img src="images/Sales-cycle.svg" alt=""> -->
         </div>
       </div>
     </div>

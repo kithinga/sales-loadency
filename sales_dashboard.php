@@ -15,11 +15,15 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="row  admin-nav">
                         <!-- <button class="shadow"><i class="fa fa-home"></i>Back home</button> -->
                         <!-- Button trigger modal -->
+                         <p class="shadow">Logged in as <?php echo  $_SESSION['name'] ?></p>
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
                         <button type="button" class="shadow-sm maybe-btn" >
                             <i class="fa-solid fa-bars-progress"></i>Potential clients
+                        </button>
+                        <button type="button" class="shadow-sm maybe-btn" >
+                            <i class="fa fa-eye"></i>View users
                         </button>
                     </div>
                 </div>

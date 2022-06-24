@@ -36,9 +36,10 @@
                         </label>
                         <input type="text" name="username" placeholder="Username" id="username" required><br>
                         <label for="password">
-                            <i class="fas fa-lock"></i>
+                            <!-- <i class="fas fa-lock"></i> -->
+                            <i class="fas fa-eye" onclick="myFunction()"></i>
                         </label>
-                        <input type="password" name="password" placeholder="Password" id="password" required><br>
+                        <input type="password" name="password" placeholder="Password" id="id_password" required><br>
                         <button type="submit" name="">Login</button>
                         <a href="create_account.php"> <button type="button" class="reg-acc" name="reg-acc">Create account</button></a>
                     </form>
@@ -49,6 +50,8 @@
     <script>
   AOS.init();
 </script>
+
+<script src="custom.js"></script>
 </body>
 
 </html>

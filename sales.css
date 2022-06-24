@@ -667,15 +667,19 @@ select option {
 }
 
 .login-btn button {
-    border-radius: 38px;
+    border-radius: 11px;
     height: 3.3rem;
     border: none;
     color: white;
     width: 10rem;
     background-color: black;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight:700;
     transition-duration: 1s;
+}
+
+.login-btn button:hover{
+    background-color: grey!important;
 }
 
 
@@ -1084,4 +1088,21 @@ tr td p{
     height:7rem;
     margin-top: 4rem;
     opacity: 0.3;
+}
+
+.admin-nav p{
+    color:rgb(0, 0, 0)!important;
+    color:rgb(206, 252, 162)!important;
+    /* color:rgb(153, 185, 126)!important;  */
+    font-family: Montserrat!important;
+    font-size: 11px;
+    /* text-transform: uppercase!important; */
+    background-color: rgb(177, 218, 139);
+    background-color: rgb(29, 29, 29);
+    /* letter-spacing: 1px; */
+    margin-top: 5px;
+    font-weight: 200!important;
+    border-radius: 3px;
+    padding: 5px 0px 5px 0px;
+    /* border: solid 1px rgb(46, 46, 45); */
 }
