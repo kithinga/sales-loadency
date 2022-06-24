@@ -5,9 +5,10 @@ include "shared_header.php";
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.php');
     exit;
-} else { ?>
+} 
 
-    <body>
+if($_SESSION['user_role'] == 'developer'){?>
+     <body>
         <div class="container-fluid">
 
             <div class="row">
@@ -15,7 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="row  admin-nav">
                         <!-- <button class="shadow"><i class="fa fa-home"></i>Back home</button> -->
                         <!-- Button trigger modal -->
-                         <p class="shadow">Logged in as <?php echo  $_SESSION['name'] ?></p>
+                         <p class="shadow"><?php echo  $_SESSION['name'] ?> logged in as <?php echo  $_SESSION['user_role'] ?></p>
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
@@ -182,8 +183,15 @@ if (!isset($_SESSION['loggedin'])) {
             AOS.init();
         </script>
         <script src="custom.js"></script>
+        <?php include_once  'modals.php'; ?>
     </body>
 <?php }
+else{
+    header('Location: index.php');
+}
+
 ?>
 
-<?php include "modals.php"; ?>
+
+
+

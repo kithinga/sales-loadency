@@ -5,7 +5,9 @@ include "shared_header.php";
 if (!isset($_SESSION['loggedin'])) {
     header('Location: index.php');
     exit;
-} else { ?>
+}
+
+if ($_SESSION['user_role'] == 'user') { ?>
 
     <body>
         <div class="container-fluid">
@@ -20,7 +22,6 @@ if (!isset($_SESSION['loggedin'])) {
                         <div class="col">
                             <div>
                                 <h1>Sales by <?= $_SESSION['name'] ?></h1>
-                    
                             </div>
                         </div>
                     </div>
@@ -144,31 +145,30 @@ if (!isset($_SESSION['loggedin'])) {
                                                         <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
-                                                         
-                                                    <div class="dropdown">
-                                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <span> <?php echo $s_status ?></span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton1">
-                                                            <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
-                                                            <label for="sele">Current-status</label>
-                                                            <select name='s_status' id="sele" class="edit-status-input">
-                                                                <option value='<?php echo $s_status ?>' selected><?php echo $s_status ?></option>
-                                                                <option value='no-answer'>no-answer</option>
-                                                                <option value='said-no'>said-no</option>
-                                                                <option value='customer'>customer</option>
-                                                                <option value='maybe'>maybe</option>
-                                                                <option value='dropped'>dropped</option>
-                                                            </select>
-                                                            <label for="stat-com">Status-comments</label>
-                                                            <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea>
-                                                            <button class="edit-status-btn" type="submit" name="edit-contact-status">Update status</button>
-                                                        </ul>
-                                                    </div>
+
+                                                        <div class="dropdown">
+                                                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <span> <?php echo $s_status ?></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton1">
+                                                                <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
+                                                                <label for="sele">Current-status</label>
+                                                                <select name='s_status' id="sele" class="edit-status-input">
+                                                                    <option value='<?php echo $s_status ?>' selected><?php echo $s_status ?></option>
+                                                                    <option value='no-answer'>no-answer</option>
+                                                                    <option value='said-no'>said-no</option>
+                                                                    <option value='customer'>customer</option>
+                                                                    <option value='maybe'>maybe</option>
+                                                                    <option value='dropped'>dropped</option>
+                                                                </select>
+                                                                <label for="stat-com">Status-comments</label>
+                                                                <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea>
+                                                                <button class="edit-status-btn" type="submit" name="edit-contact-status">Update status</button>
+                                                            </ul>
+                                                        </div>
                                                     </form>
                                                     <!-- <i class="fa fa-caret-down"></i> -->
                                                 </td>
-                                               
 
                                                 <td class="c-name"><?php echo $street_address; ?></td>
                                                 <td><?php echo $pow; ?></td>
@@ -187,5 +187,7 @@ if (!isset($_SESSION['loggedin'])) {
             AOS.init();
         </script>
     </body>
-<?php }
+<?php } else {
+    header('Location: index.php');
+}
 ?>
