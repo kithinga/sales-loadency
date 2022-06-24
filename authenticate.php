@@ -1,5 +1,4 @@
 <?php
-
 // Try and connect using the info above.
  include "config.php";
 

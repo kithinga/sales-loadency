@@ -27,7 +27,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
 	} else {
 		// Insert new account
         // Username doesnt exists, insert new account
-if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VALUES (?, ?, ?)')) {
+if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email ) VALUES (?, ?, ?)')) {
 	// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
 	$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 	$stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);

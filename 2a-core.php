@@ -23,7 +23,7 @@ class DB
     }
   }
 
-  // (A2) DESTRUCTOR - CLOSE DATABSE CONNECTION
+  // (A2) DESTRUCTOR - CLOSE DATABASE CONNECTION
   function __destruct()
   {
     if ($this->stmt !== null) {
