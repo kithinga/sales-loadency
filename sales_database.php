@@ -18,6 +18,7 @@ $datenow = date('Y-m-d H:i:s');
 $con_digit = 0;
 if(isset($_POST['select-digit'])){
     $con_digit = $_POST['con_digit'];
+    
 }
 
 $get_digits = mysqli_query($conn, "SELECT con_digit  FROM va2pow  group by con_digit order by con_digit");

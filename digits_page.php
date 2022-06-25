@@ -20,7 +20,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     </div>
                     <div class="digits-grid">
                         <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
-                            <div class="dg-unit er ">
+                            <div class="dg-unit ">
                                 <form action="sales_assigned.php" method="post" enctype="multipart/form">
                                     <?php
                                     $con_digit = $row['con_digit'];

@@ -1120,14 +1120,14 @@ tr td p{
 .digits-grid{
     background-color: rgb(241, 244, 247);
     border-radius: 6px;
-    padding:2rem;
-    padding-top: 2.5rem!important;
-    margin: top 6rem!important;
+    padding:1rem;
+    padding-top: 1.5rem!important;
+    /* margin: 6rem!important; */
     text-align: center;
     border: solid 1px rgb(236, 238, 241);
     padding-top: 2.4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 .grid-t h5{
@@ -1148,11 +1148,12 @@ tr td p{
 .dg-unit{
     background-color:white;
     border-radius:10px;
-    margin:8px;
-    min-height:8rem;
+    /* margin:8px; */
+    min-height:7rem;
     /* border: solid 1px rgb(238, 239, 243); */
     transition-duration:1.3s;
 }
+
 
 .dg-unit button{
     height: 100% !important;
@@ -1166,7 +1167,7 @@ tr td p{
     font-size:19px;
     font-weight:300;
     /* color: rgb(75, 92, 124); */
-    margin-top: 2.8rem;
+    margin-top: 2.4rem;
    }
 
 .dg-unit:hover{
@@ -1174,5 +1175,23 @@ tr td p{
     color: white!important;
     cursor: pointer;
     border-radius:5px!important;
+}
+
+
+.digits-2-grid{
+    border-radius: 6px;
+    text-align: center;
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+.dg-2-unit{
+    background-color:rgb(47, 55, 78);
+    border-radius:10px;
+    /* margin:8px; */
+    min-width: 4rem;
+    min-height:4rem;
+    /* border: solid 1px rgb(238, 239, 243); */
+    transition-duration:1.3s;
 }
 

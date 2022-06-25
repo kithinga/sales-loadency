@@ -14,13 +14,14 @@ if ($_SESSION['user_role'] == 'user') { ?>
             <div class="row">
                 <div class="col-lg-2">
                     <div class="row side-nav">
-                        <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
+                    <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
                     <div class="grid-t">
                         <P>Change digit !</P>
                     </div>
-                    <div class="digits-2-grid">
+                    <div class="digits-2-grid row">
                         <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
-                            <div class="dg-unit er ">
+                            <div class="col-lg-3">
+                            <div class="dg-2-unit er ">
                                 <form action="sales_assigned.php" method="post" enctype="multipart/form">
                                     <?php
                                     $con_digit = $row['con_digit'];
@@ -31,19 +32,19 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                     </button>
                                 </form>
                             </div>
+                            </div>
                         <?php } ?>
 
                         <div>
                         </div>
                     </div>
-
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">
                     <div class="assigned-title row">
                         <div class="col">
                             <div>
-                                <h1> Sales by <?= $_SESSION['name'] ?> <span> Working on digit <?php echo $dat2['na_count']  ?></span></h1>
+                                <h1> Sales by <?= $_SESSION['name'] ?> <span> Working on digit <?php echo $con_digit ?></span></h1>
                             </div>
                         </div>
                     </div>

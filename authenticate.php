@@ -52,7 +52,7 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
                 $_SESSION['name'] = $_POST['username'];
                 $_SESSION['id'] = $id;
                 $_SESSION['user_role'] = $user_role;
-                header('Location: digit_page.php');
+                header('Location: digits_page.php');
             }
 
         } 
