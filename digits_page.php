@@ -18,8 +18,9 @@ if ($_SESSION['user_role'] == 'user') { ?>
                         <h5>Hello, <span> <?php echo  $_SESSION['name'] ?> </span></h5>
                         <P>Please select a digit to proceed !</P>
                     </div>
-                    <div class="digits-grid">
-                        <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
+                    <div class="digits-grid row">
+                    <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
+                            <div class="col-lg-3 col-ch">
                             <div class="dg-unit ">
                                 <form action="sales_assigned.php" method="post" enctype="multipart/form">
                                     <?php
@@ -31,8 +32,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                     </button>
                                 </form>
                             </div>
+                            </div>
                         <?php } ?>
-
                         <div>
                         </div>
                     </div>

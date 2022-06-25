@@ -350,6 +350,9 @@ tr td {
     height: 3.4rem;
     color: white !important;
 }
+.bg-nav{
+    min-height:100vh;
+}
 
 .home-button button i {
     margin-left: 9px;
@@ -446,29 +449,29 @@ tr td {
 }
 
 .cspan {
-    background-color: rgb(15, 197, 76);
-    height: 1rem;
+    background-color: rgb(142, 219, 98);
+    height: 0.7rem;
     border-radius: 9px;
-    width: 2rem;
+    width:1rem;
 }
 
 .cdirer {
-    color: rgb(23, 190, 79) !important;
+    color: rgb(117, 204, 109) !important;
     font-weight: 700;
 }
 
 .nodirer {
-    color: rgb(241, 25, 18) !important;
+    color: rgb(233, 84, 73) !important;
     font-weight: 700;
 }
 
 .mbdirer {
     font-weight: 700;
-    color: rgb(150, 148, 19) !important;
+    color: rgb(166, 168, 11) !important;
 }
 
 .nadirer {
-    color: rgb(64, 88, 121) !important;
+    color: rgb(62, 88, 126) !important;
     font-weight: 700;
 }
 
@@ -477,25 +480,25 @@ tr td {
 }
 
 .snspan {
-    background-color: rgb(241, 25, 18);
-    height: 1rem;
+    background-color: rgb(245, 99, 55);
+    height: 0.7rem;
     border-radius: 9px;
-    width: 2rem;
+    width: 1rem;
 }
 
 .mbspan {
     background-color: rgb(226, 223, 5);
-    height: 1rem;
+    height:0.7rem;
     border-radius: 9px;
     /* border: rgb(235, 230, 230) 1px solid; */
-    width: 3rem;
+    width:1rem;
 }
 
 .naspan {
     background-color: rgb(74, 85, 100);
-    height: 1rem;
+    height: 0.7rem;
     border-radius: 9px;
-    width: 2.5rem;
+    width: 1rem;
 }
 
 .assigned-title {
@@ -505,7 +508,7 @@ tr td {
 .assigned-title h1 {
     margin: 1.6rem;
     color: rgb(70, 75, 90);
-    font-size: 19px;
+    font-size: 17px;
     /* letter-spacing:1px; */
     font-weight: 800;
     font-family: Montserrat;
@@ -858,7 +861,7 @@ select option {
   }
   .side-nav {
      background-color: rgb(47, 58, 68)!important;
-     min-height:100vh;
+     /* min-height:100vh; */
 
   }
 
@@ -1138,6 +1141,7 @@ tr td p{
     color: rgb(85, 105, 148)!important;
     margin-bottom:1rem;
 }
+
 .grid-t p{
     font-family: Montserrat;
     font-size: 13!important;
@@ -1148,7 +1152,7 @@ tr td p{
 .dg-unit{
     background-color:white;
     border-radius:10px;
-    /* margin:8px; */
+    margin:8px;
     min-height:7rem;
     /* border: solid 1px rgb(238, 239, 243); */
     transition-duration:1.3s;
@@ -1181,17 +1185,64 @@ tr td p{
 .digits-2-grid{
     border-radius: 6px;
     text-align: center;
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    margin: 11px;
+
 }
+
 
 .dg-2-unit{
     background-color:rgb(47, 55, 78);
     border-radius:10px;
-    /* margin:8px; */
-    min-width: 4rem;
-    min-height:4rem;
-    /* border: solid 1px rgb(238, 239, 243); */
+    transition-duration:1.2s;
+}
+
+
+.dg-2-unit button{
+    padding-top:16px!important;
+}
+
+.dg-2-unit button:hover{
+    background-color:rgb(95, 143, 50)!important;
+    border-radius:10px;
     transition-duration:1.3s;
 }
 
+.col-ch{
+    margin: 0;
+    padding:3px;
+}
+
+.grid-2-t h5{
+    font-family: Montserrat;
+    font-weight: 800!important;
+    font-size: 13!important;
+    color: rgb(85, 105, 148)!important;
+    margin-bottom:1rem;
+}
+
+.grid-2-t h6{
+    /* margin-bottom:1.5rem; */
+    margin-left: 1rem;
+    font-family: Montserrat;
+    font-weight: 800;
+    color: rgb(164, 212, 86);
+    font-size: 11!important;
+}
+
+.grid-2-t small{
+    margin-bottom:2rem;
+    margin-left: 1rem;
+    font-family: Montserrat;
+    /* font-weight:600; */
+    color: rgb(197, 255, 36);
+    font-size: 12!important;
+}
+
+
+.assigned-title h1 span small{
+    font-size:25px;
+    font-weight:800;
+    color: rgb(119, 119, 119);
+    margin-left: 1rem;
+
+}

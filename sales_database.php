@@ -21,9 +21,12 @@ if(isset($_POST['select-digit'])){
     
 }
 
-$get_digits = mysqli_query($conn, "SELECT con_digit  FROM va2pow  group by con_digit order by con_digit");
+$get_digits = mysqli_query($conn, "SELECT con_digit  FROM va2pow  group by con_digit");
 
-$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 7 ");
+$active_digit = mysqli_query($conn, "SELECT con_digit  FROM va2pow  where con_digit = '$con_digit' ");
+$active_data = mysqli_fetch_assoc($active_digit);
+
+$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 4 ");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");

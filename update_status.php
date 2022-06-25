@@ -39,6 +39,9 @@
         // $name = $_POST['name'];
         mysqli_query($conn, "UPDATE calls_tally SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
 
+
     }
-    header( 'Location:sales_dashboard.php' ) ;
+
+    $to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 4 ");
+    header( 'Location:sales_assigned.php' ) ;
 ?>
