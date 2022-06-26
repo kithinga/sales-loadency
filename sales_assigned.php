@@ -3,8 +3,8 @@ include "config.php";
 include "shared_header.php";
 
 if (!isset($_SESSION['loggedin'])) {
-    // header('Location: index.php');
-    echo "<script type='text/javascript'>document.location.href='login.php';</script>";
+    header('Location: index.php');
+    // echo "<script type='text/javascript'>document.location.href='login.php';</script>";
     exit;
 }
 
