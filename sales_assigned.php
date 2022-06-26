@@ -7,6 +7,10 @@ if (!isset($_SESSION['loggedin'])) {
     exit;
 }
 
+$active_digit = null;
+
+
+
 if ($_SESSION['user_role'] == 'user') { ?>
 
     <body>
@@ -14,41 +18,49 @@ if ($_SESSION['user_role'] == 'user') { ?>
             <div class="row no-gutters">
                 <div class="col-lg-2">
                     <div class="row side-nav ">
-                          <div class="bg-nav">
-                          <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
-                          <br><br><b></b>
-                    <div class="grid-2-t">
-                        <h6>CHANGE DIGIT HERE  </h6>
-                        <small>available digits __<i class="fa-solid fa-arrow-down"></i></small>
-                    </div>
-                    <div class="digits-2-grid row">
-                        <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
-                            <div class="col-lg-3 col-ch">
-                            <div class="dg-2-unit ">
-                                <form action="sales_assigned.php" method="post" enctype="multipart/form">
-                                    <?php
-                                    $con_digit = $row['con_digit'];
-                                    ?>
-                                    <input type="hidden" name="con_digit" value="<?php echo $con_digit; ?>">
-                                    <button type="submit" name="select-digit">
-                                        <p><?php echo $con_digit; ?></p>
-                                    </button>
-                                </form>
+                        <div class="bg-nav">
+                            <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
+                            <br><br><b></b>
+                            <div class="grid-2-t">
+                                <h6>CHANGE DIGIT HERE </h6>
+                                <small>available digits __<i class="fa-solid fa-arrow-down"></i></small>
                             </div>
-                            </div>
-                        <?php } ?>
+                            <div class="digits-2-grid row">
+                                <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
+                                    <div class="col-lg-3 col-ch">
+                                        <div class="dg-2-unit ">
+                                            <form action="sales_assigned.php" method="post" enctype="multipart/form">
+                                                <?php
+                                                $con_digit = $row['con_digit'];
+                                                ?>
+                                                <input type="hidden" name="con_digit" value="<?php echo $con_digit; ?>">
+                                                <button type="submit" name="select-digit">
+                                                    <p><?php echo $con_digit; ?></p>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                <?php } ?>
 
-                        <div>
+                                <div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                          </div>
                     </div>
                 </div>
                 <div class="col-lg-10 assigned-area">
                     <div class="assigned-title row">
                         <div class="col">
                             <div>
-                                <h1> Sales by <?= $_SESSION['name'] ?> <span> Working on digit <small> <?php echo $active_data['con_digit'] ?></small></span></h1>
+                                <h1> Sales by <?= $_SESSION['name'] ?> <span> Working on digit
+                                        <small>
+                                            <?php while ($row = mysqli_fetch_array($active_digit_res)) { ?>
+                                                <?php
+                                                $active_digit = $row['con_digit'];
+                                                ?>
+                                            <?php } ?>
+                                            <?php echo $active_digit; ?>
+                                        </small></span></h1>
                             </div>
                         </div>
                     </div>
@@ -172,6 +184,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
+                                                       
+                                                        <input class="edit-status-input" type="hidden" name="con_digit" value="<?php echo $con_digit ?>" />
 
                                                         <div class="dropdown">
                                                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

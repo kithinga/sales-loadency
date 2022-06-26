@@ -28,7 +28,7 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
         if (password_verify($_POST['password'], $password)) {
             // Verification success! User has logged-in!
             // Create sessions, so we know the user is logged in, they basically act like cookies but remember the data on the server.
-            
+
             if ($user_role == 'developer') {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
@@ -36,17 +36,14 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
                 $_SESSION['id'] = $id;
                 $_SESSION['user_role'] = $user_role;
                 header('Location: sales_dashboard.php');
-            }
-
-             elseif ($user_role == 'admin') {
+            } elseif ($user_role == 'admin') {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
                 $_SESSION['id'] = $id;
                 $_SESSION['user_role'] = $user_role;
                 header('Location: sales_dashboard.php');
-            }
-            elseif ($user_role == 'user') {
+            } elseif ($user_role == 'user') {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = TRUE;
                 $_SESSION['name'] = $_POST['username'];
@@ -54,15 +51,17 @@ if ($stmt = $conn->prepare('SELECT id, password,user_role FROM accounts WHERE us
                 $_SESSION['user_role'] = $user_role;
                 header('Location: digits_page.php');
             }
-
-        } 
-        else {
+        } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+            // echo 'Incorrect username and/or password!';
+            $_SESSION['errors'] = array("Your username or password was incorrect.");
+            header("Location:login.php");
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        // echo 'Incorrect username and/or password!';
+        $_SESSION['errors'] = array("Your username or password was incorrect.");
+        header("Location:login.php");
     }
     $stmt->close();
 }

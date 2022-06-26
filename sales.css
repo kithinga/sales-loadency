@@ -1238,11 +1238,17 @@ tr td p{
     font-size: 12!important;
 }
 
-
 .assigned-title h1 span small{
     font-size:25px;
     font-weight:800;
     color: rgb(119, 119, 119);
     margin-left: 1rem;
 
+}
+
+.error-p{
+  color: rgb(253, 91, 70);
+  font-family: Montserrat;
+  font-size:14px;
+  font-weight:400;
 }
