@@ -352,6 +352,14 @@ tr td {
 }
 .bg-nav{
     min-height:100vh;
+    transition-duration:1s;
+}
+.bg-nav button:hover{
+    background-color:rgb(46, 65, 25) !important;
+}
+.bg-nav button{
+    transition-duration:1s;
+    /* background-color:rgb(39, 68, 6) !important; */
 }
 
 .home-button button i {
@@ -1209,6 +1217,10 @@ tr td p{
     transition-duration:1.3s;
 }
 
+.bg-nav button i{
+    color: rgb(138, 206, 28)!important;
+}
+
 .col-ch{
     margin: 0;
     padding:3px;
@@ -1245,7 +1257,6 @@ tr td p{
     font-weight:800;
     color: rgb(119, 119, 119);
     margin-left: 1rem;
-
 }
 
 .error-p{
@@ -1253,4 +1264,8 @@ tr td p{
   font-family: Montserrat;
   font-size:14px;
   font-weight:400;
+}
+
+.assigned-btn{
+    display: none;
 }

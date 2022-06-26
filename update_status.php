@@ -2,6 +2,7 @@
     include 'config.php';
     if (isset($_POST['edit-contact-status'])) {
         $s_status = $_POST['s_status'];
+        $voice_mail = $_POST['voice_mail'];
         $client_name = $_POST['client_name'];
         $s_company_name = $_POST['s_company_name'];
         $s_mc_number = $_POST['s_mc_number'];
@@ -20,7 +21,7 @@
         mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE s_mc_number = '$s_mc_number'");
 
         // Inserting into tally table after update
-        mysqli_query($conn,"INSERT INTO calls_tally(street_address,times_called, s_company_name, client_name,s_status, s_mc_number, caller_name, s_phone_number, pow, status_comments)VALUES('$street_address','$times_called','$s_company_name','$client_name','$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow','$status_comments')");
+        mysqli_query($conn,"INSERT INTO calls_tally(voice_mail,street_address,times_called, s_company_name, client_name,s_status, s_mc_number, caller_name, s_phone_number, pow, status_comments)VALUES('$voice_mail','$street_address','$times_called','$s_company_name','$client_name','$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow','$status_comments')");
 
         // SELECT RESULTS AGAIN 
         $to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 4 ");

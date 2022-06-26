@@ -1,9 +1,17 @@
 // Toggles amdin dashboard components
-$(".maybe-btn").click(function() {
+$(".clients-btn").click(function() {
   $(".maybe-area").toggle();
+  $(".assigned-btn").toggle();
   $(".assigned-maybe-area").toggle();
   $(".analysis-cards").toggle();
   $(".analysis-cards-dash").toggle();
+  $(".clients-btn").toggle();
+});
+
+// toggle clients and contacts button
+$(".assigned-btn").click(function() {
+  $(".clients-btn").toggle();
+  $(".assigned-btn").toggle();
 });
 
 // AJAX HERE

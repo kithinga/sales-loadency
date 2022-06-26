@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="home-arrow row">
-                <div class="col-lg-2"><a href="sales_dashboard.php"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div>
+                <!-- <div class="col-lg-2"><a href="#"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div> -->
                 <div class="col-lg-4">
                     <h4>POTENTIAL CLIENTS <span> <?php echo $calls_tally['maybe_tally'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
                 </div>

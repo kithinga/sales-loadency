@@ -18,9 +18,12 @@ if ($_SESSION['user_role'] == 'user') { ?>
                 <div class="col-lg-2">
                     <div class="row side-nav ">
                         <div class="bg-nav">
-                            <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
-                            <button type="button" class="shadow maybe-btn">
-                                <i class="fa-solid fa-bars-progress"></i>Potential clients
+                            <div class="shadow"><a href="#"><button class=""><i class="fa fa fa-users"></i> Won customers </button></a></div>
+                            <button type="button" class="shadow maybe-btn clients-btn">
+                            <i class="fa-solid fa-bars-progress"></i>Potential clients     
+                            </button>
+                            <button type="button" class="shadow assigned-btn">
+                            <i class="fa fa-list"></i>Assigned contacts  
                             </button>
                             <br>
                             <br>
@@ -203,6 +206,12 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                                     <option value='customer'>customer</option>
                                                                     <option value='maybe'>maybe</option>
                                                                     <option value='dropped'>dropped</option>
+                                                                </select>
+                                                                <label for="voice_mail">Left voice mail <i class="fa fa-email"></i></label>
+                                                                <select name='voice_mail' id="voice" class="edit-status-input">
+                                                                    <option value='yes'>Yes / no</option>
+                                                                    <option value='yes'>yes</option>
+                                                                    <option value='no'>no</option>
                                                                 </select>
                                                                 <label for="stat-com">Status-comments</label>
                                                                 <textarea name="status_comments" id="stat-com" class="edit-status-textarea"></textarea>
