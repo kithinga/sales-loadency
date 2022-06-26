@@ -31,6 +31,7 @@ $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
 $maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' ");
+$personal_maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' and caller_name = '$username' ");
 
 
 // 

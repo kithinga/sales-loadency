@@ -9,8 +9,8 @@ if (!isset($_SESSION['loggedin'])) {
 }
 
 if ($_SESSION['user_role'] == 'user') { ?>
-    
-   <?php  $active_digit = null; ?>
+
+    <?php $active_digit = null; ?>
 
     <body>
         <div class="container-fluid">
@@ -19,10 +19,14 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="row side-nav ">
                         <div class="bg-nav">
                             <div class="shadow"><a href="sales_dashboard.php"><button class=""><i class="fa fa-home"></i> Back home </button></a></div>
-                            <br><br><b></b>
+                            <button type="button" class="shadow maybe-btn">
+                                <i class="fa-solid fa-bars-progress"></i>Potential clients
+                            </button>
+                            <br>
+                            <br>
+                            <p></p>
                             <div class="grid-2-t">
-                                <h6>CHANGE DIGIT HERE </h6>
-                                <small>available digits __<i class="fa-solid fa-arrow-down"></i></small>
+                                <h6> <small>Change digit here</small></h6>
                             </div>
                             <div class="digits-2-grid row">
                                 <?php while ($row = mysqli_fetch_array($get_digits)) { ?>
@@ -110,10 +114,9 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <p></p>
                     <div class="row">
                         <div class="col-lg-12">
-
-                            <div class="assigned-table">
+                         
+                            <div class="assigned-table  assigned-maybe-area">
                                 <h5>Assigned contacts</h5>
-
                                 <table class="table table-bordered table-hover">
                                     <thead>
                                         <tr>
@@ -183,7 +186,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
-                                                       
+
                                                         <input class="edit-status-input" type="hidden" name="con_digit" value="<?php echo $con_digit ?>" />
 
                                                         <div class="dropdown">
@@ -218,6 +221,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                     </tbody>
                                 </table>
                             </div>
+
+                            <?php include_once "personal_maybe.php"; ?>
                         </div>
                     </div>
                 </div>
@@ -226,6 +231,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
         <script>
             AOS.init();
         </script>
+        <script src="custom.js"></script>
     </body>
 <?php } else {
     header('Location: index.php');

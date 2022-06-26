@@ -341,14 +341,14 @@ tr td {
 }
 
 .side-nav button {
-    background-color: rgb(46, 46, 46) !important;
+    background-color: rgb(43, 52, 63) !important;
     border-radius: 6px;
     padding: 5px 5px 5px 5px !important;
     font-size: 14px;
     margin-top: 10px;
     width: 100%;
     height: 3.4rem;
-    color: white !important;
+    color: rgb(211, 211, 211) !important;
 }
 .bg-nav{
     min-height:100vh;
@@ -850,7 +850,7 @@ select option {
   /* ADMIN DASHBOARD */
   .side-nav button{
      border-radius: 4px!important;
-     background-color: rgb(61, 76, 88)!important;
+     /* background-color:transparent!important; */
      font-family: montserrat;
      border: 1px solid rgb(46, 57, 61);
      font-weight:600;
@@ -860,7 +860,7 @@ select option {
     margin-right: 0.6rem!important;
   }
   .side-nav {
-     background-color: rgb(47, 58, 68)!important;
+     background-color: rgb(29, 38, 48)!important;
      /* min-height:100vh; */
 
   }
@@ -1191,9 +1191,10 @@ tr td p{
 
 
 .dg-2-unit{
-    background-color:rgb(47, 55, 78);
+    background-color:transparent !important;
     border-radius:10px;
     transition-duration:1.2s;
+    /* border-radius: 10px; */
 }
 
 
@@ -1202,7 +1203,8 @@ tr td p{
 }
 
 .dg-2-unit button:hover{
-    background-color:rgb(95, 143, 50)!important;
+    background-color:rgb(81, 128, 20)!important;
+    border:solid 1px rgb(55, 124, 124)!important;
     border-radius:10px;
     transition-duration:1.3s;
 }
@@ -1222,10 +1224,10 @@ tr td p{
 
 .grid-2-t h6{
     /* margin-bottom:1.5rem; */
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     font-family: Montserrat;
-    font-weight: 800;
-    color: rgb(164, 212, 86);
+    font-weight: 700;
+    color: rgb(135, 197, 36);
     font-size: 11!important;
 }
 
@@ -1234,7 +1236,7 @@ tr td p{
     margin-left: 1rem;
     font-family: Montserrat;
     /* font-weight:600; */
-    color: rgb(197, 255, 36);
+    /* color: rgb(197, 255, 36); */
     font-size: 12!important;
 }
 
