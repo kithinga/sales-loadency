@@ -4,13 +4,10 @@ include "shared_header.php";
 
 if (!isset($_SESSION['loggedin'])) {
     // header('Location: index.php');
-    echo "<script type='text/javascript'>document.location.href='login.php';</script>";
+    echo "<script type='text/javascript'>document.location.href='index.php';</script>";
     exit;
 }
-
-if ($_SESSION['user_role'] == 'user') { ?>
-    
-   <?php  $active_digit = null; ?>
+?>
 
     <body>
         <div class="container-fluid">
@@ -227,7 +224,3 @@ if ($_SESSION['user_role'] == 'user') { ?>
             AOS.init();
         </script>
     </body>
-<?php } else {
-    header('Location: index.php');
-}
-?>
