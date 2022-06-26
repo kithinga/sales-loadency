@@ -1,17 +1,19 @@
-// Toggles amdin dashboard components
+// Toggles admin dashboard components
 $(".clients-btn").click(function() {
-  $(".maybe-area").toggle();
-  $(".assigned-btn").toggle();
-  $(".assigned-maybe-area").toggle();
-  $(".analysis-cards").toggle();
-  $(".analysis-cards-dash").toggle();
-  $(".clients-btn").toggle();
+  $(".maybe-area").show();
+  $(".assigned-btn").show();
+  $(".analysis-cards").show();
+  $(".clients-btn").hide();
+  $(".assigned-maybe-area").hide();
+
 });
 
 // toggle clients and contacts button
 $(".assigned-btn").click(function() {
-  $(".clients-btn").toggle();
-  $(".assigned-btn").toggle();
+  $(".clients-btn").show();
+  $(".assigned-btn").hide();
+  $(".assigned-maybe-area").show();
+  $(".maybe-area").hide();
 });
 
 // AJAX HERE
