@@ -3,28 +3,38 @@ include "config.php";
 include "shared_header.php";
 
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.php');
+    header('Location: login.php');
     exit;
-} 
+}
 
-if($_SESSION['user_role'] == ('admin')){?>
-     <body>
+if ($_SESSION['user_role'] == ('admin')) { ?>
+
+    <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-2 adm-bg">
                     <div class="row  admin-nav">
                         <!-- <button class="shadow"><i class="fa fa-home"></i>Back home</button> -->
                         <!-- Button trigger modal -->
-                         <p class="shadow"><?php echo  $_SESSION['name'] ?> logged in as <?php echo  $_SESSION['user_role'] ?></p>
+                        <p class="shadow"><?php echo  $_SESSION['name'] ?> logged in as <?php echo  $_SESSION['user_role'] ?></p>
                         <button type="button" class="shadow-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fa fa-user"></i>Add new user
                         </button>
-                        <button type="button" class="shadow-sm maybe-btn" >
-                            <i class="fa-solid fa-bars-progress"></i>Potential clients
+                        <button type="button" class="shadow-sm">
+                        <a href="upload.php">
+                            <i class="fa fa-user"></i>Upload contacts
+                        </a>
                         </button>
-                        <button type="button" class="shadow-sm maybe-btn" >
+                        <button type="button" class="shadow-sm maybe-btn">
                             <i class="fa fa-eye"></i>View users
                         </button>
+                        <button type="button" class="shadow-sm maybe-btn">
+                            <i class="fa-solid fa-bars-progress"></i>Won customers
+                        </button>
+                        <button type="button" class="shadow-sm maybe-btn">
+                            <i class="fa-solid fa-bars-progress"></i>Potential clients
+                        </button>
+
                     </div>
                 </div>
                 <!--  -->
@@ -32,18 +42,19 @@ if($_SESSION['user_role'] == ('admin')){?>
                     <div class="row analysis-cards-dash">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                            <!-- <br> -->
+                                <!-- <br> -->
                                 <h1>Sales dashboard </h1>
                                 <p>FOR SALES INSIGHTS</p>
                                 <br>
                             </div>
                         </div>
                     </div>
-                    <?php include_once "maybe.php"; ?>
 
-                    <?php 
+                    <?php include "maybe.php"; ?>
+
+                    <?php
                     // Contacts called
-                       $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
+                    $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
                     ?>
 
                     <div class="row analysis-cards">
@@ -181,16 +192,12 @@ if($_SESSION['user_role'] == ('admin')){?>
         <script>
             AOS.init();
         </script>
+
         <script src="custom.js"></script>
         <?php include_once  'modals.php'; ?>
     </body>
-<?php }
-else{
+<?php } else {
     header('Location: index.php');
 }
 
 ?>
-
-
-
-
