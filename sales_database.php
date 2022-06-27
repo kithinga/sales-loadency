@@ -15,6 +15,7 @@ $va2pow_results = mysqli_query($conn, "SELECT *, count(s_phone_number) as `colle
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
+
 $con_digit = 1;
 
 if(isset($_POST['select-digit'])){

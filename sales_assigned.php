@@ -129,9 +129,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                             <th scope="col">Mc number</th>
                                             <th scope="col">Phone number</th>
                                             <th scope="col">Last called</th>
-                                            <th scope="col">Previous <br> comments</th>
                                             <th scope="col">Times <br> called</th>
-                                            <th scope="col">Previous <br> caller</th>
+                                            <!-- <th scope="col">Previous <br> caller</th> -->
                                             <th scope="col">Call status</th>
                                             <th scope="col">Street address</th>
                                             <th scope="col">Pow</th>
@@ -158,7 +157,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                             $times_called = $row['times_called'];
                                             $last_changed = $row['last_changed'];
                                             $date = date('Y-m-d H:i:s');
-                                            $called_by = $row['caller_name'];
+                                            // $called_by = $row['caller_name'];
                                             $status_comments = $row['status_comments'];
 
                                             $now = time(); // 
@@ -174,9 +173,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                 <td class="c-name-no"><?php echo $s_mc_number; ?></td>
                                                 <td class="c-name-no"><?php echo $s_phone_number; ?></td>
                                                 <td><?php echo $days; ?> <small> days ago</small></td>
-                                                <td><?php echo $status_comments; ?> <small> </small></td>
                                                 <td><?php echo $times_called; ?></td>
-                                                <td><?php echo $called_by ?></td>
+                                             
                                                 <td class="status-box " title="Current status is - <?php echo $s_status ?>">
                                                     <form class="edit-status-form" method="post" action="update_status.php">
                                                         <input class="edit-status-input" type="hidden" name="s_mc_number" value="<?php echo $s_mc_number; ?>" />
@@ -190,7 +188,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
-                                                        <input class="edit-status-input" type="hidden" name="con_digit" value="<?php echo $con_digit ?>" />
+                                                        <!-- <input class="edit-status-input" type="hidden" name="con_digit" value="" /> -->
 
                                                         <div class="dropdown">
                                                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
