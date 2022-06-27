@@ -10,7 +10,9 @@ if (!isset($_SESSION['loggedin'])) {
 
 if ($_SESSION['user_role'] == 'user') { ?>
 
-    <?php $active_digit = null; ?>
+    <?php $active_digit = null; 
+    // echo $_SESSION['ses_dig']; ?>
+
 
     <body>
         <div class="container-fluid">
@@ -188,7 +190,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
-                                                        <!-- <input class="edit-status-input" type="hidden" name="con_digit" value="" /> -->
+                                                        <!-- <input class="edit-status-input" type="text" name="con_digit" value="" /> -->
 
                                                         <div class="dropdown">
                                                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
