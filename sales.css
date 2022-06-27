@@ -678,15 +678,20 @@ select option {
 }
 
 .login-btn button {
-    border-radius: 11px;
-    height: 3.3rem;
+    border-radius: 10px!important;
+    min-height: 3.4rem;
     border: none;
     color: white;
     width: 10rem;
     background-color: black;
     font-size: 13px;
     font-weight:700;
+    margin:8px;
+    padding-right: 10px;
     transition-duration: 1s;
+}
+.login-btn button p{
+ margin-bottom: 8px!important;
 }
 
 .login-btn button:hover{
@@ -701,9 +706,10 @@ select option {
 }
 
 .login-btn h6 {
-    font-weight: 900;
-    font-size: 22px;
-    color: grey;
+    font-weight: 800;
+    font-size: 19px;
+    text-transform: uppercase;
+    color: rgb(65, 65, 65);
     font-family: Montserrat;
 }
 
@@ -864,19 +870,22 @@ select option {
      font-weight:600;
      height:3.7rem!important;
   }
+
   .side-nav i{
     margin-right: 0.6rem!important;
   }
+
   .side-nav {
      background-color: rgb(29, 38, 48)!important;
      /* min-height:100vh; */
 
   }
+  .admin-nav a{
+    text-decoration: none!important;
+    color: rgb(41, 171, 211)!important;
+  }
 
 /* ADMIN DASHBOARD */
-.admin-nav {
-
-}
 
 .adm-bg {
     min-height: 90Vh;
@@ -916,11 +925,12 @@ select option {
 
 .admin-nav {
     text-align: center;
-    padding: 1rem;
+    padding: 10px;
 }
 
 .admin-nav i {
     margin-right: 12px;
+    color: rgb(47, 184, 189)!important;
 }
 
 .admin-nav button {
@@ -939,8 +949,8 @@ select option {
 }
 
 .admin-nav button:hover{
-    background-color: rgb(93, 95, 119);
-    border: solid 2px rgb(99, 112, 112)!important; 
+    background-color: rgb(20, 135, 155);
+    border: solid 2px rgb(92, 116, 116)!important; 
 }
 
 .fa-phone{
@@ -1268,4 +1278,8 @@ tr td p{
 
 .assigned-btn{
     display: none;
+}
+
+.opt-btn{
+    background-color: rgb(182, 148, 75)!important;
 }
