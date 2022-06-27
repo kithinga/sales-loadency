@@ -26,6 +26,7 @@
         // SELECT RESULTS AGAIN 
         $to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 4 ");
     }
+    $_SESSION['sess_digit'] = $con_digit;
     header( 'Location:sales_assigned.php' ) ;
 
 
