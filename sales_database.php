@@ -15,7 +15,7 @@ $va2pow_results = mysqli_query($conn, "SELECT *, count(s_phone_number) as `colle
 $customers_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'customer'");
 // Maybe results
 $datenow = date('Y-m-d H:i:s');
-$con_digit = null;
+$con_digit = 1;
 
 if(isset($_POST['select-digit'])){
     $con_digit = $_POST['con_digit']; 
@@ -25,7 +25,7 @@ $get_digits = mysqli_query($conn, "SELECT con_digit  FROM va2pow  group by con_d
 
 $active_digit_res = mysqli_query($conn, "SELECT con_digit  FROM va2pow  where con_digit = '$con_digit' ");
 
-$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 4 ");
+$to_call_results = mysqli_query($conn, "SELECT * FROM va2pow  where con_digit = '$con_digit'  order by times_called asc limit 8 ");
 // said no results
 $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no'");
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");

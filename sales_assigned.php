@@ -190,7 +190,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
 
-                                                        <input class="edit-status-input" type="text" name="con_digit" value="<?php echo $con_digit ?>" />
+                                                        <input class="edit-status-input" type="hidden" name="con_digit" value="<?php echo $con_digit ?>" />
 
                                                         <div class="dropdown">
                                                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
