@@ -44,6 +44,7 @@ if (isset($_POST['submit']))
                 $client_name = $getData[6];
                 $s_email = $getData[7];
                 $s_status = $getData[8];
+                $con_digit = $getData[9];
             
                 // If user already exists in the database with the same email
                 $query = "SELECT s_mc_number FROM va2pow WHERE s_mc_number = '" . $getData[4] . "'";
@@ -56,7 +57,7 @@ if (isset($_POST['submit']))
                 }
                 else
                 {
-                     mysqli_query($conn, "INSERT INTO va2pow (cid,s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status) VALUES ( '" . $cid . "', '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "')");
+                     mysqli_query($conn, "INSERT INTO va2pow (cid,s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status,con_digit) VALUES ( '" . $cid . "', '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "', '" .$con_digit. "')");
 
                 }
             }

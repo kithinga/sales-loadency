@@ -22,7 +22,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                         <div class="bg-nav">
                             <div class="shadow"><a href="#"><button class=""><i class="fa fa fa-users"></i> Won customers </button></a></div>
                             <button type="button" class="shadow maybe-btn clients-btn">
-                            <i class="fa-solid fa-bars-progress"></i>Potential clients     
+                            <i class="mbdirer fa-solid fa-bars-progress"></i>Potential clients     
                             </button>
                             <button type="button" class="shadow assigned-btn">
                             <i class="fa fa-list"></i>Assigned contacts  
@@ -45,15 +45,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="assigned-title row">
                         <div class="col">
                             <div>
-                                <h1> Sales by <?= $_SESSION['name'] ?> <span> Working on digit
-                                        <small>
-                                            <?php while ($row = mysqli_fetch_array($active_digit_res)) { ?>
-                                                <?php
-                                                $active_digit = $row['con_digit'];
-                                                ?>
-                                            <?php } ?>
-                                            <?php echo $active_digit; ?>
-                                        </small></span></h1>
+                                <h1> Sales by <?= $_SESSION['name'] ?> <span>
+                                </span></h1>
                             </div>
                         </div>
                     </div>
@@ -81,16 +74,16 @@ if ($_SESSION['user_role'] == 'user') { ?>
                         </div>
                         <div class="col-lg-2">
                             <div class="assigned-card">
-                                <h6>Maybe</h6>
-                                <p class="mbdirer"><?php echo $dat2['mb_count'] ?></p>
-                                <div class="mbspan shadow"></div>
+                                <h6>Said no</h6>
+                                <p class="nodirer"><?php echo $dat2['n_count'] ?></p>
+                                <div class="snspan shadow"></div>
                             </div>
                         </div>
                         <div class="col-lg-2">
                             <div class="assigned-card">
-                                <h6>Said no</h6>
-                                <p class="nodirer"><?php echo $dat2['n_count'] ?></p>
-                                <div class="snspan shadow"></div>
+                                <h6>Maybe</h6>
+                                <p class="mbdirer"><?php echo $dat2['mb_count'] ?></p>
+                                <div class="mbspan shadow"></div>
                             </div>
                         </div>
                         <div class="col-lg-2">

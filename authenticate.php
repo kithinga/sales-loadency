@@ -35,6 +35,7 @@ if ($stmt = $conn->prepare('SELECT id, password, user_role, ses_dig FROM account
                 $_SESSION['name'] = $_POST['username'];
                 $_SESSION['id'] = $id;
                 $_SESSION['user_role'] = $user_role;
+                $_SESSION['ses_dig'] = $ses_dig;
                 header('Location: sales_dashboard.php');
             } elseif ($user_role == 'admin') {
                 session_regenerate_id();
@@ -42,6 +43,7 @@ if ($stmt = $conn->prepare('SELECT id, password, user_role, ses_dig FROM account
                 $_SESSION['name'] = $_POST['username'];
                 $_SESSION['id'] = $id;
                 $_SESSION['user_role'] = $user_role;
+                $_SESSION['ses_dig'] = $ses_dig;
                 header('Location: sales_dashboard.php');
             } elseif ($user_role == 'user') {
                 session_regenerate_id();
