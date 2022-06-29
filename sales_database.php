@@ -9,7 +9,7 @@
 
 // NAMECHEAP DB CON
 $servername = 'localhost';
-$username = 'kithinga';
+$username = 'loadpwyf_kithinga';
 $password = 'dev1151@loadency';
 $dbname = "loadpwyf_sales_db";
 
