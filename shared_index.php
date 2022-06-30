@@ -63,7 +63,7 @@
         <h6>Loadency Management Information System</h6>
         <br>
          <br>
-        <a href="login.php"><button class="shadow opt-btn"> Operations </button></a>
+        <a href="logicphp/start.php"><button class="shadow opt-btn"> Operations </button></a>
         <a href="login.php"><button class="shadow sales-btn"> Sales </button></a>
       </div>
     </div>
