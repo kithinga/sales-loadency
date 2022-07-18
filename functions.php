@@ -28,13 +28,12 @@ if (isset($_POST['submit']))
 
             // Skip the first line
             fgetcsv($csvFile);
-
             // Parse data from CSV file line by line
              // Parse data from CSV file line by line
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
             {
-                // $client_name = "qsada90";
-                // $s_email = "236765z@gmail.com";
+               
+
                 $cid = $getData[0];
                 $s_company_name = $getData[1];
                 $street_address = $getData[2];
@@ -57,16 +56,14 @@ if (isset($_POST['submit']))
                 }
                 else
                 {
-                     mysqli_query($conn, "INSERT INTO va2pow (cid,s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status,con_digit) VALUES ( '" . $cid . "', '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "', '" .$con_digit. "')");
+                     mysqli_query($conn, "INSERT INTO va2pow (cid, s_company_name, street_address, s_phone_number,s_mc_number, pow, client_name, s_email,s_status,con_digit) VALUES ( '" . $cid . "', '" . $s_company_name . "', '" . $street_address . "', '" . $s_phone_number . "','" . $s_mc_number . "','" . $pow . "', '" . $client_name . "', '" . $s_email . "', '" . $s_status . "', '" .$con_digit. "')");
 
                 }
             }
-
             // Close opened CSV file
             fclose($csvFile);
 
             header("Location: index.php");
-        
     }
     else
     {

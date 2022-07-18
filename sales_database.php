@@ -1,17 +1,16 @@
 <?php
 
 // DEVELOPER DB CON
-// $servername = 'localhost';
-// $username = 'root';
-// $password = '';
-// $dbname = "sales_db";
-
+$servername = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = "sales_db";
 
 // NAMECHEAP DB CON
-$servername = 'localhost';
-$username = 'loadpwyf_kithinga';
-$password = 'dev1151@loadency';
-$dbname = "loadpwyf_sales_db";
+// $servername = 'localhost';
+// $username = 'loadpwyf_kithinga';
+// $password = 'dev1151@loadency';
+// $dbname = "loadpwyf_sales_db";
 
 $conn = mysqli_connect($servername, $username, $password, "$dbname");
 if (!$conn) {

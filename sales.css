@@ -1284,3 +1284,81 @@ tr td p{
 .opt-btn{
     background-color: rgb(182, 148, 75)!important;
 }
+
+.upload-btn{
+    border-left:none!important;
+    border: none;
+    text-align: center;
+    font-weight: 600;
+    font-family: Montserrat;
+    border-top-right-radius: 2.6rem;
+    border-bottom-right-radius: 2.6rem;
+    padding-top: 2.2rem;
+    width: 10rem;
+    text-align: center;
+    /* min-height: 8rem; */
+}
+
+
+.upload-btn i {
+    margin-left: 1rem;
+}
+
+.upload-btn button{
+    border: none;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    background-color: transparent;
+    font-weight: 700!important;
+    color: rgb(19, 132, 157);
+    font-family: Montserrat!important;
+
+}
+
+
+.up-title{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+.up-title h4{
+    font-weight: 700!important;
+    font-size:24px;
+    color: rgb(96, 98, 102);
+    font-family: Montserrat!important;
+}
+
+.upload-form{
+    min-height: 50vh;
+    padding-top: 8rem;
+    border-radius: 5px;
+}
+
+.form-col{
+    text-align: center!important;
+    justify-content: center;
+}
+
+.custom-file-input{
+    height:100%;
+    /* background-color: red; */
+    padding-top: 2.3rem;
+}
+.form-self{
+    text-align: center!important;
+    margin: 10px auto;
+    width: 60%;
+    text-align: center;
+}
+
+.input-area{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border-radius:41px;
+    border: solid 2px rgb(187, 198, 198)!important;
+    height: 7rem;
+    opacity: 0.6;
+}
+

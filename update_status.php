@@ -22,7 +22,6 @@
 
         // Inserting into tally table after update
         mysqli_query($conn,"INSERT INTO calls_tally(voice_mail,street_address,times_called, s_company_name, client_name,s_status, s_mc_number, caller_name, s_phone_number, pow, status_comments)VALUES('$voice_mail','$street_address','$times_called','$s_company_name','$client_name','$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow','$status_comments')");
-
     }
     $_SESSION['sess_digit'] = $con_digit;
     header( 'Location:sales_assigned.php' ) ;
@@ -43,8 +42,6 @@
         $con_digit = $_POST['con_digit']; 
         // $name = $_POST['name'];
         mysqli_query($conn, "UPDATE calls_tally SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
-
-        
         header( 'Location:sales_assigned.php' );
 
     }
