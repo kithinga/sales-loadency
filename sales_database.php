@@ -6,6 +6,7 @@ $username = 'root';
 $password = '';
 $dbname = "sales_db";
 
+
 // NAMECHEAP DB CON
 // $servername = 'localhost';
 // $username = 'loadpwyf_kithinga';

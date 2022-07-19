@@ -431,13 +431,23 @@ tr td {
 }
 
 .assigned-card {
-    /* border-radius:6px; */
-    /* background-color:rgb(242, 245, 248); */
     margin-bottom: 10px;
+    border: solid 1px rgb(253, 250, 250);
     border-right: 1px rgb(233, 235, 236) solid;
     padding: 2rem;
     text-align: center;
     font-family: Montserrat;
+    transition-duration: 1.7s;
+}
+
+.assigned-card:hover{
+    border: solid 1px rgb(158, 197, 151);
+   background-color:rgb(255, 255, 255)!important;
+   border-radius:9px;
+   cursor: pointer;
+ /* border-bottom: 2px solid rgb(190, 207, 190); */
+   transform: scale(0.8);
+   font-size: 14px!important;
 }
 
 .assigned-card h6 {
@@ -447,10 +457,7 @@ tr td {
 }
 
 .assigned-card p {
-    /* font-weight: 700; */
     font-size: 23px;
-    /* color: rgb(123, 135, 145); */
-    /* color: rgb(42, 112, 192); */
 }
 
 .customer h2 {

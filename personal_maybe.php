@@ -39,6 +39,7 @@
                             <th scope="col">Call status</th>
                             <th scope="col">Street address</th>
                             <th scope="col">Pow</th>
+                            <th scope="col">Email</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,7 +58,7 @@
                             $s_phone_number = $row['s_phone_number'];
                             $pow = $row['pow'];
                             $s_status = $row['s_status'];
-                            // $s_email = $row['s_email'];
+                            $s_email = $row['s_email'];
                             $times_called = $row['times_called'];
                             $last_changed = $row['last_changed'];
                             $date = date('Y-m-d H:i:s');
@@ -114,6 +115,7 @@
                                 </td>
                                 <td><?php echo $street_address; ?></td>
                                 <td><?php echo $pow; ?></td>
+                                <td><?php echo $s_email; ?></td>
                                
                             </tr>
                         <?php

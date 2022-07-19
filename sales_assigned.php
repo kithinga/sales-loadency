@@ -114,7 +114,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                             <th scope="col">Call status</th>
                                             <th scope="col">Street address</th>
                                             <th scope="col">Pow</th>
-                                            <!-- <th scope="col">Email address</th> -->
+                                            <th scope="col">Email address</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -202,6 +202,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
 
                                                 <td class="c-name"><?php echo $street_address; ?></td>
                                                 <td><?php echo $pow; ?></td>
+                                                <td><?php echo $s_email; ?></td>
                                             </tr>
                                         <?php
                                         } ?>
