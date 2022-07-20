@@ -167,6 +167,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         <input class="edit-status-input" type="hidden" name="caller_name" value="<?= $_SESSION['name'] ?>" />
                                                         <input class="edit-status-input" type="hidden" name="street_address" value="<?php echo $street_address ?>" />
                                                         <input class="edit-status-input" type="hidden" name="pow" value="<?php echo $pow ?>" />
+                                                        <input class="edit-status-input" type="hidden" name="s_email" value="<?php echo $s_email ?>" />
 
                                                         <!-- <input class="edit-status-input" type="text" name="con_digit" value="" /> -->
 

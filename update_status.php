@@ -14,14 +14,15 @@
         $now = date('Y-m-d H:i:s');
         $last_changed = $now;
         $caller_name = $_SESSION['name'];
+        $s_email = $_POST['s_email'];
         $con_digit = $_POST['con_digit'];
    
         // $tally_id = $_POST['tally_id'];
         // $name = $_POST['name'];
         mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', last_changed = '$last_changed', status_comments = '$status_comments' WHERE s_mc_number = '$s_mc_number'");
 
-        // Inserting into tally table after update
-        mysqli_query($conn,"INSERT INTO calls_tally(voice_mail,street_address,times_called, s_company_name, client_name,s_status, s_mc_number, caller_name, s_phone_number, pow, status_comments)VALUES('$voice_mail','$street_address','$times_called','$s_company_name','$client_name','$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow','$status_comments')");
+        // Inserting into calls tally table after update
+        mysqli_query($conn,"INSERT INTO calls_tally(voice_mail,street_address,times_called, s_company_name, client_name,s_status, s_mc_number, caller_name, s_phone_number, pow, status_comments,s_email)VALUES('$voice_mail','$street_address','$times_called','$s_company_name','$client_name','$s_status','$s_mc_number','$caller_name','$s_phone_number','$pow','$status_comments','$s_email')");
     }
     $_SESSION['sess_digit'] = $con_digit;
     header( 'Location:sales_assigned.php' ) ;

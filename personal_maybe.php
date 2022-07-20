@@ -46,6 +46,7 @@
                         <?php
                         $n = 1;
                         $times_called = 0;
+                        $s_email = 'no email';
                         ?>
 
                         <?php while ($row = mysqli_fetch_array($personal_maybe_clients)) { ?>
