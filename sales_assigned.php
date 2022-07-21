@@ -12,8 +12,6 @@ if ($_SESSION['user_role'] == 'user') { ?>
 
     <?php $active_digit = null; 
     // echo $_SESSION['ses_dig']; ?>
-
-
     <body>
         <div class="container-fluid">
             <div class="row no-gutters">
