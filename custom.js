@@ -30,7 +30,7 @@ $(".keystrokes").click(function() {
 });
 
 
-// Pasword 
+// Password 
 function myFunction() {
   var x = document.getElementById("id_password");
   if (x.type === "password") {
