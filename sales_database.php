@@ -6,7 +6,6 @@ $username = 'root';
 $password = '';
 $dbname = "sales_db";
 
-
 // NAMECHEAP DB CON
 // $servername = 'localhost';
 // $username = 'loadpwyf_kithinga';
@@ -43,10 +42,13 @@ $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 
 // $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 'said-no' ");
 
 $maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' ");
+
+// CLIENTS WHO SAID MAYBE
 $personal_maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' and caller_name = '$username' ");
 
+// CLIENTS WHO SAID NO
+$said_no_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'said_no' and caller_name = '$username' ");
 
-// 
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, 
@@ -103,7 +105,6 @@ SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username' ");
 $dat2 = mysqli_fetch_assoc($value_counts);
-
 
 // USER COUNT FOR TODAY AND YESTERDAY
 $today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS today_count from calls_tally 

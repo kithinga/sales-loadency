@@ -17,8 +17,6 @@
         $s_email = $_POST['s_email'];
         $con_digit = $_POST['con_digit'];
    
-        // $tally_id = $_POST['tally_id'];
-        // $name = $_POST['name'];
         mysqli_query($conn, "UPDATE va2pow SET  s_status = '$s_status', times_called = '$times_called', last_changed = '$last_changed', status_comments = '$status_comments' WHERE s_mc_number = '$s_mc_number'");
 
         // Inserting into calls tally table after update
@@ -40,7 +38,7 @@
         $last_changed = $now;
         $caller_name = $_SESSION['name'];
         $con_digit = $_POST['con_digit']; 
-        // $name = $_POST['name'];
+     
         mysqli_query($conn, "UPDATE calls_tally SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
         header( 'Location:sales_assigned.php' );
     }
