@@ -27,7 +27,6 @@
     $_SESSION['sess_digit'] = $con_digit;
     header( 'Location:sales_assigned.php' ) ;
 
-
     // EDIT MAYBE CONTACT STATUS
     if (isset($_POST['maybe-edit-contact-status'])) {
         $tally_id = $_POST['tally_id'];
@@ -44,7 +43,6 @@
         // $name = $_POST['name'];
         mysqli_query($conn, "UPDATE calls_tally SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
         header( 'Location:sales_assigned.php' );
-
     }
  
 ?>
