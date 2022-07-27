@@ -80,11 +80,13 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </a>
                         </div>
                         <div class="col-lg-2">
-                            <div class="assigned-card">
+                           <a href="maybe.php">
+                           <div class="assigned-card">
                                 <h6>Maybe</h6>
                                 <p class="mbdirer"><?php echo $dat2['mb_count'] ?></p>
                                 <div class="mbspan shadow"></div>
                             </div>
+                           </a>
                         </div>
                         <div class="col-lg-2">
                            <a href="won_customer.php">
