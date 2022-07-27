@@ -52,6 +52,9 @@ $said_no_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_statu
 // PERSONAL CUSTOMERS 
 $customer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'customer' and caller_name = '$username' ");
 
+// NO ANSWER CLIENTS
+$no_answer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'no-answer' and caller_name = '$username' ");
+
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, 

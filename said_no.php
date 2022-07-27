@@ -14,7 +14,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
     ?>
     <body>
         <!-- said no clients for each user. -->
-        <div class="col-lg-12 assigned-area said-no-area" data-aos="zoom-in">
+        <div class="col-lg-12 assigned-area said-no-area" data-aos="fade-right"
+     data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">

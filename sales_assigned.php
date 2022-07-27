@@ -19,12 +19,12 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="row side-nav ">
                         <div class="bg-nav">
                             <div class="shadow"><a href="#"><button class=""><i class="fa fa fa-users"></i> Won customers </button></a></div>
-                            <button type="button" class="shadow maybe-btn clients-btn">
+                            <!-- <button type="button" class="shadow maybe-btn clients-btn">
                             <i class="mbdirer fa-solid fa-bars-progress"></i>Potential clients     
                             </button>
                             <button type="button" class="shadow assigned-btn">
                             <i class="fa fa-list"></i>Assigned contacts  
-                            </button>
+                            </button> -->
                             <br>
                             <br>
                             <p></p>
@@ -64,11 +64,13 @@ if ($_SESSION['user_role'] == 'user') { ?>
                         </div>
 
                         <div class="col-lg-2">
+                            <a href="no_answer.php">
                             <div class="assigned-card">
                                 <h6>No answer</h6>
                                 <p class="nadirer"><?php echo $dat2['na_count'] ?></p>
                                 <div class="naspan shadow"></div>
                             </div>
+                            </a>
                         </div>
                         <div class="col-lg-2">
                             <a href="said_no.php">
@@ -215,7 +217,9 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 </table>
                             </div>
 
-                            <?php include_once "personal_maybe.php"; ?>
+                            <!-- include personal maybe count -->
+
+                            
                         </div>
                     </div>
                 </div>
