@@ -43,11 +43,14 @@ $said_no_results = mysqli_query($conn, "SELECT *  FROM va2pow  WHERE s_status = 
 
 $maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' ");
 
-// CLIENTS WHO SAID MAYBE
+// PERSONAL CLIENTS WHO SAID MAYBE
 $personal_maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'maybe' and caller_name = '$username' ");
 
-// CLIENTS WHO SAID NO
-$said_no_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'said_no' and caller_name = '$username' ");
+// PERSONAL CLIENTS WHO SAID NO
+$said_no_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'said-no' and caller_name = '$username' ");
+
+// PERSONAL CUSTOMERS 
+$customer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'customer' and caller_name = '$username' ");
 
 
 // USERS SELECTION for admin dashboard reports

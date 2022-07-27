@@ -71,11 +71,13 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </div>
                         </div>
                         <div class="col-lg-2">
+                            <a href="said_no.php">
                             <div class="assigned-card">
                                 <h6>Said no</h6>
                                 <p class="nodirer"><?php echo $dat2['n_count'] ?></p>
                                 <div class="snspan shadow"></div>
                             </div>
+                            </a>
                         </div>
                         <div class="col-lg-2">
                             <div class="assigned-card">
@@ -85,11 +87,13 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </div>
                         </div>
                         <div class="col-lg-2">
-                            <div class="assigned-card ">
+                           <a href="won_customer.php">
+                           <div class="assigned-card ">
                                 <h6>Won customers</h6>
                                 <p class="cdirer"><?php echo $dat2['cus_count'] ?></p>
                                 <div class="cspan shadow"></div>
                             </div>
+                           </a>
                         </div>
                     </div>
                     <p></p>

@@ -14,7 +14,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
     ?>
     <body>
         <!-- said no clients for each user. -->
-        <div class="col-lg-12 assigned-area said-no-area" data-aos="zoom-in">
+        <div class="col-lg-12 assigned-area won-area" data-aos="zoom-in">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">
@@ -24,7 +24,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 <a href="sales_assigned.php">
                                 <button class="btn success">home</button>
                                 </a>
-                                <h1>Contacts which said no</h1>
+                                <h1>Won customers</h1>
                                 <p>product of numbers</p>
                                 <span></span>
                             </div>
@@ -67,7 +67,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 $s_email = 'no email';
                                 ?>
 
-                                <?php while ($row = mysqli_fetch_array($said_no_clients)) { ?>
+                                <?php while ($row = mysqli_fetch_array($customer_clients)) { ?>
                                     <?php
                                     $s_mc_number = $row['s_mc_number'];
                                     $tally_id = $row['tally_id'];
