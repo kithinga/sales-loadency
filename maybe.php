@@ -17,7 +17,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
         <div class="maybe-nav">
             <?php include 'assigned_nav.php' ?>
         </div>
-        <div class="col-lg-12 assigned-area maybe-area" data-aos="fade-up" data-aos-duration="2600">
+        <div class="col-lg-12 assigned-area maybe-area" data-aos="fade-down" data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">

@@ -18,7 +18,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
         <div class="won-customer-nav">
             <?php include 'assigned_nav.php' ?>
         </div>
-        <div class="col-lg-12 assigned-area won-area" data-aos="fade-down"
+        <div class="col-lg-12 assigned-area won-area" data-aos="fade-in"
      data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
