@@ -1373,3 +1373,39 @@ tr td p{
     opacity: 0.6;
 }
 
+.user-nav{
+    padding: 8px;
+}
+
+.user-nav button{
+    border: solid 1px rgb(214, 214, 214);
+    padding: 5px;
+    border-radius: 2rem;
+    color: rgb(75, 72, 76);
+    padding-right: 15px;
+    padding-bottom: 9px;
+    font-weight: 500;
+    font-family:Montserrat!important;
+}
+
+.user-nav button i{
+    font-size: 14px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.said-no-nav{
+    background-color: rgb(242, 40, 47);
+    min-height: 3.5rem;
+}
+.no-answer-nav{
+    background-color: rgb(56, 58, 84);
+    min-height: 3.5rem;
+}
+
+.maybe-nav{
+    background-color: rgb(186, 202, 60);
+}
+.won-customer-nav{
+    background-color: rgb(110, 179, 49);
+}

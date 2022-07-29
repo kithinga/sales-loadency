@@ -13,7 +13,11 @@ if ($_SESSION['user_role'] == 'user') { ?>
     <?php $active_digit = null;
     ?>
     <body>
-        <!-- said no clients for each user. -->
+        <!-- won clients for each user. -->
+
+        <div class="won-customer-nav">
+            <?php include 'assigned_nav.php' ?>
+        </div>
         <div class="col-lg-12 assigned-area won-area" data-aos="fade-down"
      data-aos-duration="2600">
             <div class="assigned-title row">
@@ -21,10 +25,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="row convert">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                                <br>
-                                <a href="sales_assigned.php">
-                                <button class="btn success">home</button>
-                                </a>
+                              
                                 <h1>Won customers</h1>
                                 <p>product of numbers</p>
                                 <span></span>

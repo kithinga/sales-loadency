@@ -13,18 +13,17 @@ if ($_SESSION['user_role'] == 'user') { ?>
     <?php $active_digit = null;
     ?>
     <body>
+        <div class="said-no-nav">
+            <?php include 'assigned_nav.php' ?>
+        </div>
         <!-- said no clients for each user. -->
         <div class="col-lg-12 assigned-area said-no-area" data-aos="fade-right"
-     data-aos-duration="2600">
+          data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                                <br>
-                                <a href="sales_assigned.php">
-                                <button class="btn success">home</button>
-                                </a>
                                 <h1>Contacts which said no</h1>
                                 <p>product of numbers</p>
                                 <span></span>
