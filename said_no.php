@@ -14,7 +14,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
     ?>
     <body>
         <!-- said no clients for each user. -->
-        <div class="col-lg-12 assigned-area said-no-area" data-aos="zoom-in">
+        <div class="col-lg-12 assigned-area said-no-area" data-aos="fade-right"
+     data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">
@@ -34,10 +35,10 @@ if ($_SESSION['user_role'] == 'user') { ?>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="home-arrow row">
+                    <div class="home-arrow row justify-content-center">
                         <!-- <div class="col-lg-2"><a href="#"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div> -->
                         <div class="col-lg-4">
-                            <h4>POTENTIAL CLIENTS <span> <?php echo $calls_tally['maybe_tally'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
+                            <h4> CONTACTS SAID NO <span> <?php echo $dat2['n_count']  ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
                         </div>
                     </div>
                     <div class="assigned-table aa-table">

@@ -17,7 +17,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
         <!-- Maybe clients fro each user. -->
 
         <!--  -->
-        <div class="col-lg-12 assigned-area maybe-area" data-aos="fade-up"
+        <div class="col-lg-12 assigned-area maybe-area" data-aos="fade-left"
      data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
@@ -28,7 +28,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 <a href="sales_assigned.php">
                                 <button class="btn success">home</button>
                                 </a>
-                                <h1>Contacts which said maybe</h1>
+                                <h1>Contacts did not answer</h1>
                                 <p>product of numbers</p>
                                 <span></span>
                             </div>
@@ -41,7 +41,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="home-arrow row justify-content-center">
                         <!-- <div class="col-lg-2"><a href="#"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div> -->
                         <div class="col-lg-4">
-                            <h4>POTENTIAL CLIENTS <span> <?php echo $calls_tally['maybe_tally'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
+                            <h4>Not answered <span> <?php  echo $dat2['na_count'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
                         </div>
                     </div>
                     <div class="assigned-table aa-table">
@@ -71,7 +71,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 $s_email = 'no email';
                                 ?>
 
-                                <?php while ($row = mysqli_fetch_array($personal_maybe_clients)) { ?>
+                                <?php while ($row = mysqli_fetch_array($no_answer_clients)) { ?>
                                     <?php
                                     $s_mc_number = $row['s_mc_number'];
                                     $tally_id = $row['tally_id'];

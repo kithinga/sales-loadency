@@ -50,7 +50,6 @@ if ($_SESSION['user_role'] == ('admin')) { ?>
                         </div>
                     </div>
 
-                    <?php include "maybe.php"; ?>
 
                     <?php
                     // Contacts called

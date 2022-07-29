@@ -33,7 +33,6 @@ if (isset($_POST['submit']))
             while (($getData = fgetcsv($csvFile, 10000, ",")) !== FALSE)
             {
                
-
                 $cid = $getData[0];
                 $s_company_name = $getData[1];
                 $street_address = $getData[2];
