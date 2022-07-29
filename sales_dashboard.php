@@ -55,9 +55,6 @@ if ($_SESSION['user_role'] == ('admin')) { ?>
                     $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
                  
                     ?>
-
-
-
                     <div class="row analysis-cards">
                         <div class="col-lg-6">
                             <div class="row justify-content-center sales-boxes no-gutters">
@@ -152,6 +149,7 @@ if ($_SESSION['user_role'] == ('admin')) { ?>
                                             ?>
                                             <?php while ($row = mysqli_fetch_array($caller_report)) { ?>
                                                 <?php
+                                                // $caller_name = $username;
                                                 $caller_name = $row['caller_name'];
                                                 $calls_today = $row['all_today_count'];
                                                 $daily_mb_count = $row['daily_mb_count'];

@@ -43,7 +43,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                         </div>
                     </div>
                     <div class="assigned-table aa-table">
-                        <h5>Clients who said no</h5>
+                        <h5>Won customers</h5>
                         <table class="table table-bordered table-hover">
                             <thead class="the-th">
                                 <tr>
