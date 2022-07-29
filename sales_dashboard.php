@@ -50,7 +50,6 @@ if ($_SESSION['user_role'] == ('admin')) { ?>
                         </div>
                     </div>
 
-
                     <?php
                     // Contacts called
                     $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
