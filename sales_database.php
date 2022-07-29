@@ -87,8 +87,7 @@ FROM calls_tally"); $data = mysqli_fetch_assoc($all_admin_res);
 // GRAND TOTALS i>e ALL TIME COLLECTED CONTACTS  AND waiting calls
 $total_res = mysqli_query($conn, "SELECT
 COUNT(s_phone_number) AS collected_contacts,
-SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count
-FROM va2pow");
+SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_call_count FROM va2pow   ");
 $total_data = mysqli_fetch_assoc($total_res);
 
 
@@ -120,5 +119,7 @@ $da = mysqli_fetch_assoc($today_count);
 $all_today_count = mysqli_query($conn, "SELECT COUNT(caller_name) AS all_today_count from calls_tally where 
 last_changed >= date(now()) and last_changed < date(now()) + interval 1 day");
 $all_tc= mysqli_fetch_assoc($all_today_count);
+
+$count_contacts =  mysqli_query($conn, "SELECT COUNT(con_digit) AS today_digs from va2pow   where con_digit = 1 ");
 
 ?>

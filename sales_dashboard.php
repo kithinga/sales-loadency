@@ -53,7 +53,10 @@ if ($_SESSION['user_role'] == ('admin')) { ?>
                     <?php
                     // Contacts called
                     $called = ($total_data['collected_contacts'] - $total_data['waiting_call_count']);
+                 
                     ?>
+
+
 
                     <div class="row analysis-cards">
                         <div class="col-lg-6">
