@@ -50,7 +50,7 @@ $personal_maybe_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE 
 $said_no_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'said-no' and caller_name = '$username' ");
 
 // PERSONAL CUSTOMERS 
-$customer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'customer' and caller_name = '$username' ");
+$customer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'customer                                     0' and caller_name = '$username' ");
 
 
 // USERS SELECTION for admin dashboard reports
