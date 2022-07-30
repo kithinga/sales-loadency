@@ -1380,9 +1380,9 @@ tr td p{
 }
 
 .upload-form{
-    min-height: 50vh;
-    padding-top: 8rem;
-    border-radius: 5px;
+    min-height: 60vh;
+    padding-top: 5rem;
+    /* border-radius: 5px; */
 }
 
 .form-col{
@@ -1395,6 +1395,7 @@ tr td p{
     /* background-color: red; */
     padding-top: 2.3rem;
 }
+
 .form-self{
     text-align: center!important;
     margin: 10px auto;
@@ -1403,9 +1404,9 @@ tr td p{
 }
 
 .input-area{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(185, 0, 0);
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     border-radius:41px;
     border: solid 2px rgb(187, 198, 198)!important;
     height: 7rem;
@@ -1429,6 +1430,7 @@ tr td p{
     font-family:Montserrat!important;
     transition-duration:1.2s;
 }
+
 .user-nav button:hover{
     color: rgb(0, 0, 0)!important;
 }
@@ -1439,7 +1441,6 @@ tr td p{
     margin-right: 12px;
 }
 
-
 .brokers-nav{
     background-color: rgb(41, 80, 185);
     min-height: 3.5rem;
@@ -1449,19 +1450,24 @@ tr td p{
     background-color: rgb(242, 40, 47);
     min-height: 3.5rem;
 }
+
 .no-btn:hover{
     background-color: rgb(252, 136, 155);
 }
+
 .na-btn:hover{
     background-color: rgb(167, 167, 216);
 }
+
 .mb-btn:hover{
     background-color: rgb(217, 252, 136);
 }
+
 .br-btn:hover{
     background-color: rgb(134, 167, 255);
     color: white!important;
 }
+
 .cu-btn:hover{
     background-color: rgb(136, 252, 136);
 }
