@@ -1336,53 +1336,42 @@ tr td p{
 }
 
 .upload-btn{
-    border-left:none!important;
-    border: none;
     text-align: center;
     font-weight: 600;
-    font-family: Montserrat;
-    border-top-right-radius: 2.6rem;
-    border-bottom-right-radius: 2.6rem;
-    padding-top: 2.2rem;
-    width: 10rem;
-    text-align: center;
-    /* min-height: 8rem; */
-}
-
-
-.upload-btn i {
-    margin-left: 1rem;
-}
-
-.upload-btn button{
+    height:3rem;
+    border-radius:1.5rem;
+    margin-top:1rem;
+    margin-left:1rem;
+    font-size:13px;
+    color: rgb(231, 230, 230);
+    background-color:rgb(23, 99, 170);
     border: none;
-    margin-left: 1rem;
-    margin-top: 0.3rem;
-    background-color: transparent;
-    font-weight: 700!important;
-    color: rgb(19, 132, 157);
-    font-family: Montserrat!important;
-
+    font-family: Montserrat;
 }
-
-
+.fa-upload{
+    margin-left: 1rem;
+}
 .up-title{
-    margin-top: 5rem;
+    margin-top: 3rem;
     text-align: center;
+}
+.up-title i{
+    margin-left: 2rem;
+    font-weight:800!important;
+    color: rgb(11, 133, 204);
 }
 
 
 .up-title h4{
-    font-weight: 700!important;
-    font-size:24px;
+    font-weight: 600!important;
+    font-size:17px;
     color: rgb(96, 98, 102);
     font-family: Montserrat!important;
 }
 
 .upload-form{
     min-height: 60vh;
-    padding-top: 5rem;
-    /* border-radius: 5px; */
+    padding-top: 2rem;
 }
 
 .form-col{
@@ -1404,13 +1393,41 @@ tr td p{
 }
 
 .input-area{
-    background-color: rgb(185, 0, 0);
+    /* background-color: rgb(185, 0, 0); */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-radius:41px;
-    border: solid 2px rgb(187, 198, 198)!important;
-    height: 7rem;
-    opacity: 0.6;
+    border: solid 2px rgb(211, 213, 219)!important;
+    border-radius:4px;
+    padding:1.5rem;
+}
+
+.input-area input{
+    margin:1rem;
+    height:3rem;
+    color: rgb(39, 113, 252);
+    border-radius: 1px;
+    border: none;
+    /* border: solid 1px rgb(238, 240, 243)!important; */
+    /* border-radius:4px; */
+    border-bottom: solid 1px rgb(230, 230, 230)!important;
+    text-align: center;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial;
+    font-size:13px;
+    font-weight:500;
+    transition-duration: 1s;
+}
+.input-area input:focus{
+  background-color:rgb(250, 251, 253);
+  outline:none;
+  border-radius: 6px;
+  border: solid 1px rgb(214, 228, 247);
+
+}
+
+
+
+.input-area input::placeholder{
+  color: rgb(142, 164, 216);
 }
 
 .user-nav{
@@ -1483,3 +1500,81 @@ tr td p{
 .won-customer-nav{
     background-color: rgb(110, 179, 49);
 }
+
+.numbers-area{
+    background-color:rgb(250, 252, 255);
+   
+    margin-top:1rem;
+    padding:1.5rem;
+    font-family: Montserrat;
+    border-radius:2px;
+}
+
+.today-num{
+    border-radius:4px;
+    margin-top: 2rem;min-height:5rem;
+    font-family: Montserrat;
+    text-align: center;
+    border: solid 1px rgb(233, 230, 230);
+    padding: 1.5rem;
+}
+
+.con-area{
+    
+    border: solid 2px rgb(226, 230, 233);
+    border-radius:2px;
+    margin-top:2rem;
+    padding:1.5rem;
+    font-family: Montserrat;
+}
+
+.con-digit{
+    border: solid 1px rgb(237, 239, 243);
+    text-align: center;
+    margin-bottom:1rem;
+    padding-top:0.8rem;
+    padding-bottom:1rem;
+    border-radius:4px;
+    background-color:rgb(255, 255, 255);
+}
+
+.con-digit p{
+    font-weight:800;
+    font-size:14px;
+    margin-top: 1rem!important;
+    padding:2px;
+    margin:1px;
+    
+}
+
+.con-digit h6{
+    font-size:13px;
+    font-family: Montserrat!important;
+    font-weight:500;
+    color:rgb(58, 94, 122);
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgb(235, 242, 243);
+}
+
+.con-digit p span{
+    color: rgb(52, 104, 146);
+    font-size:11px;
+    font-weight:400;
+    margin-left: 5px;
+}
+.con-digit i{
+    color: rgb(154, 187, 212);
+    font-size:11px;
+    margin-right:0.6rem;
+}
+
+.prett-title{
+    font-weight: 600;
+    font-family: Montserrat;
+    color: rgb(80, 94, 116);
+    margin-top: 0.6rem;
+    margin-left: 0.6rem;
+    border-bottom: solid 1px rgb(237, 241, 243);
+    padding-bottom: 8px;
+}
+

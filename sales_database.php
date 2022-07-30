@@ -58,6 +58,9 @@ $no_answer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_sta
 //contacted brokers
 $contacted_brokers = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'broker' and caller_name = '$username' ");
 
+// Available contgacts
+$available_contacts = mysqli_query($conn, "SELECT con_digit, count(con_digit) as av_contacts  FROM va2pow  WHERE times_called =0 AND con_digit >0  group by con_digit ASC");
+
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, 
