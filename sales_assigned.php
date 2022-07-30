@@ -29,7 +29,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             <br>
                             <p></p>
                             <div class="grid-2-t">
-                                <h6> <small>Change digit here</small></h6>
+                                
                             </div>
                             <div class="digits-2-grid row">
                                   <!-- Fill the numbers selector tils here -->
@@ -50,20 +50,21 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     </div>
                     <div class="row assigned-card-area " data-aos="fade-left" data-aos-duration="2400">
 
-                        <div class="col-lg-2">
+                        <div class="">
                             <div class="assigned-card">
                                 <h6>All time calls</h6>
                                 <p class="otc"> <?php echo $dat2['all_time_count'] ?></p>
                             </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="">
                             <div class="assigned-card">
                                 <h6>Calls today</h6>
                                 <p> <?php echo $da['today_count'] ?></p>
                             </div>
                         </div>
 
-                        <div class="col-lg-2">
+                     
+                        <div class="">
                             <a href="no_answer.php">
                             <div class="assigned-card">
                                 <h6>No answer</h6>
@@ -72,7 +73,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </div>
                             </a>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="">
                             <a href="said_no.php">
                             <div class="assigned-card">
                                 <h6>Said no</h6>
@@ -81,7 +82,18 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </div>
                             </a>
                         </div>
-                        <div class="col-lg-2">
+                     
+                        <div class="">
+                            <a href="brokers.php">
+                            <div class="assigned-card">
+                                <h6>Brokers</h6>
+                                <p class="brdirer"><?php echo $dat2['br_count'] ?></p>
+                                <div class="brspan shadow"></div>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="2">
                            <a href="maybe.php">
                            <div class="assigned-card">
                                 <h6>Maybe</h6>
@@ -90,7 +102,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                             </div>
                            </a>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="">
                            <a href="won_customer.php">
                            <div class="assigned-card ">
                                 <h6>Won customers</h6>
@@ -190,7 +202,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                                     <option value='said-no'>said-no</option>
                                                                     <option value='customer'>customer</option>
                                                                     <option value='maybe'>maybe</option>
-                                                                    <option value='dropped'>dropped</option>
+                                                                    <option value='broker'>broker</option>
                                                                 </select>
                                                                 <label for="voice_mail">Left voice mail <i class="fa fa-email"></i></label>
                                                                 <select name='voice_mail' id="voice" class="edit-status-input">
@@ -216,10 +228,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                     </tbody>
                                 </table>
                             </div>
-
                             <!-- include personal maybe count -->
-
-                            
                         </div>
                     </div>
                 </div>

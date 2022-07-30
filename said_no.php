@@ -11,6 +11,8 @@ if (!isset($_SESSION['loggedin'])) {
 if ($_SESSION['user_role'] == 'user') { ?>
 
     <?php $active_digit = null;
+      // Define this variable to use it to read current page for redirect
+      $current_page = 'said_no_page';
     ?>
     <body>
         <div class="said-no-nav">

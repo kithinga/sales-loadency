@@ -55,6 +55,9 @@ $customer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_stat
 // NO ANSWER CLIENTS
 $no_answer_clients = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'no-answer' and caller_name = '$username' ");
 
+//contacted brokers
+$contacted_brokers = mysqli_query($conn, "SELECT * FROM calls_tally  WHERE s_status = 'broker' and caller_name = '$username' ");
+
 
 // USERS SELECTION for admin dashboard reports
 $caller_report = mysqli_query($conn, "SELECT *, 
@@ -99,7 +102,6 @@ $calls_tally = mysqli_fetch_assoc($calls_tally_total);
 
 
 // SALES ASSIGNED PERSONAL DASHBOARD
-// The declaration of receiving digit id
 
 // All time total calls 
 $value_counts = mysqli_query($conn, "SELECT 
@@ -108,6 +110,7 @@ SUM(CASE WHEN s_status = 'customer' THEN 1 ELSE 0 END) AS cus_count,
 SUM(CASE WHEN s_status = 'maybe' THEN 1 ELSE 0 END) AS mb_count,
 SUM(CASE WHEN s_status = 'said-no' THEN 1 ELSE 0 END) AS n_count,
 SUM(CASE WHEN s_status = 'no-answer' THEN 1 ELSE 0 END) AS na_count,
+SUM(CASE WHEN s_status = 'broker' THEN 1 ELSE 0 END) AS br_count,
 SUM(CASE WHEN s_status = 'waiting-call' THEN 1 ELSE 0 END) AS waiting_count,
  COUNT(s_phone_number)AS total_contacts from calls_tally WHERE caller_name = '$username' ");
 $dat2 = mysqli_fetch_assoc($value_counts);

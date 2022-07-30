@@ -11,6 +11,8 @@ if (!isset($_SESSION['loggedin'])) {
 if ($_SESSION['user_role'] == 'user') { ?>
 
     <?php $active_digit = null;
+    // Define this variable to use it to read current page for redirect
+      $current_page = 'maybe_page';
     ?>
     <body>
         <!-- Maybe clients fro each user. -->
@@ -33,10 +35,19 @@ if ($_SESSION['user_role'] == 'user') { ?>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="home-arrow row justify-content-center">
+                    <div class="home-arrow row per-area">
                         <!-- <div class="col-lg-2"><a href="#"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div> -->
                         <div class="col-lg-4">
-                            <h4>POTENTIAL CLIENTS <span> <?php echo $calls_tally['maybe_tally'] ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
+                            <h4>Potential clients <span> <?php echo  $dat2['mb_count'] ?></span> / <?php echo $dat2['all_time_count'] ?>
+                             <span>Percentage : <?php 
+                                $per_mb_clients = $dat2['mb_count'];
+                                $per_all_clients = $dat2['all_time_count'];
+                             
+                                 $mb_per = ($per_mb_clients/$per_all_clients)*100;
+                                 echo number_format($mb_per);
+                                ?> %</span> 
+                               
+                            </h4>
                         </div>
                     </div>
                     <div class="assigned-table aa-table">
@@ -115,6 +126,8 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton1">
                                                         <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
+                                                        <label for="email-h">Email</label>
+                                                        <input type="text" id="email-h" class="s-email" name="s_email" value="<?php echo $s_email ?>">
                                                         <label for="sele">Current-status</label>
                                                         <select name='s_status' id="sele" class="edit-status-input">
                                                             <option value='<?php echo $s_status ?>' selected><?php echo $s_status ?></option>
@@ -127,7 +140,11 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         </select>
                                                         <label for="stat-com">Status-comments</label>
                                                         <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
+                                       
+                                                        <br>
+                                                        <br>
                                                         <button class="edit-status-btn" type="submit" name="maybe-edit-contact-status">Update status</button>
+                                                   
                                                     </ul>
                                                 </div>
                                             </form>

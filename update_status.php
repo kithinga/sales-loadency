@@ -32,6 +32,7 @@
         $s_mc_number = $_POST['s_mc_number'];
         $times_called = $_POST['times_called'];
         $s_phone_number = $_POST['s_phone_number'];
+        $s_email = $_POST['s_email'];
         $status_comments = $_POST['status_comments'];
         $pow = $_POST['pow'];
         $now = date('Y-m-d H:i:s');
@@ -39,8 +40,10 @@
         $caller_name = $_SESSION['name'];
         $con_digit = $_POST['con_digit']; 
      
-        mysqli_query($conn, "UPDATE calls_tally SET  s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
-        header( 'Location:sales_assigned.php' );
+        mysqli_query($conn, "UPDATE calls_tally SET s_email = '$s_email', s_status = '$s_status', times_called = '$times_called', caller_name = '$caller_name', last_changed = '$last_changed', status_comments = '$status_comments' WHERE tally_id = '$tally_id'");
+        if($current_page = 'maybe_page'){
+            header( 'Location:maybe.php' );
+        }
     }
  
 ?>

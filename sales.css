@@ -70,6 +70,12 @@
  
 }
 
+.edit-status-textarea{
+    color: rgb(91, 128, 138)!important;
+    font-weight: 500;
+    font-size: 14px;
+}
+
 .sales-title h1 {
     margin-top: 3rem;
     margin-bottom: 1rem;
@@ -428,6 +434,9 @@ tr td {
     padding-bottom: 1rem;
     border-bottom: 1px solid rgb(243, 246, 248);
     background-color: rgb(248, 249, 250);
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .assigned-card-area a{
@@ -461,7 +470,7 @@ tr td {
 }
 
 .assigned-card p {
-    font-size: 23px;
+    font-size: 17px;
 }
 
 .customer h2 {
@@ -489,6 +498,12 @@ tr td {
     font-weight: 700;
     color: rgb(166, 168, 11) !important;
 }
+
+.brdirer {
+    font-weight: 700;
+    color: rgb(34, 85, 255) !important;
+}
+
 
 .nadirer {
     color: rgb(62, 88, 126) !important;
@@ -520,6 +535,12 @@ tr td {
     border-radius: 9px;
     width: 1rem;
 }
+.brspan {
+    background-color: rgb(33, 54, 245);
+    height: 0.7rem;
+    border-radius: 9px;
+    width: 1rem;
+}
 
 .assigned-title {
     border-bottom: 1px solid rgb(242, 244, 245);
@@ -536,14 +557,28 @@ tr td {
 
 .logout-sec button {
     height: 2rem !important;
-    border-radius: 7px;
-    border: none;
+    border-radius: 1.2rem;
+    border: solid 1px rgb(222, 230, 208)!important;
+    
     padding-right: 1rem;
     padding-left: 1rem;
     font-weight: 500;
     font-family: Montserrat;
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(247, 248, 252);
 }
+.per-area{
+    margin-left:15rem;
+}
+
+.s-email{
+    border-radius: 4px;
+    border: solid 1px rgb(211, 216, 216);
+    height:3rem;
+    padding-left:1rem;
+    width: 100%;
+    font-size:13px
+}
+
 
 .assigned-title h1 span {
     float: right;
@@ -639,6 +674,8 @@ tr td {
 
 .dropdown-content button {
     background-color: rgb(70, 70, 70);
+    border: solid rgb(173, 255, 42) 1px!important;
+    /* background-color: rgb(9, 43, 87); */
     border: none;
     color: white;
     height: 2.5rem;
@@ -647,12 +684,14 @@ tr td {
     margin-top: 10px;
     font-size: 13px !important;
     width: 100%;
+    font-weight:600!important;
+    font-size: 13px;
     font-family: Montserrat;
 }
 
 .dropdown-content button:hover {
-    background-color: black;
-    border-radius: 1px;
+    background-color: rgb(8, 80, 85);
+    border-radius: 8px;
 }
 
 select option {
@@ -1390,7 +1429,9 @@ tr td p{
     font-family:Montserrat!important;
     transition-duration:1.2s;
 }
-
+.user-nav button:hover{
+    color: rgb(0, 0, 0)!important;
+}
 
 .user-nav button i{
     font-size: 14px;
@@ -1398,6 +1439,11 @@ tr td p{
     margin-right: 12px;
 }
 
+
+.brokers-nav{
+    background-color: rgb(41, 80, 185);
+    min-height: 3.5rem;
+}
 
 .said-no-nav{
     background-color: rgb(242, 40, 47);
@@ -1411,6 +1457,10 @@ tr td p{
 }
 .mb-btn:hover{
     background-color: rgb(217, 252, 136);
+}
+.br-btn:hover{
+    background-color: rgb(134, 167, 255);
+    color: white!important;
 }
 .cu-btn:hover{
     background-color: rgb(136, 252, 136);

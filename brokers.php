@@ -12,23 +12,21 @@ if ($_SESSION['user_role'] == 'user') { ?>
 
     <?php $active_digit = null;
       // Define this variable to use it to read current page for redirect
-      $current_page = 'won_customers_page';
+      $current_page = 'brokers_page';
     ?>
     <body>
-        <!-- won clients for each user. -->
-
-        <div class="won-customer-nav">
+        <div class="brokers-nav">
             <?php include 'assigned_nav.php' ?>
         </div>
-        <div class="col-lg-12 assigned-area won-area" data-aos="fade-in"
-     data-aos-duration="2600">
+        <!-- said no clients for each user. -->
+        <div class="col-lg-12 assigned-area said-no-area" data-aos="fade-in"
+          data-aos-duration="2600">
             <div class="assigned-title row">
                 <div class="col">
                     <div class="row convert">
                         <div class="col-lg-12">
                             <div class="sales-title">
-                              
-                                <h1>Won customers</h1>
+                                <h1>Contacted brokers</h1>
                                 <p>product of numbers</p>
                                 <span></span>
                             </div>
@@ -41,11 +39,11 @@ if ($_SESSION['user_role'] == 'user') { ?>
                     <div class="home-arrow row justify-content-center">
                         <!-- <div class="col-lg-2"><a href="#"> <button class="shadow-lg"><i class="fa fa-home"></i>back home</button></a></div> -->
                         <div class="col-lg-4">
-                            <h4> WON CUSTOMERS <span> <?php echo $dat2['cus_count']  ?></span> / <?php echo $calls_tally['calls_done'] ?> </h4>
+                            <h4> Contacted brokers <span> <?php echo $dat2['br_count']  ?></span></h4>
                         </div>
                     </div>
                     <div class="assigned-table aa-table">
-                        <h5>Won customers</h5>
+                        <h5>Contacted brokers</h5>
                         <table class="table table-bordered table-hover">
                             <thead class="the-th">
                                 <tr>
@@ -71,7 +69,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                 $s_email = 'no email';
                                 ?>
 
-                                <?php while ($row = mysqli_fetch_array($customer_clients)) { ?>
+                                <?php while ($row = mysqli_fetch_array($contacted_brokers)) { ?>
                                     <?php
                                     $s_mc_number = $row['s_mc_number'];
                                     $tally_id = $row['tally_id'];
@@ -120,8 +118,6 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                     </button>
                                                     <ul class="dropdown-menu dropdown-content" aria-labelledby="dropdownMenuButton1">
                                                         <p><i class="fa fa-phone"></i> <?php echo $s_phone_number; ?></p>
-                                                        <label for="email-h">Email</label>
-                                                        <input type="text" id="email-h" class="s-email" name="s_email" value="<?php echo $s_email ?>">
                                                         <label for="sele">Current-status</label>
                                                         <select name='s_status' id="sele" class="edit-status-input">
                                                             <option value='<?php echo $s_status ?>' selected><?php echo $s_status ?></option>
@@ -134,11 +130,7 @@ if ($_SESSION['user_role'] == 'user') { ?>
                                                         </select>
                                                         <label for="stat-com">Status-comments</label>
                                                         <textarea name="status_comments" id="stat-com" class="edit-status-textarea"><?php echo $status_comments; ?></textarea>
-                                       
-                                                        <br>
-                                                        <br>
                                                         <button class="edit-status-btn" type="submit" name="maybe-edit-contact-status">Update status</button>
-                                                   
                                                     </ul>
                                                 </div>
                                             </form>
